@@ -8,9 +8,9 @@
 - oh-my-zsh
 - vim
 - GIMP
-- Google Play Music Desktop Player
+- Google Play Music Desktop Player : <https://www.googleplaymusicdesktopplayer.com/>
 - VLC
-- JAVA
+- Java
   - Oracle Java
     ```sh
     sudo add-apt-repository ppa:webupd8team/java
