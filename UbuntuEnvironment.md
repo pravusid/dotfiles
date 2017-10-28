@@ -55,6 +55,12 @@
 - git
 - bleachbit
 
+## 기타설정
+
+### Noto Sans 우선순위 설정
+
+`/etc/fonts/conf.d/64-language-selector-prefer.conf` 파일수정
+
 ## Gnome-Shell 확장기능 목록
 
 - Alternatetab
