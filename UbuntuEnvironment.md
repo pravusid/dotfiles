@@ -39,15 +39,12 @@
 ## Gnome-Shell 확장기능 목록
 
 - Alternatetab
-- Applications Menu
-- Dash to panel
-- Dynamic Panel Transparency
 - Impatience
 - Lock Keys
 - Native Window Placement
 - Places Status Indicator
-- Removable Drive Menu
 - Sensory Perception
 - Status Area Horizontal Spacing
 - Ubuntu appindicators
+- Ubuntu dock
 - User Themes
