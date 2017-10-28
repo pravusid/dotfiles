@@ -2,6 +2,12 @@
 
 ## 우분투에서 사용하는 패키지들
 
+- numix theme
+  ```sh
+  sudo add-apt-repository ppa:numix/ppa
+  sudo apt-get update
+  sudo apt-get install numix-gtk-theme numix-icon-theme-circle
+  ```
 - lm-sensors
 - imwheel
 - zsh
