@@ -2,6 +2,7 @@
 
 ## 우분투에서 사용하는 패키지들
 
+- ubuntu-tweak-tool
 - numix theme
   ```sh
   sudo add-apt-repository ppa:numix/ppa
