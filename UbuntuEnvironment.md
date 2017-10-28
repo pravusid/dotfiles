@@ -43,6 +43,7 @@
 - yarn
 - python3-pip
 - git
+- bleachbit
 
 ## Gnome-Shell 확장기능 목록
 
