@@ -13,6 +13,7 @@
 - imwheel
 - tlp
   ```sh
+  sudo add-apt-repository ppa:linrunner/tlp
   sudo apt install tlp tlp-rdw tp-smapi-dkms acpi-call-dkms
   ```
 - zsh
