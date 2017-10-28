@@ -33,7 +33,6 @@
 
 - Alternatetab
 - Applications Menu
-- Battery Status
 - Dash to panel
 - Dynamic Panel Transparency
 - Impatience
@@ -43,6 +42,4 @@
 - Removable Drive Menu
 - Sensory Perception
 - Status Area Horizontal Spacing
-- Suspend Button
-- Topicons Plus
 - User Themes
