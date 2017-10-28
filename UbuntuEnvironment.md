@@ -46,6 +46,11 @@
   sudo apt-get install -y nodejs
   ```
 - yarn
+- firefox aurora
+  ```sh
+  sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
+  sudo apt update
+  ```
 - python3-pip
 - git
 - bleachbit
