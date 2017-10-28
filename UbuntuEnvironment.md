@@ -42,4 +42,5 @@
 - Removable Drive Menu
 - Sensory Perception
 - Status Area Horizontal Spacing
+- Ubuntu appindicators
 - User Themes
