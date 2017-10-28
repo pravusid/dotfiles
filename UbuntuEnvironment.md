@@ -11,6 +11,10 @@
   ```
 - lm-sensors
 - imwheel
+- tlp
+  ```sh
+  sudo apt install tlp tlp-rdw tp-smapi-dkms acpi-call-dkms
+  ```
 - zsh
   ```sh
   sudo apt-get install zsh
