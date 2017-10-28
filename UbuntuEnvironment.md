@@ -12,7 +12,14 @@
 - lm-sensors
 - imwheel
 - zsh
+  ```sh
+  sudo apt-get install zsh
+  chsh -s /usr/bin/zsh
+  ```
 - oh-my-zsh
+  ```sh
+  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  ```
 - vim
 - GIMP
 - Google Play Music Desktop Player : <https://www.googleplaymusicdesktopplayer.com/>
