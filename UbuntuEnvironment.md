@@ -69,7 +69,6 @@
 - Lock Keys
 - Native Window Placement
 - Places Status Indicator
-- Sensory Perception
 - Status Area Horizontal Spacing
 - Ubuntu appindicators
 - Ubuntu dock
