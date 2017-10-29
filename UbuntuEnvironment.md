@@ -65,6 +65,7 @@
 ## Gnome-Shell 확장기능 목록
 
 - Alternatetab
+- Freon
 - Impatience
 - Lock Keys
 - Native Window Placement
@@ -73,4 +74,3 @@
 - Ubuntu appindicators
 - Ubuntu dock
 - User Themes
-- System-monitor
