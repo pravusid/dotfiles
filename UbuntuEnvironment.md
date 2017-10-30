@@ -47,6 +47,10 @@
   sudo apt-get install -y nodejs
   ```
 - yarn
+  ```sh
+  sudo npm install -g yarnpkg
+  sudo apt install yarn
+  ```
 - firefox aurora
   ```sh
   sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
