@@ -1,5 +1,12 @@
 # 우분투 설정사항
 
+## Repository 변경
+
+```sh
+sudo cp /etc/apt/sources.list ~/sources.list.old
+sudo sed -i 's/archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+```
+
 ## 우분투에서 사용하는 패키지들
 
 - fcitx : `sudo apt-get install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
