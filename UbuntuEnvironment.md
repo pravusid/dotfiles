@@ -4,7 +4,7 @@
 
 ```sh
 sudo cp /etc/apt/sources.list ~/sources.list.old
-sudo sed -i 's/archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
+sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 ```
 
 ## 우분투에서 사용하는 패키지들
