@@ -76,15 +76,18 @@ sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 
 `/etc/fonts/conf.d/64-language-selector-prefer.conf` 파일수정
 
-## Gnome-Shell 확장기능 목록
+## Ubuntu-Budgie 애플릿
 
-- Alternatetab
-- Freon
-- Impatience
-- Lock Keys
-- Native Window Placement
-- Places Status Indicator
-- Status Area Horizontal Spacing
-- Ubuntu appindicators
-- Ubuntu dock
-- User Themes
+- Budgie 메뉴
+- Places
+- 작업공간 전환기
+- 시계
+- Panel System Monitor
+- App indicator Applet
+- Caps/Num lock상태
+- Night Light
+- 시스템 트레이
+- 상태 표시기
+- User Indicator
+- Raven Sidebar Panel
+- 알림
