@@ -68,6 +68,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/ftp.daum.net/g' /etc/apt/sources.list
 - python3-pip
 - git
 - bleachbit
+- Insomnia
 
 ## 기타설정
 
