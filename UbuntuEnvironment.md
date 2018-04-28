@@ -37,6 +37,14 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   ```
   
+- oh-my-zsh spaceship theme: `https://github.com/denysdovhan/spaceship-prompt`
+
+```text
+# .zshrc에 적용
+ZSH_THEME="spaceship"
+# source "/home/idpravus/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+```
+  
 - vim
 
 - GIMP
