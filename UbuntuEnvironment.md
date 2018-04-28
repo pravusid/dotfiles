@@ -43,7 +43,12 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   ```
   
-- vim
+- vim: 다른 터미널 사용시 수정 (`/usr/share/applications/vim.desktop`)
+
+  ```text
+  Exec=/usr/bin/tilix -e vim %F
+  Terminal=false
+  ```
 
 - GIMP
 
