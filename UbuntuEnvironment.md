@@ -146,10 +146,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install paper-gtk-theme
   ```
 
-## 터치패드 설정
-
-[libinput-gestures](https://github.com/bulletmark/libinput-gestures)
-
 ### Noto Sans 우선순위 설정
 
 `/etc/fonts/conf.d/64-language-selector-prefer.conf` 파일수정
