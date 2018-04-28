@@ -13,6 +13,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - gnome-tweak-tool
 
+- tilix: `gconftool –type string –set /desktop/gnome/applications/terminal/exec tilix`
+
 - lm-sensors
 
 - imwheel
