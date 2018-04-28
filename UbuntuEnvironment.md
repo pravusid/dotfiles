@@ -81,6 +81,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   ```
   
 - yarn
+
   ```sh
   sudo npm install -g yarnpkg
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
