@@ -9,8 +9,9 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ## 우분투에서 사용하는 패키지들
 
-- fcitx : `sudo apt-get install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
+- fcitx: `sudo apt-get install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
 - ubuntu-tweak-tool
+- materia theme: `sudo apt install materia-gtk-theme`
 - numix theme
   ```sh
   sudo add-apt-repository ppa:numix/ppa
