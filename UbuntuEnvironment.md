@@ -24,6 +24,10 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt install tlp tlp-rdw tp-smapi-dkms acpi-call-dkms
   ```
   
+- git
+
+- curl
+
 - zsh
 
   ```sh
@@ -84,8 +88,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   ```
   
 - python3-pip
-
-- git
 
 - bleachbit
 
