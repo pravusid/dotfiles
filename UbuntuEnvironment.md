@@ -39,11 +39,11 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   
 - oh-my-zsh spaceship theme: `https://github.com/denysdovhan/spaceship-prompt`
 
-```text
-# .zshrc에 적용
-ZSH_THEME="spaceship"
-# source "/home/idpravus/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-```
+  ```text
+  # .zshrc에 적용
+  ZSH_THEME="spaceship"
+  # source "/home/idpravus/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+  ```
   
 - vim
 
