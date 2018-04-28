@@ -77,18 +77,11 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 `/etc/fonts/conf.d/64-language-selector-prefer.conf` 파일수정
 
-## Ubuntu-Budgie 애플릿
+## Ubuntu gnome extesion
 
-- Budgie 메뉴
-- Places
-- 작업공간 전환기
-- 시계
-- Panel System Monitor
-- App indicator Applet
-- Caps/Num lock상태
-- Night Light
-- 시스템 트레이
-- 상태 표시기
-- User Indicator
-- Raven Sidebar Panel
-- 알림
+### install shell
+
+`sudo apt-get install chrome-gnome-shell`
+
+### list
+
