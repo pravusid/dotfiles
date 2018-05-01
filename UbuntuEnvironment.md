@@ -11,6 +11,11 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - fcitx: `sudo apt-get install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
 
+  ```text
+  한영 전환 팝업 삭제: ~/.config/fcitx/config 파일 수정
+  ShowInputWindowAfterTriggering=False
+  ```
+
 - gnome-tweak-tool
 
 - tilix: `gsettings set org.gnome.desktop.default-applications.terminal exec tilix`
