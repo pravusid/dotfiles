@@ -115,7 +115,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
   echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
   echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-  echo 'eval "$(pyenv init -)"' >> ~/.profile
+  echo 'eval "$(pyenv init -)"' >> ~/.zshrc
   ```
 
 - bleachbit
