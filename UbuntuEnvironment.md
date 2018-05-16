@@ -202,9 +202,17 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### `.profile`
 
-```env
+```sh
 # set PATH so it includes user's private bin directories
 export YARN_GLOBAL="$HOME/.yarn"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$PATH"
+```
+
+### `.zshrc`
+
+```sh
+alias python="python3"
+alias pip="pip3"
+eval "$(pyenv init -)"
 ```
