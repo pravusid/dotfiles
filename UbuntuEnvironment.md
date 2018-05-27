@@ -46,12 +46,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   ```
   
-- vim: 다른 터미널 사용시 수정 (`/usr/share/applications/vim.desktop`)
-
-  ```text
-  Exec=/usr/bin/tilix -e vim %F
-  Terminal=false
-  ```
+- vim
 
 - GIMP
 
@@ -201,6 +196,13 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 `gsettings set org.gnome.desktop.default-applications.terminal exec {terminal-name}`
 
 `sudo update-alternatives --config x-terminal-emulator`
+
+### vim 다른 터미널 사용시 수정 (`/usr/share/applications/vim.desktop`)
+
+```text
+Exec=/usr/bin/tilix -e vim %F
+Terminal=false
+```
 
 ## 환경변수
 
