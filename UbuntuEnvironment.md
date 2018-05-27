@@ -46,7 +46,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   ```
   
-- vim
+- vim : 기본 에디터 변경 `sudo sed -i 's/gedit/vim/' /usr/share/applications/defaults.list`
 
 - GIMP
 
