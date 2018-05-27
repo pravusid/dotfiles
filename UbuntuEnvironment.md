@@ -18,8 +18,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - gnome-tweak-tool
 
-- tilix: `gsettings set org.gnome.desktop.default-applications.terminal exec tilix`
-
 - lm-sensors
 
 - imwheel
@@ -197,6 +195,12 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 - Ubuntu AppIndicators
 
 - User Themes
+
+## 터미널 변경
+
+`gsettings set org.gnome.desktop.default-applications.terminal exec {terminal-name}`
+
+`sudo update-alternatives --config x-terminal-emulator`
 
 ## 환경변수
 
