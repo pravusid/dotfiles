@@ -218,6 +218,9 @@ export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$PATH"
 ### `.zshrc`
 
 ```sh
+alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
+alias altjava="update-alternatives --config java"
+
 alias python="python3"
 alias pip="pip3"
 eval "$(pyenv init -)"
