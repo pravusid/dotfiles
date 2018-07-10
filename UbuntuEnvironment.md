@@ -173,7 +173,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Caffeine
 
-- Dash to Dock
+- Dash to Dock: Ubuntu Dock 제거 (충돌방지) = `sudo apt purge gnome-shell-extension-ubuntu-dock`
 
 - Dynamic Panel Transparency
 
