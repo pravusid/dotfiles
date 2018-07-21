@@ -129,6 +129,17 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install insomnia
   ```
 
+- golang: <https://golang.org/dl/>
+
+  ```sh
+  tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
+  # 환경변수 설정
+  # export PATH=$PATH:/usr/local/go/bin
+  # 만약 기본경로를 사용하지 않는다면
+  # export GOROOT=$HOME/go
+  # export PATH=$PATH:$GOROOT/bin
+  ```
+
 ## 테마
 
 - oh-my-zsh spaceship theme: `https://github.com/denysdovhan/spaceship-prompt`
