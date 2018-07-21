@@ -132,7 +132,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 - golang: <https://golang.org/dl/>
 
   ```sh
-  tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
+  sudo tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
   # 환경변수 설정
   # export PATH=$PATH:/usr/local/go/bin
   # 만약 기본경로를 사용하지 않는다면
@@ -221,7 +221,8 @@ Terminal=false
 # set PATH so it includes user's private bin directories
 export YARN_GLOBAL="$HOME/.yarn"
 export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$PATH"
+export GOROOT="/usr/local/go"
+export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
 ```
 
 ### `.zshrc`
