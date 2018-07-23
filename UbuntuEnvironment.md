@@ -190,6 +190,10 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Impatience
 
+- Lock Keys
+
+- No Topleft Hot Corner
+
 - Places Status Indicator
 
 - Sensory Perception
