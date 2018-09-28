@@ -68,6 +68,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   
     ```sh
     sudo apt install openjdk-8-jdk
+    sudo apt install openjdk-11-jdk
     ```
     
 - NodeJS
