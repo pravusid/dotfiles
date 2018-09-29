@@ -163,12 +163,12 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install paper-gtk-theme
   ```
 
-- papirus
+- flat-remix
 
   ```sh
-  sudo add-apt-repository ppa:papirus/papirus
+  sudo add-apt-repository ppa:daniruiz/flat-remix
   sudo apt-get update
-  sudo apt-get install papirus-icon-theme
+  sudo apt-get install flat-remix
   ```
 
 ### Noto Sans 우선순위 설정
