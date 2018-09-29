@@ -153,14 +153,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - materia theme: `sudo apt install materia-gtk-theme`
 
-- numix theme
-
-  ```sh
-  sudo add-apt-repository ppa:numix/ppa
-  sudo apt-get update
-  sudo apt-get install numix-gtk-theme numix-icon-theme-circle
-  ```
-  
 - paper
 
   ```sh
@@ -169,6 +161,14 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install paper-icon-theme
   sudo apt-get install paper-cursor-theme
   sudo apt-get install paper-gtk-theme
+  ```
+
+- papirus
+
+  ```sh
+  sudo add-apt-repository ppa:papirus/papirus
+  sudo apt-get update
+  sudo apt-get install papirus-icon-theme
   ```
 
 ### Noto Sans 우선순위 설정
