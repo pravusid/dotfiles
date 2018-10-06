@@ -185,6 +185,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Lock Keys
 
+- Night Light Slider
+
 - No Topleft Hot Corner
 
 - Places Status Indicator
