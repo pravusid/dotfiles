@@ -228,7 +228,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$GOROOT
 
 ```sh
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
-alias altjava="update-alternatives --config java"
+alias altjava="sudo update-alternatives --config java"
 
 alias python="python3"
 alias pip="pip3"
