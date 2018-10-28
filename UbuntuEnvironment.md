@@ -60,7 +60,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   
     ```sh
     sudo add-apt-repository ppa:webupd8team/java
-    sudo apt-get update
     sudo apt-get install oracle-java8-installer
     ```
     
@@ -75,7 +74,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
   ```sh
   curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
-  sudo apt update
   sudo apt-get install -y nodejs
   ```
   
@@ -85,7 +83,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo npm install -g yarnpkg
   curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  sudo apt update
   sudo apt install yarn
   ```
   
@@ -93,7 +90,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
   ```sh
   sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
-  sudo apt update
   ```
   
 - python3-pip
@@ -126,7 +122,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
       | sudo apt-key add -
 
   # Refresh repository sources and install Insomnia
-  sudo apt update
   sudo apt-get install insomnia
   ```
 
@@ -157,7 +152,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
   ```sh
   sudo add-apt-repository ppa:snwh/pulp
-  sudo apt-get update
   sudo apt-get install paper-icon-theme
   sudo apt-get install paper-cursor-theme
   sudo apt-get install paper-gtk-theme
