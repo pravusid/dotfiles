@@ -74,7 +74,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 - NodeJS
 
   ```sh
-  curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_11.x | sudo -E bash -
   sudo apt update
   sudo apt-get install -y nodejs
   ```
