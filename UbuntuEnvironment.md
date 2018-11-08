@@ -33,6 +33,7 @@ xkb_keymap {
     };
     xkb_geometry  { include "pc(pc105)"     };
 };
+```
 
 xkb 로컬 설정 적용
 
