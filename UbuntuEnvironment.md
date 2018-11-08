@@ -23,7 +23,7 @@ cd /usr/share/X11/xkb/symbols/
 sudo vim altwin
 ```
 
-파일을 열어 `Alt_R, Meta_R` 부분을 `Hangul`로 수정한다
+파일을 열어 meta_alt의 `Alt_R, Meta_R` 부분을 `Hangul`로 수정한다
 
 ```sh
 // Meta is mapped to second level of Alt keys.
@@ -36,7 +36,6 @@ xkb_symbols "meta_alt" {
 //  modifier_map Mod4 {};
 };
 ```
-
 
 ### 로컬 설정 변경 (Fcitx 시작/재시작과 함께 초기화 됨)
 
