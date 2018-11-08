@@ -9,6 +9,37 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ## 한/영, 한자 키
 
+### 전체 설정 변경
+
+xkb 설정 디렉토리로 간다
+
+```sh
+cd /usr/share/X11/xkb/symbols/
+```
+
+한/영 Alt_R 매핑을 수정한다
+
+```sh
+sudo vim altwin
+```
+
+파일을 열어 `Alt_R, Meta_R` 부분을 `Hangul`로 수정한다
+
+```sh
+// Meta is mapped to second level of Alt keys.
+partial modifier_keys
+xkb_symbols "meta_alt" {
+    key <LALT> { [ Alt_L, Meta_L ] };
+    key <RALT> { type[Group1] = "TWO_LEVEL",
+                 symbols[Group1] = [ Hangul ] };
+    modifier_map Mod1 { Alt_L, Alt_R, Meta_L, Meta_R };
+//  modifier_map Mod4 {};
+};
+```
+
+
+### 로컬 설정 변경 (Fcitx 시작/재시작과 함께 초기화 됨)
+
 xkb 로컬 설정을 위한 디렉토리 생성
 
 ```sh
