@@ -7,6 +7,39 @@ sudo cp /etc/apt/sources.list ~/sources.list.old
 sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 ```
 
+## 한/영, 한자 키
+
+xkb 로컬 설정을 위한 디렉토리 생성
+
+```sh
+mkdir -p ~/.xkb/symbols
+mkdir -p ~/.xkb/keymap
+```
+xkb 설정 복사
+
+```sh
+setxkbmap -print > ~/.xkb/keymap/hangul.xkb
+```
+
+xkb 로컬 설정 변경
+
+```text
+xkb_keymap {
+    xkb_keycodes  { include "evdev+aliases(qwerty)" };
+    xkb_types     { include "complete"      };
+    xkb_compat    { include "complete"      };
+    xkb_symbols   {
+        include "pc+us+kr(kr104):2+inet(evdev)+terminate(ctrl_alt_bksp)+kr(ralt_hangul)+kr(rctrl_hanja)"
+    };
+    xkb_geometry  { include "pc(pc105)"     };
+};
+
+xkb 로컬 설정 적용
+
+```sh
+xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
+```
+
 ## 우분투에서 사용하는 패키지들
 
 - fcitx: `sudo apt-get install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
