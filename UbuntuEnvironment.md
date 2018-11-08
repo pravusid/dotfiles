@@ -35,10 +35,10 @@ xkb_keymap {
 };
 ```
 
-xkb 로컬 설정 적용
+xkb 로컬 설정 적용 (`~/.xinitrc` 파일)
 
 ```sh
-xkbcomp ~/.xkb/keymap/hangul.xkb $DISPLAY
+xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 ```
 
 ## 우분투에서 사용하는 패키지들
