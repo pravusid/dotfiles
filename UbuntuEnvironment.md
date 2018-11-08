@@ -38,7 +38,7 @@ xkb_keymap {
 xkb 로컬 설정 적용
 
 ```sh
-xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
+xkbcomp ~/.xkb/keymap/hangul.xkb $DISPLAY
 ```
 
 ## 우분투에서 사용하는 패키지들
