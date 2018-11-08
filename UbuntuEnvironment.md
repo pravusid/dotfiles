@@ -37,6 +37,18 @@ xkb_symbols "meta_alt" {
 };
 ```
 
+한자 Ctrl_R 매핑을 수정한다
+
+```sh
+sudo vim pc
+```
+
+파일을 열어 RCTL의 `Control_R` 부분을 `Hangul_Hanja`로 수정한다
+
+```sh
+key <RCTL> {        [ Hangul_Hanja          ]       };
+```
+
 ### 로컬 설정 변경 (Fcitx 시작/재시작과 함께 초기화 됨)
 
 xkb 로컬 설정을 위한 디렉토리 생성
