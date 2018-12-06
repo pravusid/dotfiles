@@ -111,19 +111,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - curl
 
-- zsh
-
-  ```sh
-  sudo apt-get install zsh
-  chsh -s /usr/bin/zsh
-  ```
-  
-- oh-my-zsh
-
-  ```sh
-  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-  ```
-  
 - vim: 기본 에디터 변경 `sudo sed -i 's/gedit/vim/' /usr/share/applications/defaults.list`
 
 - GIMP
@@ -214,15 +201,46 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   # export PATH=$PATH:$GOROOT/bin
   ```
 
-## 테마
+## SHELL
 
-- oh-my-zsh spaceship theme: `https://github.com/denysdovhan/spaceship-prompt`
+- zsh
 
-  ```text
+  ```sh
+  sudo apt-get install zsh
+  chsh -s /usr/bin/zsh
+  ```
+
+- oh-my-zsh
+
+  ```sh
+  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  ```
+
+- oh-my-zsh spaceship theme: <https://github.com/denysdovhan/spaceship-prompt>
+
+  ```sh
+  # 해당위치에 심볼릭 링크 생성 "/home/idpravus/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
+  
   # .zshrc에 적용
   ZSH_THEME="spaceship"
-  # source "/home/idpravus/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
   ```
+
+- oh-my-zsh 설정 (`.zshrc`)
+
+  ```sh
+  plugins=(
+    autojump
+    command-not-found
+    docker
+    git
+  )
+
+  . /usr/share/autojump/autojump.sh
+  ```
+
+- autojump(<https://github.com/wting/autojump>) 설치: `sudo apt install autojump`
+
+## 테마
 
 - materia theme: `sudo apt install materia-gtk-theme`
 
@@ -290,13 +308,12 @@ Terminal=false
 
 ```sh
 # set PATH so it includes user's private bin directories
-export YARN_GLOBAL="$HOME/.yarn"
 export PYENV_ROOT="$HOME/.pyenv"
 export GOROOT="/usr/local/go"
 export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
 ```
 
-### `.zshrc`
+### `.zshrc` or `.bashrc`
 
 ```sh
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
