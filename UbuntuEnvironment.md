@@ -235,6 +235,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     git
   )
 
+  # Run plugins
   . /usr/share/autojump/autojump.sh
   ```
 
