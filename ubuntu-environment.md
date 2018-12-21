@@ -315,6 +315,9 @@ export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$GOROOT
 ### `.zshrc` or `.bashrc`
 
 ```sh
+alias ls.="ls -al"
+alias netatp="netstat -atp"
+
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
 
