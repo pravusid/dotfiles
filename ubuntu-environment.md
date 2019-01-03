@@ -316,6 +316,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$GOROOT
 
 ```sh
 alias ls.="ls -al"
+alias lsg="ls -al | grep"
 alias netatp="netstat -atp"
 
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
