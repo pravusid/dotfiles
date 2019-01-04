@@ -315,7 +315,6 @@ export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$GOROOT
 ### `.zshrc` or `.bashrc`
 
 ```sh
-alias ls.="ls -al"
 alias lsg="ls -al | grep"
 alias netatp="netstat -atp"
 
