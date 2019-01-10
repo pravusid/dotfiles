@@ -209,7 +209,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
   ```sh
   # 해당위치에 심볼릭 링크 생성 "/home/idpravus/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-  
+
   # .zshrc에 적용
   ZSH_THEME="spaceship"
   ```
