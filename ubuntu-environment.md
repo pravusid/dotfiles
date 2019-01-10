@@ -104,7 +104,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   sudo add-apt-repository ppa:linrunner/tlp
   sudo apt install tlp tlp-rdw tp-smapi-dkms acpi-call-dkms
   ```
-  
+
 - git
 
 - curl
@@ -120,45 +120,36 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - Java
 
   - Oracle Java
-  
+
     ```sh
     sudo add-apt-repository ppa:webupd8team/java
     sudo apt-get install oracle-java8-installer
     ```
-    
+
   - Open JDK
-  
+
     ```sh
     sudo apt install openjdk-8-jdk
     sudo apt install openjdk-11-jdk
     ```
-    
+
 - NodeJS
 
   ```sh
   curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
   sudo apt-get install -y nodejs
   ```
-  
-- yarn
 
-  ```sh
-  sudo npm install -g yarnpkg
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-  sudo apt install yarn
-  ```
-  
 - firefox aurora
 
   ```sh
   sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
   ```
-  
+
 - python3-pip
 
   - `pip install virtualenv`
-  
+
   - `pip install autoenv`
 
 - pyenv
@@ -309,7 +300,7 @@ Terminal=false
 # set PATH so it includes user's private bin directories
 export PYENV_ROOT="$HOME/.pyenv"
 export GOROOT="/usr/local/go"
-export PATH="$HOME/bin:$HOME/.local/bin:$YARN_GLOBAL/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
 ```
 
 ### `.zshrc` or `.bashrc`
