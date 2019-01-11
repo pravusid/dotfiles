@@ -194,8 +194,14 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
   ```sh
   sudo add-apt-repository ppa:serge-rider/dbeaver-ce
-  sudo apt-get update
   sudo apt-get install dbeaver-ce
+  ```
+
+- ulauncher
+
+  ```sh
+  sudo add-apt-repository ppa:agornostal/ulauncher
+  sudo apt-get install ulauncher
   ```
 
 ## SHELL
