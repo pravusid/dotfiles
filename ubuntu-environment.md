@@ -190,6 +190,14 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   # export PATH=$PATH:$GOROOT/bin
   ```
 
+- dbeaver
+
+  ```sh
+  sudo add-apt-repository ppa:serge-rider/dbeaver-ce
+  sudo apt-get update
+  sudo apt-get install dbeaver-ce
+  ```
+
 ## SHELL
 
 - zsh
