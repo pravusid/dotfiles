@@ -1,4 +1,4 @@
-# 우분투 설정사항
+# Ubuntu 환경설정
 
 ## Repository 변경
 
