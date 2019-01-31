@@ -340,7 +340,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
 ### `.zshrc` or `.bashrc`
 
 ```sh
-alias lsg="ls -al | grep"
+alias lsg="\ls -al | grep"
 alias cntf="\ls -afq | wc -l"
 alias ssa="ss -atp"
 
