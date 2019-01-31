@@ -102,7 +102,9 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
   ```sh
   sudo add-apt-repository ppa:linrunner/tlp
-  sudo apt install tlp tlp-rdw tp-smapi-dkms acpi-call-dkms
+  sudo apt-get install tlp tlp-rdw
+  # ThinkPads
+  sudo apt-get install tp-smapi-dkms acpi-call-dkms
   ```
 
 - git
@@ -208,6 +210,10 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
   # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
   ```
+
+- tusk: <https://klaussinani.github.io/tusk/>
+
+- lnav: `snap install lnav`
 
 ## SHELL
 
