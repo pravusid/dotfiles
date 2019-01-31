@@ -113,13 +113,14 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - curl
 
+- wireshark
+
+  ```sh
+  sudo add-apt-repository ppa:wireshark-dev/stable
+  sudo apt-get install wireshark
+  ```
+
 - vim-gtk: 기본 에디터 변경 `sudo sed -i 's/gedit/vim/' /usr/share/applications/defaults.list`
-
-- GIMP
-
-- Google Play Music Desktop Player: <https://www.googleplaymusicdesktopplayer.com/>
-
-- VLC
 
 - Java
 
@@ -216,6 +217,12 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - tusk: <https://klaussinani.github.io/tusk/>
 
 - lnav: `snap install lnav`
+
+- GIMP
+
+- Google Play Music Desktop Player: <https://www.googleplaymusicdesktopplayer.com/>
+
+- VLC
 
 ## SHELL
 
