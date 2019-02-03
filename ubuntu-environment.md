@@ -349,7 +349,7 @@ alias ssa="ss -atp"
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
 
-alias aria="aria2"
+alias aria="aria2c"
 alias python="python3"
 alias pip="pip3"
 eval "$(pyenv init -)"
