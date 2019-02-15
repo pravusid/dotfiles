@@ -120,6 +120,9 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   ```sh
   sudo add-apt-repository ppa:wireshark-dev/stable
   sudo apt-get install wireshark
+
+  sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
+  sudo usermod -aG wireshark $USER
   ```
 
 - vim-gtk: 기본 에디터 변경 `sudo sed -i 's/gedit/vim/' /usr/share/applications/defaults.list`
