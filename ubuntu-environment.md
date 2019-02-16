@@ -118,6 +118,8 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - curl
 
+- jq
+
 - aria2: `sudo apt install aria2`
 
 - wireshark
