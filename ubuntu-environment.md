@@ -94,8 +94,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - gnome-tweak-tool
 
-- gnome-system-monitor
-
 - lm-sensors
 
 - imwheel
