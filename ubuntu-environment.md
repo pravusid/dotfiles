@@ -225,6 +225,13 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - GIMP
 
+- peek
+
+  ```sh
+  sudo add-apt-repository ppa:peek-developers/stable
+  sudo apt install peek
+  ```
+
 - Google Play Music Desktop Player: <https://www.googleplaymusicdesktopplayer.com/>
 
 - VLC
