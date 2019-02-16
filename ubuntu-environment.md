@@ -127,7 +127,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   ```sh
   sudo add-apt-repository ppa:wireshark-dev/stable
   sudo apt-get install wireshark
-
+  # 설치 후 
   sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
   sudo usermod -aG wireshark $USER
   ```
