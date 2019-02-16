@@ -109,6 +109,13 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   sudo apt-get install tp-smapi-dkms acpi-call-dkms
   ```
 
+- stacer
+
+  ```sh
+  sudo add-apt-repository ppa:oguzhaninan/stacer
+  sudo apt-get install stacer
+  ```
+
 - git
 
 - curl
@@ -172,8 +179,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   echo 'eval "$(pyenv init -)"' >> ~/.zshrc
   ```
 
-- bleachbit
-
 - Insomnia
 
   ```sh
@@ -224,6 +229,8 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - lnav: `snap install lnav`
 
 - GIMP
+
+- flameshot: `sudo apt install flameshot`
 
 - peek
 
