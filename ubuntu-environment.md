@@ -360,8 +360,9 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
 
 ```sh
 alias lsg="\ls -al | grep"
+alias pg="\pgrep -fl"
 alias cntf="\ls -afq | wc -l"
-alias ssa="ss -atp"
+alias ssa="\ss -atp"
 
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
