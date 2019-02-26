@@ -243,6 +243,10 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - VLC
 
+- Chrome: <https://www.google.com/chrome/>
+
+- MailSpring: <https://github.com/Foundry376/Mailspring/releases>
+
 ## SHELL
 
 - zsh
