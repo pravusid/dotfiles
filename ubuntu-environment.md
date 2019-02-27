@@ -365,7 +365,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
 ```sh
 alias lsg="\ls -al | grep"
 alias pg="\pgrep -fl"
-alias cntf="\ls -afq | wc -l"
+alias cntf="\ls -1A | wc -l"
 alias ssa="\ss -natp"
 alias ssl="\ss -nltp"
 
