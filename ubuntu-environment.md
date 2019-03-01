@@ -312,28 +312,18 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 ### list
 
+- AlternateTab
 - Caffeine
-
 - Dash to Dock: Ubuntu Dock 제거 (충돌방지) = `sudo apt purge gnome-shell-extension-ubuntu-dock`
-
 - Dynamic Panel Transparency
-
 - Impatience
-
 - Lock Keys
-
 - Night Light Slider
-
 - No Topleft Hot Corner
-
 - Places Status Indicator
-
 - Sensory Perception
-
 - Status Area Horizontal Spacing
-
 - Ubuntu AppIndicators
-
 - User Themes
 
 ## 터미널 변경
