@@ -358,6 +358,7 @@ alias pg="\pgrep -fl"
 alias cntf="\ls -1A | wc -l"
 alias ssa="\ss -natp"
 alias ssl="\ss -nltp"
+alias tf="\tail -f"
 
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
