@@ -247,6 +247,8 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - MailSpring: <https://github.com/Foundry376/Mailspring/releases>
 
+- notable: <https://github.com/notable/notable/releases>
+
 ## SHELL
 
 - zsh
