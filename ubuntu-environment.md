@@ -308,6 +308,10 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 ## Ubuntu gnome extesion
 
+- 확장 설정: dconf-editor: `org->gnome->shell->extension`
+- plank dock: `sudo apt install plank`
+- Ubuntu Dock 제거 (충돌방지): `sudo apt purge gnome-shell-extension-ubuntu-dock`
+
 ### install shell
 
 `sudo apt-get install chrome-gnome-shell`
@@ -316,7 +320,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - AlternateTab
 - Caffeine
-- Dash to Dock: Ubuntu Dock 제거 (충돌방지) = `sudo apt purge gnome-shell-extension-ubuntu-dock`
 - Dynamic Panel Transparency
 - Impatience
 - Lock Keys
