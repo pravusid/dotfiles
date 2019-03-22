@@ -315,13 +315,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - plank dock: `sudo apt install plank`
 - plank 설정: `plank --preferences`
 - Ubuntu Dock 제거 (충돌방지): `sudo apt purge gnome-shell-extension-ubuntu-dock`
-- Ubuntu Dock 설정 변경으로 숨기기
-
-  ```sh
-  gsettings set org.gnome.shell.extensions.dash-to-dock autohide false && \
-  gsettings set org.gnome.shell.extensions.dash-to-dock dock-fixed false && \
-  gsettings set org.gnome.shell.extensions.dash-to-dock intellihide false
-  ```
 
 ### install shell
 
@@ -332,6 +325,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - AlternateTab
 - Caffeine
 - Dynamic Panel Transparency
+- Hide Dash X
 - Impatience
 - Lock Keys
 - Night Light Slider
