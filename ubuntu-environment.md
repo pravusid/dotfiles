@@ -59,6 +59,7 @@ xkb 로컬 설정을 위한 디렉토리 생성
 mkdir -p ~/.xkb/symbols
 mkdir -p ~/.xkb/keymap
 ```
+
 xkb 설정 복사
 
 ```sh
@@ -87,16 +88,19 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 ## 우분투에서 사용하는 패키지들
 
-- fcitx: `sudo apt-get install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
+### 일반
+
+- fcitx: `sudo apt install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
+
   - 한영 전환 팝업 삭제: `~/.config/fcitx/config` 파일 수정: `ShowInputWindowAfterTriggering=False`
   - `;`키 충돌: 입력기 설정 → 부가기능 → QuickPhrase → 맨위 옵션을 없음으로 → 아래의 고급 설정 클릭 → 철자 힌트 보이지 않기 체크
   - `ctrl`+`alt`+`h` 단축키 충돌: 입력기 설정 → 부가기능 → Keyboard Layout → 단어 힌트 전환 단축기 해제
 
-- gnome-tweak-tool
+- gnome-tweak-tool: `sudo apt install gnome-tweak-tool`
 
-- lm-sensors
+- lm-sensors: `sudo apt install lm-sensors`
 
-- imwheel
+- imwheel: `sudo apt install imwheel`
 
 - tlp
 
@@ -114,69 +118,129 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   sudo apt-get install stacer
   ```
 
-- git
-
-- curl
-
-- jq
-
 - aria2: `sudo apt install aria2`
 
-- wireshark
+- ulauncher
 
   ```sh
-  sudo add-apt-repository ppa:wireshark-dev/stable
-  sudo apt-get install wireshark
-  # 설치 후 
-  sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
-  sudo usermod -aG wireshark $USER
+  sudo add-apt-repository ppa:agornostal/ulauncher
+  sudo apt-get install ulauncher
+
+  # Make sure no app is using ALT+SPACE.
+  # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
+  # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
+  # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
   ```
 
-- vim-gtk: 기본 에디터 변경 `sudo sed -i 's/gedit/vim/' /usr/share/applications/defaults.list`
+- Chrome: <https://www.google.com/chrome/>
+
+- remmina: `sudo apt install remmina`
+
+- flameshot: `sudo apt install flameshot`
+
+- peek
+
+  ```sh
+  sudo add-apt-repository ppa:peek-developers/stable
+  sudo apt install peek
+  ```
+
+- GIMP: `sudo apt install gimp`
+
+- VLC: `sudo apt install vlc`
+
+- Telegram Desktop: `sudo snap install telegram-desktop`
+
+- MailSpring: `sudo snap install mailspring`
+
+- tusk: <https://klaussinani.github.io/tusk/>
+
+- Google Play Music Desktop Player: <https://www.googleplaymusicdesktopplayer.com/>
+
+- notable: <https://github.com/notable/notable/releases>
+
+### 런타임
 
 - Java
 
-  - Oracle Java
-
-    ```sh
-    sudo add-apt-repository ppa:webupd8team/java
-    sudo apt-get install oracle-java8-installer
-    ```
-
-  - Open JDK
-
-    ```sh
-    sudo apt install openjdk-8-jdk
-    sudo apt install openjdk-11-jdk
-    ```
+  ```sh
+  sudo apt install openjdk-8-jdk
+  sudo apt install openjdk-11-jdk
+  ```
 
 - NodeJS
 
+  - snap: `sudo snap install node --channel=10/stable --classic`
+
+  - apt-get
+
+    ```sh
+    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+    sudo apt-get install -y nodejs
+    ```
+
+- golang: <https://github.com/golang/go/wiki/Ubuntu>
+
+  - snap: `sudo snap install --classic go`
+
+  - <https://golang.org/dl/>
+
+    ```sh
+    sudo tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
+    # 환경변수 설정
+    # export PATH=$PATH:/usr/local/go/bin
+    # 만약 기본경로를 사용하지 않는다면
+    # export GOROOT=$HOME/go
+    # export PATH=$PATH:$GOROOT/bin
+    ```
+
+- python
+
+  - python3-pip: `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py`
+
+  - virtualenv: `pip install virtualenv`
+
+  - autoenv: `pip install autoenv`
+
+  - pyenv
+
+    ```sh
+    git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
+    echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+    ```
+
+### 개발툴
+
+- git: `sudo apt install git`
+
+- curl: `sudo apt install curl`
+
+- jq: `sudo apt install jq`
+
+- Visual Studio Code: `sudo snap install code --classic`
+
+- IDEA Ultimate: `sudo snap install intellij-idea-ultimate --classic`
+
+- GoLand: `sudo snap install goland --classic`
+
+- Android Studio: `sudo snap install android-studio --classic`
+
+- vim-gtk: `sudo apt install vim-gtk`
+
+  - 설치 후 기본 에디터 변경 `sudo sed -i 's/gedit/vim/' /usr/share/applications/defaults.list`
+
+- lnav: `sudo snap install lnav`
+
+- Slack: <https://slack.com/downloads/linux>
+
+- dbeaver
+
   ```sh
-  curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-  sudo apt-get install -y nodejs
-  ```
-
-- firefox aurora
-
-  ```sh
-  sudo add-apt-repository ppa:ubuntu-mozilla-daily/firefox-aurora
-  ```
-
-- python3-pip
-
-  - `pip install virtualenv`
-
-  - `pip install autoenv`
-
-- pyenv
-
-  ```sh
-  git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-
-  echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-  echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+  sudo add-apt-repository ppa:serge-rider/dbeaver-ce
+  sudo apt-get install dbeaver-ce
   ```
 
 - Insomnia
@@ -194,75 +258,15 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   sudo apt-get install insomnia
   ```
 
-- golang: <https://github.com/golang/go/wiki/Ubuntu>
-
-  - <https://golang.org/dl/>
-
-    ```sh
-    sudo tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
-    # 환경변수 설정
-    # export PATH=$PATH:/usr/local/go/bin
-    # 만약 기본경로를 사용하지 않는다면
-    # export GOROOT=$HOME/go
-    # export PATH=$PATH:$GOROOT/bin
-    ```
-
-  - snap 사용: `sudo snap install --classic go`
-
-  - apt-get 사용
-  
-    ```sh
-    # 기본
-    sudo apt-get install golang-go
-
-    # 버전 선택 /usr/lib/go-<version>/bin
-    sudo add-apt-repository ppa:gophers/archive
-    sudo apt-get install golang-<version>-go
-    ```
-
-- dbeaver
+- wireshark
 
   ```sh
-  sudo add-apt-repository ppa:serge-rider/dbeaver-ce
-  sudo apt-get install dbeaver-ce
+  sudo add-apt-repository ppa:wireshark-dev/stable
+  sudo apt-get install wireshark
+  # 설치 후
+  sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
+  sudo usermod -aG wireshark $USER
   ```
-
-- ulauncher
-
-  ```sh
-  sudo add-apt-repository ppa:agornostal/ulauncher
-  sudo apt-get install ulauncher
-
-  # Make sure no app is using ALT+SPACE.
-  # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
-  # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
-  # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
-  ```
-
-- tusk: <https://klaussinani.github.io/tusk/>
-
-- lnav: `snap install lnav`
-
-- GIMP
-
-- flameshot: `sudo apt install flameshot`
-
-- peek
-
-  ```sh
-  sudo add-apt-repository ppa:peek-developers/stable
-  sudo apt install peek
-  ```
-
-- Google Play Music Desktop Player: <https://www.googleplaymusicdesktopplayer.com/>
-
-- VLC
-
-- Chrome: <https://www.google.com/chrome/>
-
-- MailSpring: <https://github.com/Foundry376/Mailspring/releases>
-
-- notable: <https://github.com/notable/notable/releases>
 
 ## SHELL
 
@@ -371,8 +375,7 @@ Terminal=false
 ```sh
 # set PATH so it includes user's private bin directories
 export PYENV_ROOT="$HOME/.pyenv"
-export GOROOT="/usr/local/go"
-export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$GOROOT/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 ```
 
 ### `.zshrc` or `.bashrc`
