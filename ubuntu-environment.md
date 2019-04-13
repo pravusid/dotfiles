@@ -194,16 +194,31 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   sudo apt-get install insomnia
   ```
 
-- golang: <https://golang.org/dl/>
+- golang: <https://github.com/golang/go/wiki/Ubuntu>
 
-  ```sh
-  sudo tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
-  # 환경변수 설정
-  # export PATH=$PATH:/usr/local/go/bin
-  # 만약 기본경로를 사용하지 않는다면
-  # export GOROOT=$HOME/go
-  # export PATH=$PATH:$GOROOT/bin
-  ```
+  - <https://golang.org/dl/>
+
+    ```sh
+    sudo tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
+    # 환경변수 설정
+    # export PATH=$PATH:/usr/local/go/bin
+    # 만약 기본경로를 사용하지 않는다면
+    # export GOROOT=$HOME/go
+    # export PATH=$PATH:$GOROOT/bin
+    ```
+
+  - snap 사용: `sudo snap install --classic go`
+
+  - apt-get 사용
+  
+    ```sh
+    # 기본
+    sudo apt-get install golang-go
+
+    # 버전 선택 /usr/lib/go-<version>/bin
+    sudo add-apt-repository ppa:gophers/archive
+    sudo apt-get install golang-<version>-go
+    ```
 
 - dbeaver
 
