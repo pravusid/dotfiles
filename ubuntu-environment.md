@@ -329,8 +329,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 ### Dock 설정
 
-- plank dock: `sudo apt install plank`
-- plank 설정: `plank --preferences`
 - Ubuntu Dock 제거 (충돌방지): `sudo apt purge gnome-shell-extension-ubuntu-dock`
 
 ### install shell
@@ -341,8 +339,8 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - AlternateTab
 - Caffeine
+- Dash to Dock
 - Dynamic Panel Transparency
-- Hide Dash X
 - Impatience
 - Lock Keys
 - Night Light Slider
