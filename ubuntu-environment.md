@@ -222,8 +222,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - IDEA Ultimate: `sudo snap install intellij-idea-ultimate --classic`
 
-- GoLand: `sudo snap install goland --classic`
-
 - Android Studio: `sudo snap install android-studio --classic`
 
 - vim-gtk: `sudo apt install vim-gtk`
