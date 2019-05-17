@@ -384,10 +384,15 @@ alias tf="\tail -f"
 
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
-
 alias aria="aria2c"
-alias npmlsg="npm ls -g --depth=0"
+
 alias python="python3"
 alias pip="pip3"
 eval "$(pyenv init -)"
+
+alias prod="NODE_ENV=production"
+alias npl="npm ls -g --depth=0"
+alias npr="npm run"
+alias jt="npx jest -t"
+alias jw="npx jest --watch -t"
 ```
