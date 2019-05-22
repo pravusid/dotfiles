@@ -170,11 +170,11 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
   - snap: `sudo snap install node --channel=10/stable --classic`
 
-  - apt-get
+  - nvm
 
     ```sh
-    curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-    sudo apt-get install -y nodejs
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
+    nvm install --lts
     ```
 
 - golang: <https://github.com/golang/go/wiki/Ubuntu>
