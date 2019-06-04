@@ -98,15 +98,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - gnome-tweak-tool: `sudo apt install gnome-tweak-tool`
 
-- gnome-terminal
-
-  ```sh
-  sudo apt-get install dconf-cli
-  git clone https://github.com/GalaticStryder/gnome-terminal-colors-dracula
-  cd gnome-terminal-colors-dracula
-  ./install.sh
-  ```
-
 - lm-sensors: `sudo apt install lm-sensors`
 
 - imwheel: `sudo apt install imwheel`
@@ -334,6 +325,15 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   sudo apt-get install paper-icon-theme
   sudo apt-get install paper-cursor-theme
   sudo apt-get install paper-gtk-theme
+  ```
+
+- gnome-terminal
+
+  ```sh
+  sudo apt-get install dconf-cli
+  git clone https://github.com/GalaticStryder/gnome-terminal-colors-dracula
+  cd gnome-terminal-colors-dracula
+  ./install.sh
   ```
 
 ### Noto Sans 우선순위 설정
