@@ -120,6 +120,8 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - aria2: `sudo apt install aria2`
 
+- fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf`
+
 - ulauncher
 
   ```sh
