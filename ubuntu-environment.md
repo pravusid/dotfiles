@@ -189,8 +189,8 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
     nvm install --lts
 
-    echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.profile
-    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.profile
+    echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
+    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
     echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshrc
     ```
 
@@ -334,6 +334,15 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   zstyle ':prezto:module:prompt' theme 'spaceship'
   ```
 
+- zsh-async
+
+  ```sh
+  if [[ ! -a ~/.zsh-async ]]; then
+    git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async
+  fi
+  source ~/.zsh-async/async.zsh
+  ```
+
 ## 테마
 
 - materia theme: `sudo apt install materia-gtk-theme`
@@ -409,15 +418,21 @@ Terminal=false
 # set PATH so it includes user's private bin directories
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 ```
 
 ### `.zshrc` or `.bashrc`
 
 ```sh
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+export NVM_DIR="$HOME/.nvm"
+function load_nvm() {
+    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+}
+
+# Initialize worker
+async_start_worker nvm_worker -n
+async_register_callback nvm_worker load_nvm
+async_job nvm_worker sleep 0.1
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias fzfpv="fzf --preview 'head -100 {}'"
