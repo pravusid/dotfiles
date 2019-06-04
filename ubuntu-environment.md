@@ -290,50 +290,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   chsh -s /usr/bin/zsh
   ```
 
-- prezto
-
-  ```sh
-  # zsh 실행
-  zsh
-
-  # 설치
-  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
-
-  # 설정파일 생성
-  setopt EXTENDED_GLOB
-  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-  done
-  ```
-
-- prezto-contrib (includes spaceship theme)
-
-  ```sh
-  cd $ZPREZTODIR
-  git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
-  ```
-  
-- `.zpreztorc`
-
-  ```sh
-  zstyle ':prezto:load' pmodule \
-    'environment' \
-    'terminal' \
-    'editor' \
-    'history' \
-    'directory' \
-    'spectrum' \
-    'utility' \
-    'completion' \
-    'contrib-prompt' \
-    'prompt' \
-    'command-not-found' \
-    'git' \
-    'fasd'
-
-  zstyle ':prezto:module:prompt' theme 'spaceship'
-  ```
-
 - zsh-async
 
   - `git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async`
@@ -343,6 +299,36 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     ```sh
     source ~/.zsh-async/async.zsh
     ```
+
+- oh-my-zsh
+
+  ```sh
+  sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  ```
+
+- zsh spaceship theme: <https://github.com/denysdovhan/spaceship-prompt>
+
+  ```sh
+  # 다운로드
+  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+
+  # 해당위치에 심볼릭 링크 생성
+  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+
+  # .zshrc에 적용
+  ZSH_THEME="spaceship"
+  ```
+
+- oh-my-zsh 설정 (.zshrc)
+
+  ```sh
+  plugins=(
+    command-not-found
+    docker
+    git
+    fasd
+  )
+  ```
 
 ## 테마
 
