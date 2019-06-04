@@ -412,10 +412,18 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 ```
 
 ### `.zshrc` or `.bashrc`
+
+```sh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias fzfpv="fzf --preview 'head -100 {}'"
+```
+
+### alias
 
 ```sh
 alias lsg="\ls -al | grep"
