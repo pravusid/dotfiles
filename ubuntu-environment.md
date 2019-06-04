@@ -436,8 +436,6 @@ source ~/.zsh-async/async.zsh
 async_start_worker zsh_async_worker -n
 async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0.1
-
-alias fzfpv="fzf --preview 'head -100 {}'"
 ```
 
 ### alias
@@ -454,6 +452,7 @@ alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
 
 alias aria="aria2c"
+alias fzfpv="fzf --preview 'head -100 {}'"
 
 alias python="python3"
 alias pip="pip3"
