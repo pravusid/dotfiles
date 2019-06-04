@@ -326,7 +326,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     command-not-found
     docker
     git
-    fasd
+    z
   )
   ```
 
