@@ -127,6 +127,9 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   - `.zshrc`
 
     ```sh
+    # 설치할 때 옵션에서 선택하면 추가되어 있음
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    # preview alias
     alias fzfpv="fzf --preview 'head -100 {}'"
     ```
 
@@ -406,8 +409,6 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 ```
 
 ### `.zshrc` or `.bashrc`
