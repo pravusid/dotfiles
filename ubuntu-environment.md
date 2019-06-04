@@ -430,6 +430,7 @@ function lazy_loader() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+    eval "$(pyenv init -)"
 }
 
 source ~/.zsh-async/async.zsh
@@ -456,7 +457,6 @@ alias fzfpv="fzf --preview 'head -100 {}'"
 
 alias python="python3"
 alias pip="pip3"
-eval "$(pyenv init -)"
 
 alias prod="NODE_ENV=production"
 alias npl="npm ls -g --depth=0"
