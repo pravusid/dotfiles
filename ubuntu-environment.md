@@ -425,18 +425,18 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 
 ```sh
 export NVM_DIR="$HOME/.nvm"
-function load_nvm() {
+
+function lazy_loader() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
-# Initialize worker
 source ~/.zsh-async/async.zsh
-async_start_worker nvm_worker -n
-async_register_callback nvm_worker load_nvm
-async_job nvm_worker sleep 0.1
+async_start_worker zsh_async_worker -n
+async_register_callback zsh_async_worker lazy_loader
+async_job zsh_async_worker sleep 0.1
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 alias fzfpv="fzf --preview 'head -100 {}'"
 ```
 
