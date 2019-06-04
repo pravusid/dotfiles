@@ -299,7 +299,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   done
   ```
 
-- prezto spaceship theme
+- prezto-contrib (includes spaceship theme)
 
   ```sh
   cd $ZPREZTODIR
