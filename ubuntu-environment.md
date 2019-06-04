@@ -283,36 +283,49 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   chsh -s /usr/bin/zsh
   ```
 
-- oh-my-zsh
+- prezto
 
   ```sh
-  curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
+  # zsh 실행
+  zsh
+
+  # 설치
+  git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
+
+  # 설정파일 생성
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
   ```
 
-- oh-my-zsh spaceship theme: <https://github.com/denysdovhan/spaceship-prompt>
+- prezto spaceship theme
 
   ```sh
-  # 해당위치에 심볼릭 링크 생성 "/home/idpravus/.oh-my-zsh/custom/themes/spaceship.zsh-theme"
-
-  # .zshrc에 적용
-  ZSH_THEME="spaceship"
+  cd $ZPREZTODIR
+  git clone --recurse-submodules https://github.com/belak/prezto-contrib contrib
   ```
-
-- oh-my-zsh 설정 (`.zshrc`)
+  
+- `.zpreztorc`
 
   ```sh
-  plugins=(
-    autojump
-    command-not-found
-    docker
-    git
-  )
+  zstyle ':prezto:load' pmodule \
+    'environment' \
+    'terminal' \
+    'editor' \
+    'history' \
+    'directory' \
+    'spectrum' \
+    'utility' \
+    'completion' \
+    'contrib-prompt' \
+    'prompt' \
+    'command-not-found' \
+    'git' \
+    'fasd'
 
-  # Run plugins
-  . /usr/share/autojump/autojump.sh
+  zstyle ':prezto:module:prompt' theme 'spaceship'
   ```
-
-- autojump(<https://github.com/wting/autojump>) 설치: `sudo apt install autojump`
 
 ## 테마
 
