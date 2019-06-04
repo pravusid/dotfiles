@@ -337,10 +337,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - zsh-async
 
   ```sh
-  if [[ ! -a ~/.zsh-async ]]; then
-    git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async
-  fi
-  source ~/.zsh-async/async.zsh
+  git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async
   ```
 
 ## 테마
@@ -430,6 +427,7 @@ function load_nvm() {
 }
 
 # Initialize worker
+source ~/.zsh-async/async.zsh
 async_start_worker nvm_worker -n
 async_register_callback nvm_worker load_nvm
 async_job nvm_worker sleep 0.1
