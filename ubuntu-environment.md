@@ -336,9 +336,13 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - zsh-async
 
-  ```sh
-  git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async
-  ```
+  - `git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async`
+
+  - `.zshrc`
+
+    ```sh
+    source ~/.zsh-async/async.zsh
+    ```
 
 ## 테마
 
