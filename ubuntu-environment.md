@@ -120,18 +120,23 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - aria2: `sudo apt install aria2`
 
-- fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
+- fzf
 
-  ```sh
-  grep --line-buffered --color=never -r "" * | fzf
-  fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
-                 echo {} is a binary file ||
-                 (bat --style=numbers --color=always {} ||
-                  highlight -O ansi -l {} ||
-                  coderay {} ||
-                  rougify {} ||
-                  cat {}) 2> /dev/null | head -500'
-  ```
+  - 설치: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
+
+  - `.zshrc`
+
+    ```sh
+    fzfpv() {
+        fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
+                echo {} is a binary file ||
+                (bat --style=numbers --color=always {} ||
+                highlight -O ansi -l {} ||
+                coderay {} ||
+                rougify {} ||
+                cat {}) 2> /dev/null | head -500'
+    }
+    ```
 
 - ulauncher
 
