@@ -127,15 +127,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   - `.zshrc`
 
     ```sh
-    fzfpv() {
-        fzf --preview '[[ $(file --mime {}) =~ binary ]] &&
-                echo {} is a binary file ||
-                (bat --style=numbers --color=always {} ||
-                highlight -O ansi -l {} ||
-                coderay {} ||
-                rougify {} ||
-                cat {}) 2> /dev/null | head -500'
-    }
+    alias fzfpv="fzf --preview 'head -100 {}'"
     ```
 
 - ulauncher
