@@ -420,7 +420,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 ```
 
-### `.zshrc` or `.bashrc`
+### `.zshrc`
 
 ```sh
 export NVM_DIR="$HOME/.nvm"
