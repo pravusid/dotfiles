@@ -339,15 +339,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   sudo apt-get install paper-gtk-theme
   ```
 
-- gnome-terminal
-
-  ```sh
-  sudo apt-get install dconf-cli
-  git clone https://github.com/GalaticStryder/gnome-terminal-colors-dracula
-  cd gnome-terminal-colors-dracula
-  ./install.sh
-  ```
-
 ### Noto Sans 우선순위 설정
 
 `/etc/fonts/conf.d/64-language-selector-prefer.conf` 파일수정
