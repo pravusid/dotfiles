@@ -133,6 +133,12 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     alias fzfpv="fzf --preview 'head -100 {}'"
     ```
 
+- fd-find
+
+  - apt: `sudo apt install fd-find`
+
+  - npm: `sudo npm install -g fd-find`
+
 - ulauncher
 
   ```sh
