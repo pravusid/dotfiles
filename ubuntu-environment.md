@@ -292,7 +292,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - zsh-async
 
-  - `git clone git@github.com:mafredri/zsh-async.git ~/.zsh-async`
+  - `git clone https://github.com/mafredri/zsh-async.git ~/.zsh-async`
 
   - `.zshrc`
 
