@@ -412,6 +412,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 
 ```sh
 export NVM_DIR="$HOME/.nvm"
+export FZF_DEFAULT_COMMAND='fd --type f'
 
 function lazy_loader() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
@@ -440,7 +441,7 @@ alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
 
 alias aria="aria2c"
-alias fzfpv="fzf --preview 'head -100 {}'"
+alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
 
 alias python="python3"
 alias pip="pip3"
