@@ -120,18 +120,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - aria2: `sudo apt install aria2`
 
-- fzf
-
-  - `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
-
-  - `.zshrc`
-
-    ```sh
-    # 설치할 때 옵션에서 선택하면 추가되어 있음
-    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-    # preview alias
-    alias fzfpv="fzf --preview 'head -100 {}'"
-    ```
+- fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
 
 - fd-find
 
