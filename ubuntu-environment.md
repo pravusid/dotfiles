@@ -163,8 +163,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 - Google Play Music Desktop Player: <https://www.googleplaymusicdesktopplayer.com/>
 
-- tusk: <https://klaussinani.github.io/tusk/>
-
 ### 런타임
 
 - Java
