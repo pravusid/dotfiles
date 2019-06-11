@@ -396,7 +396,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 
 ```sh
 export NVM_DIR="$HOME/.nvm"
-export FZF_DEFAULT_COMMAND='fd --type f'
+export FZF_DEFAULT_COMMAND="fd --type f"
 
 function lazy_loader() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
