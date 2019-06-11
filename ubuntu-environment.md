@@ -418,7 +418,14 @@ alias l='ls'
 alias la='ls -A'
 alias ll='ls -AFlh'
 
-alias lsg="\ls -al | grep"
+alias -g H='| head'
+alias -g T='| tail'
+alias -g G='| grep'
+alias -g L="| less"
+alias -g M="| most"
+alias -g NE="2> /dev/null"
+
+alias lg="\ls -al | grep"
 alias pg="\pgrep -fl"
 alias cntf="\ls -1A | wc -l"
 alias ssa="\ss -natp"
