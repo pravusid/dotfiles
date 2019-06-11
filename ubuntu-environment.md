@@ -414,6 +414,10 @@ async_job zsh_async_worker sleep 0
 ### alias
 
 ```sh
+alias l='ls'
+alias la='ls -A'
+alias ll='ls -AFlh'
+
 alias lsg="\ls -al | grep"
 alias pg="\pgrep -fl"
 alias cntf="\ls -1A | wc -l"
