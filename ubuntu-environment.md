@@ -414,13 +414,13 @@ async_job zsh_async_worker sleep 0
 ### alias
 
 ```sh
-alias l='ls'
-alias la='ls -A'
-alias ll='ls -AFlh'
+alias l="ls"
+alias la="ls -A"
+alias ll="ls -AFlh"
 
-alias -g H='| head'
-alias -g T='| tail'
-alias -g G='| grep'
+alias -g H="| head"
+alias -g T="| tail"
+alias -g G="| grep"
 alias -g L="| less"
 alias -g M="| most"
 alias -g NE="2> /dev/null"
