@@ -318,6 +318,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   plugins=(
     command-not-found
     docker
+    docker-compose
     fancy-ctrl-z
     git
     z
