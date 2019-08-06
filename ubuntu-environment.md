@@ -215,9 +215,9 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     ```sh
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
-    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.profile
-    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.profile
-    echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
+    echo 'eval "$(pyenv init -)"' >> ~/.zprofile
     ```
 
 ### 개발툴
@@ -391,6 +391,8 @@ Terminal=false
 # set PATH so it includes user's private bin directories
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
+
+eval "$(pyenv init -)"
 ```
 
 ### `.zshrc`
@@ -404,7 +406,6 @@ function lazy_loader() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-    eval "$(pyenv init -)"
 }
 
 source ~/.zsh-async/async.zsh
