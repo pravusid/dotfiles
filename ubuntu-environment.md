@@ -391,14 +391,15 @@ Terminal=false
 # set PATH so it includes user's private bin directories
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-export FZF_DEFAULT_COMMAND="fd --type f"
 ```
 
 ### `.zshrc`
 
 ```sh
 # User configurations
+export NVM_DIR="$HOME/.nvm"
+export FZF_DEFAULT_COMMAND="fd --type f"
+
 function lazy_loader() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
