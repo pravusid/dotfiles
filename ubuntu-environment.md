@@ -412,7 +412,7 @@ async_start_worker zsh_async_worker -n
 async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0
 
-# User alias
+# User aliases
 alias l="ls"
 alias la="ls -A"
 alias ll="ls -AFlh"
