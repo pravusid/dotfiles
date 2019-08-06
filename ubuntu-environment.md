@@ -385,20 +385,20 @@ Terminal=false
 
 ## 환경변수
 
-### `.profile`
+### `.zprofile`
 
 ```sh
 # set PATH so it includes user's private bin directories
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
+export NVM_DIR="$HOME/.nvm"
+export FZF_DEFAULT_COMMAND="fd --type f"
 ```
 
 ### `.zshrc`
 
 ```sh
-export NVM_DIR="$HOME/.nvm"
-export FZF_DEFAULT_COMMAND="fd --type f"
-
+# User configurations
 function lazy_loader() {
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
     [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
@@ -410,11 +410,8 @@ source ~/.zsh-async/async.zsh
 async_start_worker zsh_async_worker -n
 async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0
-```
 
-### alias
-
-```sh
+# User alias
 alias l="ls"
 alias la="ls -A"
 alias ll="ls -AFlh"
