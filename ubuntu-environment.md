@@ -182,9 +182,9 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
     nvm install --lts
 
-    echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshrc
-    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshrc
-    echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshrc
+    echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshenv
+    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshenv
+    echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshenv
     ```
 
 - golang: <https://github.com/golang/go/wiki/Ubuntu>
@@ -215,9 +215,9 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     ```sh
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
-    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zprofile
-    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zprofile
-    echo 'eval "$(pyenv init -)"' >> ~/.zprofile
+    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshenv
+    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshenv
+    echo 'eval "$(pyenv init -)"' >> ~/.zshenv
     ```
 
 ### 개발툴
@@ -385,7 +385,7 @@ Terminal=false
 
 ## 환경변수
 
-### `.zprofile`
+### `.zshenv`
 
 ```sh
 # set PATH so it includes user's private bin directories
@@ -393,12 +393,7 @@ export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
 
 eval "$(pyenv init -)"
-```
 
-### `.zshrc`
-
-```sh
-# User configurations
 export NVM_DIR="$HOME/.nvm"
 export FZF_DEFAULT_COMMAND="fd --type f"
 
@@ -412,7 +407,11 @@ source ~/.zsh-async/async.zsh
 async_start_worker zsh_async_worker -n
 async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0
+```
 
+### `.zshrc`
+
+```sh
 # User aliases
 alias l="ls"
 alias la="ls -A"
