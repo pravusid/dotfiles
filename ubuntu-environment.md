@@ -176,15 +176,10 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
   - snap: `sudo snap install node --channel=10/stable --classic`
 
-  - nvm
+  - [fnm](https://github.com/Schniz/fnm)
 
     ```sh
-    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.34.0/install.sh | bash
-    nvm install --lts
-
-    echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.zshenv
-    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.zshenv
-    echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.zshenv
+    curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
     ```
 
 - golang: <https://github.com/golang/go/wiki/Ubuntu>
@@ -385,21 +380,29 @@ Terminal=false
 
 ## 환경변수
 
-### `.zshenv`
+### `.zprofile`
 
 ```sh
 # set PATH so it includes user's private bin directories
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$HOME/bin:$HOME/.local/bin:$PYENV_ROOT/bin:$PATH"
+export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 
-eval "$(pyenv init -)"
+# fnm node path fallback
+export PATH=$HOME/.fnm/aliases/default/bin:$PATH
+```
 
-export NVM_DIR="$HOME/.nvm"
-export FZF_DEFAULT_COMMAND="fd --type f"
+### `.zshenv`
 
+```sh
 function lazy_loader() {
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-    [ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+
+    export FNM_DIR="$HOME/.fnm"
+    export PATH="$FNM_DIR:$PATH"
+    eval "$(fnm env --multi)"
+
+    export FZF_DEFAULT_COMMAND="fd --type f"
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 }
 
@@ -440,7 +443,6 @@ alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
 alias python="python3"
 alias pip="pip3"
 
-alias prod="NODE_ENV=production"
 alias npl="npm ls -g --depth=0"
 alias npr="npm run"
 alias jt="npx jest -t"
