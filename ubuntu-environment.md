@@ -194,10 +194,10 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     ```sh
     sudo tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
     # 환경변수 설정
-    # export PATH=$PATH:/usr/local/go/bin
+    # export PATH="$PATH:/usr/local/go/bin"
     # 만약 기본경로를 사용하지 않는다면
-    # export GOROOT=$HOME/go
-    # export PATH=$PATH:$GOROOT/bin
+    # export GOROOT="$HOME/go"
+    # export PATH="$PATH:$GOROOT/bin"
     ```
 
 - python
@@ -214,7 +214,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 
     echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshenv
-    echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshenv
+    echo 'export PATH="$PATH:$PYENV_ROOT/bin"' >> ~/.zshenv
     echo 'eval "$(pyenv init -)"' >> ~/.zshenv
     ```
 
@@ -387,10 +387,10 @@ Terminal=false
 
 ```sh
 # set PATH so it includes user's private bin directories
-export PATH="$HOME/bin:$HOME/.local/bin:$PATH"
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
 
 # fnm node path fallback
-export PATH=$HOME/.fnm/aliases/default/bin:$PATH
+export PATH="$PATH:$HOME/.fnm/aliases/default/bin"
 ```
 
 ### `.zshenv`
@@ -398,10 +398,10 @@ export PATH=$HOME/.fnm/aliases/default/bin:$PATH
 ```sh
 function lazy_loader() {
     export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
+    export PATH="$PATH:$PYENV_ROOT/bin"
     eval "$(pyenv init -)"
 
-    export PATH="$HOME/.fnm:$PATH"
+    export PATH="$PATH:$HOME/.fnm"
     eval "$(fnm env --multi)"
 
     export FZF_DEFAULT_COMMAND="fd --type f"
