@@ -180,6 +180,8 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
     ```sh
     curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
+    fnm use [VERSION]
+    fnm default [VERSION]
     ```
 
 - golang: <https://github.com/golang/go/wiki/Ubuntu>
