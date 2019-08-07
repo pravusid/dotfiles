@@ -401,7 +401,7 @@ function lazy_loader() {
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 
-    export PATH="$HOME/.fnm:$PATH"
+    export PATH=$HOME/.fnm:$PATH
     eval "$(fnm env --multi)"
 
     export FZF_DEFAULT_COMMAND="fd --type f"
