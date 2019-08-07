@@ -180,8 +180,9 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
     ```sh
     curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
-    fnm use [VERSION]
-    fnm default [VERSION]
+
+    # for help
+    fnm
     ```
 
 - golang: <https://github.com/golang/go/wiki/Ubuntu>
@@ -400,8 +401,7 @@ function lazy_loader() {
     export PATH="$PYENV_ROOT/bin:$PATH"
     eval "$(pyenv init -)"
 
-    export FNM_DIR="$HOME/.fnm"
-    export PATH="$FNM_DIR:$PATH"
+    export PATH="$HOME/.fnm:$PATH"
     eval "$(fnm env --multi)"
 
     export FZF_DEFAULT_COMMAND="fd --type f"
