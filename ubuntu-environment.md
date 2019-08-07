@@ -208,14 +208,10 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
   - autoenv: `pip install autoenv`
 
-  - pyenv
+  - [pyenv](https://github.com/pyenv/pyenv)
 
     ```sh
     git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-
-    echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshenv
-    echo 'export PATH="$PATH:$PYENV_ROOT/bin"' >> ~/.zshenv
-    echo 'eval "$(pyenv init -)"' >> ~/.zshenv
     ```
 
 ### 개발툴
