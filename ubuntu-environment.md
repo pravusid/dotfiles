@@ -307,7 +307,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   ZSH_THEME="spaceship"
   ```
 
-- oh-my-zsh 설정 (.zshrc)
+- oh-my-zsh 설정 (`.zshrc`)
 
   ```sh
   plugins=(
