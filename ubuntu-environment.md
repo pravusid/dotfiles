@@ -350,7 +350,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - Caffeine
 - Dash to Dock
 - Dynamic Panel Transparency
-- Emoji Selector
 - Impatience
 - Lock Keys
 - Night Light Slider
