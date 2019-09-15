@@ -362,7 +362,6 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - Night Light Slider
 - No Topleft Hot Corner
 - Places Status Indicator
-- Public IP
 - Sensory Perception
 - Status Area Horizontal Spacing
 - Ubuntu AppIndicators
