@@ -175,7 +175,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
   # 위의 명령어가 실행되지 않으면(command not found)
   sudo apt-get install -y software-properties-common
 
-  # openjdk 설치
+  # openjdk 설치: <adoptopenjdk-version-jvm>
   sudo apt-get install <adoptopenjdk-8-hotspot>
   ```
 
