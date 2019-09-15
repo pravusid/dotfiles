@@ -165,11 +165,18 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 
 ### 런타임
 
-- Java
+- Java: <https://adoptopenjdk.net/installation.html#linux-pkg>
 
   ```sh
-  sudo apt install openjdk-8-jdk
-  sudo apt install openjdk-11-jdk
+  # repository 등록
+  wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+  sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+
+  # 위의 명령어가 실행되지 않으면(command not found)
+  sudo apt-get install -y software-properties-common
+
+  # openjdk 설치
+  sudo apt-get install <adoptopenjdk-8-hotspot>
   ```
 
 - NodeJS
