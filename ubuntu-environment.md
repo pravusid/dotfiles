@@ -359,6 +359,7 @@ xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
 - Dynamic Panel Transparency
 - Impatience
 - Lock Keys
+- Multi Monitors Add-On
 - Night Light Slider
 - No Topleft Hot Corner
 - Places Status Indicator
