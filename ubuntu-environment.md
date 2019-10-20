@@ -414,7 +414,7 @@ async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0
 ```
 
-### `.zshrc`
+### `.zshrc` User aliases
 
 ```sh
 # User aliases
@@ -451,7 +451,7 @@ alias jt="npx jest -t"
 alias jw="npx jest --watch -t"
 ```
 
-### `.zshrc` User Functions
+### `.zshrc` User functions
 
 ```sh
 # User Function
