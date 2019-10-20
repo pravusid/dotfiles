@@ -454,7 +454,7 @@ alias jw="npx jest --watch -t"
 ### `.zshrc` User functions
 
 ```sh
-# User Function
+# User function
 getmpeg() {
   ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
 }
