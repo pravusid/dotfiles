@@ -450,3 +450,12 @@ alias npr="npm run"
 alias jt="npx jest -t"
 alias jw="npx jest --watch -t"
 ```
+
+### `.zshrc` User Functions
+
+```sh
+# User Function
+getmpeg() {
+  ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
+}
+```
