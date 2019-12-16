@@ -441,6 +441,7 @@ alias tf="\tail -f"
 
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias altjava="sudo update-alternatives --config java"
+alias duc="du -hsx * 2> /dev/null | sort -rh"
 
 alias aria="aria2c"
 alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
