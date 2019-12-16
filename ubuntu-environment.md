@@ -414,13 +414,19 @@ async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0
 ```
 
-### `.zshrc` User aliases
+### `.zshrc`
 
 ```sh
 # User functions
 [ -f ~/.zshfunc ] && source ~/.zshfunc
 
 # User aliases
+[ -f ~/.zshalias ] && source ~/.zshalias
+```
+
+### `.zshalias` User aliases
+
+```sh
 alias l="ls"
 alias la="ls -A"
 alias ll="ls -AFlh"
