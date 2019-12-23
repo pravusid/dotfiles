@@ -141,11 +141,11 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - python
 
-  - python3-pip: `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && python get-pip.py`
+  - python3-pip: `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python get-pip.py`
 
-  - virtualenv: `pip install virtualenv`
+  - virtualenv: `sudo pip install virtualenv`
 
-  - autoenv: `pip install autoenv`
+  - autoenv: `sudo pip install autoenv`
 
   - [pyenv](https://github.com/pyenv/pyenv): `git clone https://github.com/pyenv/pyenv.git ~/.pyenv`
 
