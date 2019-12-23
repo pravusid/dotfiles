@@ -255,7 +255,25 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ## Noto Sans 우선순위 설정
 
-`/etc/fonts/conf.avail/70-noto-cjk.conf`
+```sh
+sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
+```
+
+`/etc/fonts/conf.d/65-nonlatin.conf`
+
+```xml
+<family>Noto Serif CJK KR</family> <!-- hangul (ko) -->
+<family>Noto Sans CJK KR</family> <!-- hangul (ko) -->
+<family>Noto Sans Mono CJK KR</family> <!-- hangul (ko)-->
+```
+
+`/etc/fonts/conf.d/60-latin.conf`
+
+```xml
+<family>Noto Serif</family>
+<family>Noto Sans</family>
+<family>Noto Sans Mono</family>
+```
 
 ## gnome extesion
 
