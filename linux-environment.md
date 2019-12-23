@@ -465,8 +465,9 @@ export GTK_IM_MODULE=nimf
 export QT4_IM_MODULE="nimf"
 export QT_IM_MODULE=nimf
 export XMODIFIERS="@im=nimf"
-nimf
 ```
+
+nimf-settings 에서 환경 변수 설정 옵션을 켠다(ON)
 
 gnome 데스크탑 환경의 경우 다음 실행
 
