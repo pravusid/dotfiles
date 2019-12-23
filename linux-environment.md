@@ -44,6 +44,13 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install tp-smapi-dkms acpi-call-dkms
   ```
 
+- snap
+
+  ```sh
+  sudo pacman -S snapd
+  sudo systemctl enable --now snapd.socket
+  ```
+
 - stacer
 
   ```sh
