@@ -93,7 +93,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - VLC: `sudo apt install vlc`
 
-- Telegram Desktop: `sudo snap install telegram-desktop`
+- Telegram Desktop: `sudo pacman -S telegram-desktop`
 
 - MailSpring: `sudo snap install mailspring`
 
