@@ -253,12 +253,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   )
   ```
 
-## 테마
-
-- materia theme: `sudo pacman -S materia-gtk-theme`
-- paper icon theme: `sudo pacman -S paper-icon-theme`
-
-### Noto Sans 우선순위 설정
+## Noto Sans 우선순위 설정
 
 `/etc/fonts/conf.avail/70-noto-cjk.conf`
 
@@ -268,12 +263,9 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### Dock 설정
 
-- (Ubuntu) Ubuntu Dock 제거 (충돌방지): `sudo apt purge gnome-shell-extension-ubuntu-dock`
-
 ### install shell
 
 - `sudo pacman -S chrome-gnome-shell`
-- `sudo apt-get install chrome-gnome-shell`
 
 ### list
 
@@ -289,7 +281,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 - Places Status Indicator
 - Sensory Perception
 - Status Area Horizontal Spacing
-- (Ubuntu) Ubuntu AppIndicators
 - User Themes
 
 ## 터미널 변경
