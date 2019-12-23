@@ -28,9 +28,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 ### 일반
 
 - gnome
-  - gnome-tweak-tool
-    - `sudo pacman -S gnome-tweaks`
-    - `sudo apt install gnome-tweak-tool`
+  - gnome-tweak-tool: `sudo pacman -S gnome-tweaks`
   - gconf: `sudo pacman -S gconf`
 
 - lm-sensors: `sudo apt install lm-sensors`
@@ -61,33 +59,24 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install stacer
   ```
 
-- aria2
-  - `sudo apt install aria2`
-  - `sudo pacman -S aria2`
+- aria2: `sudo pacman -S aria2`
 
 - fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
 
-- fd-find
-  - pacman: `sudo pacman -S fd`
-  - apt: `sudo apt install fd-find`
+- fd-find: `sudo pacman -S fd`
 
 - ulauncher
 
   - `yay -S ulauncher`
 
     ```sh
-    sudo add-apt-repository ppa:agornostal/ulauncher
-    sudo apt-get install ulauncher
-
     # Make sure no app is using ALT+SPACE.
     # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
     # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
     # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
     ```
 
-- Chrome
-  - `yay -S google-chrome`
-  - <https://www.google.com/chrome/>
+- Chrome: `yay -S google-chrome`
 
 - remmina: `sudo apt install remmina`
 
@@ -126,7 +115,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install <adoptopenjdk-8-hotspot>
   ```
 
-- NodeJS: [fnm](https://github.com/Schniz/fnm)
+- NodeJS: <https://github.com/Schniz/fnm>
 
   ```sh
   curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
@@ -162,19 +151,13 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### 개발툴
 
-- git
-  - `sudo pacman -S git`
-  - `sudo apt install git`
+- git: `sudo pacman -S git`
 
-- curl
-  - `sudo pacman -S curl`
-  - `sudo apt install curl`
+- curl: `sudo pacman -S curl`
 
-- jq
-  - `sudo pacman -S jq`
-  - `sudo apt install jq`
+- jq: `sudo pacman -S jq`
 
-- Visual Studio Code: `sudo snap install code --classic`
+- Visual Studio Code: `yay -S visual-studio-code-bin`
 
 - IDEA Ultimate: `sudo snap install intellij-idea-ultimate --classic`
 
