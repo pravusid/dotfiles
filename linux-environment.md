@@ -83,8 +83,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
     ```
 
 - Chrome
-  - <https://www.google.com/chrome/>
   - `yay -S google-chrome`
+  - <https://www.google.com/chrome/>
 
 - remmina: `sudo apt install remmina`
 
@@ -123,18 +123,14 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install <adoptopenjdk-8-hotspot>
   ```
 
-- NodeJS
+- NodeJS: [fnm](https://github.com/Schniz/fnm)
 
-  - snap: `sudo snap install node --channel=10/stable --classic`
+  ```sh
+  curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
 
-  - [fnm](https://github.com/Schniz/fnm)
-
-    ```sh
-    curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
-
-    # for help
-    fnm
-    ```
+  # for help
+  fnm
+  ```
 
 - golang: <https://github.com/golang/go/wiki/Ubuntu>
 
@@ -163,11 +159,17 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### 개발툴
 
-- git: `sudo apt install git`
+- git
+  - `sudo pacman -S git`
+  - `sudo apt install git`
 
-- curl: `sudo apt install curl`
+- curl
+  - `sudo pacman -S curl`
+  - `sudo apt install curl`
 
-- jq: `sudo apt install jq`
+- jq
+  - `sudo pacman -S jq`
+  - `sudo apt install jq`
 
 - Visual Studio Code: `sudo snap install code --classic`
 
