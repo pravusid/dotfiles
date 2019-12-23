@@ -65,15 +65,15 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
   - `yay -S ulauncher`
 
-  ```sh
-  sudo add-apt-repository ppa:agornostal/ulauncher
-  sudo apt-get install ulauncher
+    ```sh
+    sudo add-apt-repository ppa:agornostal/ulauncher
+    sudo apt-get install ulauncher
 
-  # Make sure no app is using ALT+SPACE.
-  # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
-  # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
-  # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
-  ```
+    # Make sure no app is using ALT+SPACE.
+    # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
+    # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
+    # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
+    ```
 
 - Chrome
   - <https://www.google.com/chrome/>
