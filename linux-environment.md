@@ -27,9 +27,11 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### 일반
 
-- gnome-tweak-tool
-  - `sudo pacman -S gnome-tweaks`
-  - `sudo apt install gnome-tweak-tool`
+- gnome
+  - gnome-tweak-tool
+    - `sudo pacman -S gnome-tweaks`
+    - `sudo apt install gnome-tweak-tool`
+  - gconf: `sudo pacman -S gconf`
 
 - lm-sensors: `sudo apt install lm-sensors`
 
