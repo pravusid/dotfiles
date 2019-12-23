@@ -257,6 +257,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 ## 테마
 
 - materia theme: `sudo pacman -S materia-gtk-theme`
+- paper icon theme: `sudo pacman -S paper-icon-theme`
 
 ### Noto Sans 우선순위 설정
 
