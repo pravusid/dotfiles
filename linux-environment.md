@@ -27,13 +27,9 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### 일반
 
-- fcitx: `sudo apt install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
-
-  - 한영 전환 팝업 삭제: `~/.config/fcitx/config` 파일 수정: `ShowInputWindowAfterTriggering=False`
-  - `;`키 충돌: 입력기 설정 → 부가기능 → QuickPhrase → 맨위 옵션을 없음으로 → 아래의 고급 설정 클릭 → 철자 힌트 보이지 않기 체크
-  - `ctrl`+`alt`+`h` 단축키 충돌: 입력기 설정 → 부가기능 → Keyboard Layout → 단어 힌트 전환 단축기 해제
-
-- gnome-tweak-tool: `sudo apt install gnome-tweak-tool`
+- gnome-tweak-tool
+  - `sudo pacman -S gnome-tweaks`
+  - `sudo apt install gnome-tweak-tool`
 
 - lm-sensors: `sudo apt install lm-sensors`
 
@@ -55,17 +51,19 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt-get install stacer
   ```
 
-- aria2: `sudo apt install aria2`
+- aria2
+  - `sudo apt install aria2`
+  - `sudo pacman -S aria2`
 
 - fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
 
 - fd-find
-
+  - pacman: `sudo pacman -S fd`
   - apt: `sudo apt install fd-find`
 
-  - npm: `sudo npm install -g fd-find`
-
 - ulauncher
+
+  - `yay -S ulauncher`
 
   ```sh
   sudo add-apt-repository ppa:agornostal/ulauncher
@@ -77,7 +75,9 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
   ```
 
-- Chrome: <https://www.google.com/chrome/>
+- Chrome
+  - <https://www.google.com/chrome/>
+  - `yay -S google-chrome`
 
 - remmina: `sudo apt install remmina`
 
@@ -488,6 +488,12 @@ gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMMod
 ```
 
 ### Ubuntu & xkb 설정
+
+fcitx: `sudo apt install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
+
+- 한영 전환 팝업 삭제: `~/.config/fcitx/config` 파일 수정: `ShowInputWindowAfterTriggering=False`
+- `;`키 충돌: 입력기 설정 → 부가기능 → QuickPhrase → 맨위 옵션을 없음으로 → 아래의 고급 설정 클릭 → 철자 힌트 보이지 않기 체크
+- `ctrl`+`alt`+`h` 단축키 충돌: 입력기 설정 → 부가기능 → Keyboard Layout → 단어 힌트 전환 단축기 해제
 
 #### 전체 설정 변경
 
