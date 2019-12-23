@@ -305,13 +305,13 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 </fontconfig>
 ```
 
-## Ubuntu gnome extesion
+## gnome extesion
 
 확장 설정: dconf-editor: `org->gnome->shell->extension`
 
 ### Dock 설정
 
-- Ubuntu Dock 제거 (충돌방지): `sudo apt purge gnome-shell-extension-ubuntu-dock`
+- (Ubuntu) Ubuntu Dock 제거 (충돌방지): `sudo apt purge gnome-shell-extension-ubuntu-dock`
 
 ### install shell
 
@@ -331,7 +331,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 - Places Status Indicator
 - Sensory Perception
 - Status Area Horizontal Spacing
-- Ubuntu AppIndicators
+- (Ubuntu) Ubuntu AppIndicators
 - User Themes
 
 ## 터미널 변경
