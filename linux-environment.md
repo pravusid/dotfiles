@@ -162,7 +162,9 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - jq: `sudo apt install jq`
 
-- Visual Studio Code: `sudo snap install code --classic`
+- Visual Studio Code
+  - `sudo pacman -S code`
+  - `sudo snap install code --classic`
 
 - IDEA Ultimate: `sudo snap install intellij-idea-ultimate --classic`
 
