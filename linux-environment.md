@@ -253,7 +253,9 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   )
   ```
 
-## Noto Sans 우선순위 설정
+## 폰트 설정
+
+emoji 설치: `sudo pacman -S noto-fonts-emoji`
 
 ```sh
 sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
