@@ -317,7 +317,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ### install shell
 
-`sudo apt-get install chrome-gnome-shell`
+- `sudo pacman -S chrome-gnome-shell`
+- `sudo apt-get install chrome-gnome-shell`
 
 ### list
 
