@@ -256,16 +256,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ## 테마
 
-- materia theme: `sudo apt install materia-gtk-theme`
-
-- paper
-
-  ```sh
-  sudo add-apt-repository ppa:snwh/pulp
-  sudo apt-get install paper-icon-theme
-  sudo apt-get install paper-cursor-theme
-  sudo apt-get install paper-gtk-theme
-  ```
+- materia theme: `sudo pacman -S materia-gtk-theme`
 
 ### Noto Sans 우선순위 설정
 
