@@ -90,9 +90,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
-- MailSpring: `sudo snap install mailspring`
-
-- Google Play Music Desktop Player: <https://www.googleplaymusicdesktopplayer.com/>
+- Google Play Music Desktop Player: `sudo snap install google-play-music-desktop-player`
 
 ### 런타임
 
