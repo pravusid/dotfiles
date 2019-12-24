@@ -294,7 +294,6 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
   - Impatience
   - Lock Keys
   - Multi Monitors Add-On
-  - Night Light Slider
   - No Topleft Hot Corner
   - Sensory Perception
 
