@@ -77,7 +77,10 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - remmina: `sudo pacman -S remmina`
 
-- flameshot: `sudo pacman -S flameshot`
+- flameshot
+  - `sudo pacman -S flameshot`
+  - config: `flameshot config`
+  - hotkey: 데스크톱 환경 단축키와 `flameshot gui` 연결
 
 - peek: `sudo pacman -S peek`
 
