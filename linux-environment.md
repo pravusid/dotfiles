@@ -33,15 +33,13 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - lm-sensors: `sudo pacman -S lm_sensors`
 
-- imwheel: `sudo apt install imwheel`
-
 - tlp
 
   ```sh
-  sudo add-apt-repository ppa:linrunner/tlp
-  sudo apt-get install tlp tlp-rdw
-  # ThinkPads
-  sudo apt-get install tp-smapi-dkms acpi-call-dkms
+  # BE
+  sudo pacman -S tlp tlp-rdw
+  # FE
+  yay -S tlpui-git
   ```
 
 - snap
@@ -52,12 +50,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo ln -s /var/lib/snapd/snap /snap
   ```
 
-- stacer
-
-  ```sh
-  sudo add-apt-repository ppa:oguzhaninan/stacer
-  sudo apt-get install stacer
-  ```
+- stacer: `yay -S stacer`
 
 - aria2: `sudo pacman -S aria2`
 
@@ -89,9 +82,9 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo apt install peek
   ```
 
-- GIMP: `sudo apt install gimp`
+- GIMP: `sudo pacman -S gimp`
 
-- VLC: `sudo apt install vlc`
+- VLC: `sudo pacman -S vlc`
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
