@@ -25,6 +25,10 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ## 사용하는 패키지들
 
+### 기본앱 변경
+
+`sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list`
+
 ### 일반
 
 - gnome
@@ -71,16 +75,11 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Chrome: `yay -S google-chrome`
 
-- remmina: `sudo apt install remmina`
+- remmina: `sudo pacman -S remmina`
 
-- flameshot: `sudo apt install flameshot`
+- flameshot: `sudo pacman -S flameshot`
 
-- peek
-
-  ```sh
-  sudo add-apt-repository ppa:peek-developers/stable
-  sudo apt install peek
-  ```
+- peek: `sudo pacman -S peek`
 
 - GIMP: `sudo pacman -S gimp`
 
@@ -95,18 +94,22 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 ### 런타임
 
 - Java: <https://adoptopenjdk.net/installation.html#linux-pkg>
+  
+  - Manjaro: `sudo pacman -S jdk8-openjdk`
 
-  ```sh
-  # repository 등록
-  wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-  sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
+  - Ubuntu
 
-  # 위의 명령어가 실행되지 않으면(command not found)
-  sudo apt-get install -y software-properties-common
+    ```sh
+    # repository 등록
+    wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
+    sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
 
-  # openjdk 설치: <adoptopenjdk-version-jvm>
-  sudo apt-get install <adoptopenjdk-8-hotspot>
-  ```
+    # 위의 명령어가 실행되지 않으면(command not found)
+    sudo apt-get install -y software-properties-common
+
+    # openjdk 설치: <adoptopenjdk-version-jvm>
+    sudo apt-get install <adoptopenjdk-8-hotspot>
+    ```
 
 - NodeJS: <https://github.com/Schniz/fnm>
 
@@ -156,45 +159,15 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Android Studio: `sudo snap install android-studio --classic`
 
-- vim-gtk: `sudo apt install vim-gtk`
-
-  - 설치 후 기본 에디터 변경 `sudo sed -i 's/gedit/vim/' /usr/share/applications/defaults.list`
-
 - lnav: `sudo snap install lnav`
 
-- Slack: <https://slack.com/downloads/linux>
+- Slack: `yay -S slack-desktop`
 
-- dbeaver
+- dbeaver: `sudo pacman -S dbeaver`
 
-  ```sh
-  sudo add-apt-repository ppa:serge-rider/dbeaver-ce
-  sudo apt-get install dbeaver-ce
-  ```
+- insomnia: `yay -S insomnia`
 
-- Insomnia
-
-  ```sh
-  # Add to sources
-  echo "deb https://dl.bintray.com/getinsomnia/Insomnia /" \
-      | sudo tee -a /etc/apt/sources.list.d/insomnia.list
-
-  # Add public key used to verify code signature
-  wget --quiet -O - https://insomnia.rest/keys/debian-public.key.asc \
-      | sudo apt-key add -
-
-  # Refresh repository sources and install Insomnia
-  sudo apt-get install insomnia
-  ```
-
-- wireshark
-
-  ```sh
-  sudo add-apt-repository ppa:wireshark-dev/stable
-  sudo apt-get install wireshark
-  # 설치 후
-  sudo setcap 'CAP_NET_RAW+eip CAP_NET_ADMIN+eip' /usr/bin/dumpcap
-  sudo usermod -aG wireshark $USER
-  ```
+- wireshark: `sudo pacman -S wireshark-qt`
 
 ## SHELL
 
