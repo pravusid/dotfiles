@@ -31,7 +31,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   - gnome-tweak-tool: `sudo pacman -S gnome-tweaks`
   - gconf: `sudo pacman -S gconf`
 
-- lm-sensors: `sudo apt install lm-sensors`
+- lm-sensors: `sudo pacman -S lm_sensors`
 
 - imwheel: `sudo apt install imwheel`
 
@@ -289,19 +289,25 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
 
 ### list
 
-- AlternateTab
-- Caffeine
-- Dash to Dock
-- Dynamic Panel Transparency
-- Impatience
-- Lock Keys
-- Multi Monitors Add-On
-- Night Light Slider
-- No Topleft Hot Corner
-- Places Status Indicator
-- Sensory Perception
-- Status Area Horizontal Spacing
-- User Themes
+- 설치
+  - Dynamic Panel Transparency
+  - Impatience
+  - Lock Keys
+  - Multi Monitors Add-On
+  - Night Light Slider
+  - No Topleft Hot Corner
+  - Sensory Perception
+
+- 만자로 기본
+  - Arc menu
+  - Caffeine
+  - Dash to Dock
+  - KStatusNotifierItem/AppIndicator Support
+  - Status Area Horizontal Spacing
+  - Places Status Indicator
+  - Removable drive menu
+  - User Themes
+  - Workspace indicator
 
 ## 터미널 변경
 
