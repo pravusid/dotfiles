@@ -246,7 +246,7 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
 
 ## gnome extesion
 
-확장 설정: dconf-editor: `org->gnome->shell->extension`
+확장 설정: dconf-editor: `org > gnome > shell > extension`
 
 ### Dock 설정
 
