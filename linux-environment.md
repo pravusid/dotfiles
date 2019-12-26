@@ -432,7 +432,7 @@ gsettings set org.gnome.settings-daemon.plugins.keyboard active false
 gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'nimf'>}"
 ```
 
-### Ubuntu & xkb 설정
+### Ubuntu & fcitx & xkb 설정
 
 fcitx: `sudo apt install fcitx-hangul` 설치 후 `im-config`에서 기본 입력기 설정
 
