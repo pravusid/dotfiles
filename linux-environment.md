@@ -86,7 +86,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - GIMP: `sudo pacman -S gimp`
 
-- VLC: `sudo pacman -S vlc`
+- mpv: `sudo pacman -S mpv`
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
