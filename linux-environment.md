@@ -170,6 +170,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - wireshark: `sudo pacman -S wireshark-qt`
 
+- docker: `sudo pacman -S docker`
+
 ## SHELL
 
 - zsh
