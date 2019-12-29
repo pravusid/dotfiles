@@ -226,11 +226,58 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ## 폰트 설정
 
-emoji 설치: `sudo pacman -S noto-fonts-emoji`
+emoji font 설치
+
+```sh
+sudo pacman -S noto-fonts-emoji
+```
+
+noto-cjk conf 심볼릭 링크
 
 ```sh
 sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
 ```
+
+### X11 fallback
+
+`/etc/fonts/local.conf`
+
+```conf
+<?xml version="1.0"?>
+<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+<fontconfig>
+  <alias>
+    <family>sans-serif</family>
+    <prefer>
+      <family>Noto Sans</family>
+    </prefer>
+    <default>
+      <family>Noto Sans CJK KR</family>
+    </default>
+  </alias>
+  <alias>
+    <family>serif</family>
+    <prefer>
+      <family>Noto Serif</family>
+    </prefer>
+    <default>
+      <family>Noto Serif CJK KR</family>
+    </default>
+  </alias>
+  <alias>
+    <family>monospace</family>
+    <prefer>
+      <family>Source Code Pro</family>
+      <family>Noto Sans Mono</family>
+    </prefer>
+    <default>
+      <family>DejaVu Sans Mono</family>
+    </default>
+  </alias>
+</fontconfig>
+```
+
+### 개별 설정
 
 `/etc/fonts/conf.d/65-nonlatin.conf`
 
