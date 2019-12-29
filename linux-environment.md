@@ -1,5 +1,9 @@
 # 리눅스 환경설정
 
+## X Window 환경확인
+
+`echo $XDG_SESSION_TYPE`
+
 ## Repository 변경
 
 ### Manjaro
@@ -240,7 +244,7 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
 
 ### X11 fallback
 
-`/etc/fonts/local.conf`
+`/etc/fonts/conf.d/51-local.conf`를 활성화하고 `/etc/fonts/local.conf` 파일에 다음 내용 생성
 
 ```xml
 <?xml version="1.0"?>
