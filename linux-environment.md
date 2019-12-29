@@ -54,6 +54,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sudo ln -s /var/lib/snapd/snap /snap
   ```
 
+- gnupg: `sudo pacman -S gnupg`
+
 - stacer: `yay -S stacer`
 
 - aria2: `sudo pacman -S aria2`
