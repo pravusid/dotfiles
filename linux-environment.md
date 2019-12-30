@@ -160,7 +160,12 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - jq: `sudo pacman -S jq`
 
-- Visual Studio Code: `yay -S visual-studio-code-bin`
+- Visual Studio Code
+  - 설치: `yay -S visual-studio-code-bin`
+  - [background issue](https://github.com/microsoft/vscode/issues/85452)
+    - Command Palette search for "Configure Runtime Arguments"
+    - Set `disable-hardware-acceleration: true`
+    - Restart
 
 - IDEA Ultimate: `sudo snap install intellij-idea-ultimate --classic`
 
