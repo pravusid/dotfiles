@@ -259,6 +259,8 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
     <family>sans-serif</family>
     <prefer>
       <family>Noto Sans</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
     </prefer>
     <default>
       <family>Noto Sans CJK KR</family>
@@ -268,6 +270,8 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
     <family>serif</family>
     <prefer>
       <family>Noto Serif</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
     </prefer>
     <default>
       <family>Noto Serif CJK KR</family>
@@ -278,6 +282,8 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
     <prefer>
       <family>Source Code Pro</family>
       <family>Noto Sans Mono</family>
+      <family>Noto Color Emoji</family>
+      <family>Noto Emoji</family>
     </prefer>
     <default>
       <family>DejaVu Sans Mono</family>
