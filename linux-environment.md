@@ -393,11 +393,11 @@ async_job zsh_async_worker sleep 0
 ### `.zshrc`
 
 ```sh
-# User functions
-[ -f ~/.zshfunc ] && source ~/.zshfunc
-
 # User aliases
 [ -f ~/.zshalias ] && source ~/.zshalias
+
+# User functions
+[ -f ~/.zshfunc ] && source ~/.zshfunc
 ```
 
 ### `.zshalias` User aliases
