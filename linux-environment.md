@@ -463,6 +463,11 @@ getportconn() {
     }' \
     | sort | uniq -c | sort -rn
 }
+
+kp() {
+  lsof -ti :$1 | xargs -r -I {} kill -9 {}
+  echo "kill port $1"
+}
 ```
 
 ## 한/영, 한자 키
