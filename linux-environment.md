@@ -159,7 +159,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
     - Set `disable-hardware-acceleration: true`
     - Restart
 
-- IDEA Ultimate: `yay -S intellij-idea-ultimate-edition-jre`
+- IDEA Ultimate: `yay -S intellij-idea-ultimate-edition`
 
 - Android Studio: `yay -S android-studio`
 
