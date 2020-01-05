@@ -17,7 +17,7 @@ sudo pacman-mirrors --country South_Korea Japan Taiwan China Hong_Kong
 sudo pacman-mirrors --country all
 
 # 업데이트
-sudo pacman -Syyu
+sudo pacman -Syu
 ```
 
 ### Ubuntu
