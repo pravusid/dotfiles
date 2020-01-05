@@ -50,14 +50,6 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   yay -S tlpui-git
   ```
 
-- snap
-
-  ```sh
-  sudo pacman -S snapd
-  sudo systemctl enable --now snapd.socket
-  sudo ln -s /var/lib/snapd/snap /snap
-  ```
-
 - gnupg: `sudo pacman -S gnupg`
 
 - stacer: `yay -S stacer`
@@ -96,7 +88,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
-- Google Play Music Desktop Player: `sudo snap install google-play-music-desktop-player`
+- Google Play Music Desktop Player: `yay -S gpmdp`
 
 ### 런타임
 
@@ -129,7 +121,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - golang: <https://github.com/golang/go/wiki/Ubuntu>
 
-  - snap: `sudo snap install --classic go`
+  - `sudo pacman -S go`
 
   - <https://golang.org/dl/>
 
@@ -167,11 +159,11 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
     - Set `disable-hardware-acceleration: true`
     - Restart
 
-- IDEA Ultimate: `sudo snap install intellij-idea-ultimate --classic`
+- IDEA Ultimate: `yay -S intellij-idea-ultimate-edition-jre`
 
-- Android Studio: `sudo snap install android-studio --classic`
+- Android Studio: `yay -S android-studio`
 
-- lnav: `sudo snap install lnav`
+- lnav: `yay -S lnav`
 
 - Slack: `yay -S slack-desktop`
 
