@@ -90,6 +90,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Google Play Music Desktop Player: `yay -S gpmdp`
 
+- Notion: `yay -S notion-app`
+
 ### 런타임
 
 - Java: <https://adoptopenjdk.net/installation.html#linux-pkg>
