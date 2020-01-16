@@ -332,8 +332,6 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
   - KStatusNotifierItem/AppIndicator Support
   - Native Window Placement
   - OpenWeather
-  - Status Area Horizontal Spacing
-  - Places Status Indicator
   - Removable drive menu
   - User Themes
   - Workspace indicator
