@@ -414,10 +414,8 @@ alias ssl="\ss -nltp"
 alias tf="\tail -f"
 
 alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
-alias altjava="sudo update-alternatives --config java"
 alias duc="du -hsx * 2> /dev/null | sort -rh"
 
-alias aria="aria2c"
 alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
 
 alias python="python3"
@@ -427,6 +425,8 @@ alias npl="npm ls -g --depth=0"
 alias npr="npm run"
 alias jt="npx jest -t"
 alias jw="npx jest --watch -t"
+
+alias aria="aria2c"
 ```
 
 ### `.zshfunc` User functions
