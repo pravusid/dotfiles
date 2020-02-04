@@ -423,8 +423,6 @@ alias pip="pip3"
 
 alias npl="npm ls -g --depth=0"
 alias npr="npm run"
-alias jt="npx jest -t"
-alias jw="npx jest --watch -t"
 
 alias aria="aria2c"
 ```
