@@ -54,6 +54,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - stacer: `yay -S stacer`
 
+- xclip: `sudo pacman -S xclip`
+
 - aria2: `sudo pacman -S aria2`
 
 - fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
