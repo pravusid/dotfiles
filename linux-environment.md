@@ -306,6 +306,12 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
 <family>Noto Sans Mono</family>
 ```
 
+## 단축키 충돌
+
+- `dconf-editor`
+- `/org/gnome/desktop/wm/keybindings/`
+- `switch-to-workspace-up`, `switch-to-workspace-down`: `['disabled']
+
 ## gnome extesion
 
 확장 설정: dconf-editor: `org > gnome > shell > extension`
