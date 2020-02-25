@@ -357,117 +357,6 @@ Exec=/usr/bin/tilix -e vim %F
 Terminal=false
 ```
 
-## 환경변수
-
-### `.zprofile`
-
-```sh
-# set PATH so it includes user's private bin directories
-export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
-
-# fnm node path fallback
-export PATH="$PATH:$HOME/.fnm/aliases/default/bin"
-```
-
-### `.zshenv`
-
-```sh
-function lazy_loader() {
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PATH:$PYENV_ROOT/bin"
-    eval "$(pyenv init -)"
-
-    export PATH="$PATH:$HOME/.fnm"
-    eval "$(fnm env --multi)"
-
-    export FZF_DEFAULT_COMMAND="fd --type f"
-    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-}
-
-source ~/.zsh-async/async.zsh
-async_start_worker zsh_async_worker -n
-async_register_callback zsh_async_worker lazy_loader
-async_job zsh_async_worker sleep 0
-```
-
-### `.zshrc`
-
-```sh
-# User aliases
-[ -f ~/.zshalias ] && source ~/.zshalias
-
-# User functions
-[ -f ~/.zshfunc ] && source ~/.zshfunc
-```
-
-### `.zshalias` User aliases
-
-```sh
-alias l="ls"
-alias la="ls -A"
-alias ll="ls -AFlh"
-
-alias -g H="| head"
-alias -g T="| tail"
-alias -g G="| grep"
-alias -g L="| less"
-alias -g M="| most"
-alias -g NE="2> /dev/null"
-
-alias lg="\ls -al | grep"
-alias pg="\pgrep -fl"
-alias cntf="\ls -1A | wc -l"
-alias ssa="\ss -natp"
-alias ssl="\ss -nltp"
-alias tf="\tail -f"
-
-alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
-alias duc="du -hsx * 2> /dev/null | sort -rh"
-
-alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
-
-alias python="python3"
-alias pip="pip3"
-
-alias npl="npm ls -g --depth=0"
-alias npr="npm run"
-
-alias aria="aria2c"
-```
-
-### `.zshfunc` User functions
-
-```sh
-getmpeg() {
-  ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
-}
-
-getportconn() {
-  grep -v "rem_address" /proc/net/tcp  \
-    | awk 'function hextodec(str,ret,n,i,k,c)  {
-      ret = 0
-      n = length(str)
-      for (i = 1; i <= n; i++) {
-        c = tolower(substr(str, i, 1))
-        k = index("123456789abcdef", c)
-        ret = ret * 16 + k
-      }
-      return ret
-    } {
-      x=hextodec(substr($2,index($2,":")-2,2));
-      for (i=5; i>0; i-=2) x = x"."hextodec(substr($2,i,2))
-    } {
-      print x":"hextodec(substr($2,index($2,":")+1,4))
-    }' \
-    | sort | uniq -c | sort -rn
-}
-
-kp() {
-  lsof -ti :$1 | xargs -r -I {} kill -9 {}
-  echo "kill port $1"
-}
-```
-
 ## 한/영, 한자 키
 
 ### Manjaro & nimf
@@ -584,4 +473,115 @@ xkb 로컬 설정 적용 (`~/.xinitrc` 파일)
 
 ```sh
 xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
+```
+
+## 환경변수
+
+### `.zprofile`
+
+```sh
+# set PATH so it includes user's private bin directories
+export PATH="$PATH:$HOME/bin:$HOME/.local/bin"
+
+# fnm node path fallback
+export PATH="$PATH:$HOME/.fnm/aliases/default/bin"
+```
+
+### `.zshenv`
+
+```sh
+function lazy_loader() {
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PATH:$PYENV_ROOT/bin"
+    eval "$(pyenv init -)"
+
+    export PATH="$PATH:$HOME/.fnm"
+    eval "$(fnm env --multi)"
+
+    export FZF_DEFAULT_COMMAND="fd --type f"
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+}
+
+source ~/.zsh-async/async.zsh
+async_start_worker zsh_async_worker -n
+async_register_callback zsh_async_worker lazy_loader
+async_job zsh_async_worker sleep 0
+```
+
+### `.zshrc`
+
+```sh
+# User aliases
+[ -f ~/.zshalias ] && source ~/.zshalias
+
+# User functions
+[ -f ~/.zshfunc ] && source ~/.zshfunc
+```
+
+### `.zshalias` User aliases
+
+```sh
+alias l="ls"
+alias la="ls -A"
+alias ll="ls -AFlh"
+
+alias -g H="| head"
+alias -g T="| tail"
+alias -g G="| grep"
+alias -g L="| less"
+alias -g M="| most"
+alias -g NE="2> /dev/null"
+
+alias lg="\ls -al | grep"
+alias pg="\pgrep -fl"
+alias cntf="\ls -1A | wc -l"
+alias ssa="\ss -natp"
+alias ssl="\ss -nltp"
+alias tf="\tail -f"
+
+alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
+alias duc="du -hsx * 2> /dev/null | sort -rh"
+
+alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
+
+alias python="python3"
+alias pip="pip3"
+
+alias npl="npm ls -g --depth=0"
+alias npr="npm run"
+
+alias aria="aria2c"
+```
+
+### `.zshfunc` User functions
+
+```sh
+getmpeg() {
+  ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
+}
+
+getportconn() {
+  grep -v "rem_address" /proc/net/tcp  \
+    | awk 'function hextodec(str,ret,n,i,k,c)  {
+      ret = 0
+      n = length(str)
+      for (i = 1; i <= n; i++) {
+        c = tolower(substr(str, i, 1))
+        k = index("123456789abcdef", c)
+        ret = ret * 16 + k
+      }
+      return ret
+    } {
+      x=hextodec(substr($2,index($2,":")-2,2));
+      for (i=5; i>0; i-=2) x = x"."hextodec(substr($2,i,2))
+    } {
+      print x":"hextodec(substr($2,index($2,":")+1,4))
+    }' \
+    | sort | uniq -c | sort -rn
+}
+
+kp() {
+  lsof -ti :$1 | xargs -r -I {} kill -9 {}
+  echo "kill port $1"
+}
 ```
