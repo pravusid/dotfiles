@@ -94,6 +94,10 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - Notion: `yay -S notion-app`
 
+- nomacs: `sudo pacman -S nomacs`
+
+- VeraCrypt: `sudo pacman -S veracrypt`
+
 ### 런타임
 
 - Java: <https://adoptopenjdk.net/installation.html#linux-pkg>
