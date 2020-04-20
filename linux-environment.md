@@ -243,6 +243,15 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 ## 폰트 설정
 
+monospace font 설치
+
+```sh
+sudo pacman -S ttf-fira-code
+sudo pacman -S adobe-source-code-pro-fonts
+sudo pacman -S ttf-ibm-plex
+yay -S ttf-d2coding
+```
+
 emoji font 설치
 
 ```sh
