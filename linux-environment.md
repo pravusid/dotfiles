@@ -54,9 +54,13 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - stacer: `yay -S stacer`
 
+- tldr: `sudo pacman -S tldr`
+
 - xclip: `sudo pacman -S xclip`
 
 - aria2: `sudo pacman -S aria2`
+
+- mitmproxy: `sudo pacman -S mitmproxy`
 
 - fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
 
@@ -182,6 +186,10 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 - wireshark: `sudo pacman -S wireshark-qt`
 
 - docker: `sudo pacman -S docker`
+
+- shellcheck: `sudo pacman -S shellcheck`
+
+- tokei: `sudo pacman -S tokei`
 
 ## SHELL
 
