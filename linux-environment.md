@@ -352,6 +352,7 @@ sudo ln -s /etc/fonts/conf.avail/70-noto-cjk.conf /etc/fonts/conf.d/
   - Multi Monitors Add-On
   - No Topleft Hot Corner
   - Sensory Perception
+  - Sound Input & Output Device Chooser
 
 - 만자로 기본
   - Arc menu
