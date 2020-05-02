@@ -181,7 +181,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - dbeaver: `sudo pacman -S dbeaver`
 
-- insomnia: `yay -S insomnia`
+- insomnia: `yay -S insomnia insomnia-designer`
 
 - wireshark: `sudo pacman -S wireshark-qt`
 
