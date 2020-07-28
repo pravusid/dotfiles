@@ -215,7 +215,14 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
   ```
 
-- zsh spaceship theme: <https://github.com/denysdovhan/spaceship-prompt>
+- starship theme: <https://starship.rs/>
+
+  ```sh
+  curl -fsSL https://starship.rs/install.sh | bash
+  echo 'eval "$(starship init zsh)"' >> .zshrc
+  ```
+
+- ~~zsh spaceship theme~~: <https://github.com/denysdovhan/spaceship-prompt>
 
   ```sh
   # 다운로드
