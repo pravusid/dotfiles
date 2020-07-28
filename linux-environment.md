@@ -219,7 +219,7 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
   ```sh
   curl -fsSL https://starship.rs/install.sh | bash
-  echo 'eval "$(starship init zsh)"' >> .zshrc
+  echo 'eval "$(starship init zsh)"' >> .zshenv
   ```
 
 - ~~zsh spaceship theme~~: <https://github.com/denysdovhan/spaceship-prompt>
@@ -536,6 +536,8 @@ source ~/.zsh-async/async.zsh
 async_start_worker zsh_async_worker -n
 async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0
+
+eval "$(starship init zsh)"
 ```
 
 ### `.zshrc`
