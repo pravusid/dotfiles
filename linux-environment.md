@@ -257,8 +257,8 @@ monospace font 설치
 ```sh
 sudo pacman -S ttf-fira-code
 sudo pacman -S ttf-ibm-plex
-yay -S ttf-d2coding
 yay -S nerd-fonts-source-code-pro
+yay -S ttf-d2coding
 ```
 
 emoji font 설치
