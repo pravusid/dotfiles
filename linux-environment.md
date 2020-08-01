@@ -66,6 +66,8 @@ sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 
 - fd-find: `sudo pacman -S fd`
 
+- bat: `sudo pacman -S bat`
+
 - ulauncher
 
   - `yay -S ulauncher`
