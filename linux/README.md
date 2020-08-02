@@ -21,7 +21,9 @@ Terminal=false
 
 - `dconf-editor`
 - `/org/gnome/desktop/wm/keybindings/`
-- `switch-to-workspace-up`, `switch-to-workspace-down`: `['disabled']
+- `activate-window-menu`: 비활성화
+- `switch-to-workspace-up`, `switch-to-workspace-down`: `['<Super>Page_Up']`, `['<Super>Page_Down']`
+- `switch-to-workspace-left`, `switch-to-workspace-right`: 비활성화
 
 ## color schemes
 
