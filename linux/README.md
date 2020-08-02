@@ -1,4 +1,4 @@
-# 각종 system 설정
+# Linux 환경설정
 
 ## X Window 환경확인
 
