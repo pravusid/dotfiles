@@ -22,3 +22,9 @@ Terminal=false
 - `dconf-editor`
 - `/org/gnome/desktop/wm/keybindings/`
 - `switch-to-workspace-up`, `switch-to-workspace-down`: `['disabled']
+
+## color schemes
+
+- <https://github.com/arcticicestudio/nord-dircolors/>
+- <https://github.com/arcticicestudio/nord-gnome-terminal>
+- <https://github.com/arcticicestudio/nord-gedit>
