@@ -2,6 +2,8 @@
 
 ## SHELL
 
+`sudo pacman -S zsh`
+
 - zsh
 
   ```sh
@@ -43,3 +45,27 @@
   # .zshrc에 적용
   ZSH_THEME="spaceship"
   ```
+
+## vim
+
+```sh
+sudo pacman -S vim
+
+# with curl
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+# with wget
+mkdir -p ~/.vim/autoload/
+cd ~/.vim/autoload/
+wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+vim-plug 설치: `.vimrc` 수정 후
+
+```vim
+:source %
+:PlugInstall
+```
+
+만약 플러그인 설치가 제대로 되지 않았다면: `:PlugUpdate`
