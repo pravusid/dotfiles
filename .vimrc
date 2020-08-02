@@ -14,8 +14,6 @@ set clipboard=unnamedplus
 set list
 set listchars=tab:\|\ ,trail:·
 
-set guifont=DejaVu\ Sans\ Mono\ 12
-
 ca ㅈ w
 ca ㅈㅂ wq
 
