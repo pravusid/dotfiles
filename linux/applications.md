@@ -7,6 +7,7 @@
 ## 일반
 
 - gnome
+
   - gnome-tweak-tool: `sudo pacman -S gnome-tweaks`
   - gconf: `sudo pacman -S gconf`
 
@@ -55,6 +56,7 @@
 - remmina: `sudo pacman -S remmina`
 
 - flameshot
+
   - `sudo pacman -S flameshot`
   - config: `flameshot config`
   - hotkey: 데스크톱 환경 단축키와 `flameshot gui` 연결
@@ -74,7 +76,7 @@
 ## 런타임/컴파일러
 
 - Java: <https://adoptopenjdk.net/installation.html#linux-pkg>
-  
+
   - Manjaro: `sudo pacman -S jdk8-openjdk`
 
   - Ubuntu
@@ -134,7 +136,9 @@
 - jq: `sudo pacman -S jq`
 
 - Visual Studio Code
+
   - 설치: `yay -S visual-studio-code-bin`
+
   - [background issue](https://github.com/microsoft/vscode/issues/85452)
     - Command Palette search for "Configure Runtime Arguments"
     - Set `disable-hardware-acceleration: true`
@@ -151,8 +155,6 @@
 - dbeaver: `sudo pacman -S dbeaver`
 
 - insomnia: `yay -S insomnia-designer`
-
-- wireshark: `sudo pacman -S wireshark-qt`
 
 - docker: `sudo pacman -S docker`
 
