@@ -67,11 +67,7 @@
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
-- Google Play Music Desktop Player: `yay -S gpmdp`
-
 - Notion: `yay -S notion-app`
-
-- nomacs: `sudo pacman -S nomacs`
 
 - VeraCrypt: `sudo pacman -S veracrypt`
 
