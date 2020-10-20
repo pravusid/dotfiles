@@ -10,23 +10,22 @@
 
 ## list
 
-- 설치
-  - Dynamic Panel Transparency
-  - Impatience
-  - Lock Keys
-  - Multi Monitors Add-On
-  - No Topleft Hot Corner
-  - Sensory Perception
-  - Sound Input & Output Device Chooser
-
-- 만자로 기본
-  - Arc menu
-  - Auto Move Windows
-  - Caffeine
-  - Dash to Dock
-  - KStatusNotifierItem/AppIndicator Support
-  - Native Window Placement
-  - OpenWeather
-  - Removable drive menu
-  - User Themes
-  - Workspace indicator
+- AppIndicator and KStatusNotifierItem Support
+- Auto Move Windows
+- Caffeine
+- Dash to Dock
+- Dynamic Panel Transparency
+- Horizontal workspaces
+- Impatience
+- Lock Keys
+- Multi Monitors Add-On
+- Night Theme Switcher
+- No Topleft Hot Corner
+- OpenWeather
+- Pamac Updates Indicator
+- Places Status Indicator
+- Removable Drive Menu
+- Sensory Perception
+- Sound Input & Output Device Chooser
+- User Themes
+- Workspace indicator
