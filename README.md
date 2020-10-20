@@ -49,7 +49,10 @@
 ## vim
 
 ```sh
+# linux
 sudo pacman -S vim
+# macOS
+brew install vim
 
 # with curl
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
