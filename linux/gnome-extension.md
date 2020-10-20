@@ -15,8 +15,6 @@
 - Caffeine
 - Dash to Dock
 - Dynamic Panel Transparency
-- Horizontal workspaces
-- Impatience
 - Lock Keys
 - Multi Monitors Add-On
 - Night Theme Switcher
