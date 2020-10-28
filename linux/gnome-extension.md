@@ -15,6 +15,7 @@
 - Caffeine
 - Dash to Dock
 - Dynamic Panel Transparency
+- Emoji Selector
 - Lock Keys
 - Multi Monitors Add-On
 - Night Theme Switcher
