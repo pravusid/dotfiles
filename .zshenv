@@ -4,7 +4,7 @@ function lazy_loader() {
     eval "$(pyenv init -)"
 
     export PATH="$PATH:$HOME/.fnm"
-    eval "$(fnm env --multi)"
+    eval "$(fnm env)"
 
     export FZF_DEFAULT_COMMAND="fd --type f"
     [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
