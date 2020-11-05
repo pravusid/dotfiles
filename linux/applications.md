@@ -161,3 +161,10 @@
 - shellcheck: `sudo pacman -S shellcheck`
 
 - tokei: `sudo pacman -S tokei`
+
+## 하드웨어 가속
+
+- <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
+- <https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration>
+- <https://wiki.archlinux.org/index.php/Chromium#Hardware_video_acceleration>
+- <https://wiki.archlinux.org/index.php/Mpv#Hardware_video_acceleration>
