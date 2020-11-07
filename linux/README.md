@@ -13,3 +13,5 @@
 - [한글입력](./hangul.md)
 
 - [터미널](./terminal.md)
+
+- [절전](./suspend.md)
