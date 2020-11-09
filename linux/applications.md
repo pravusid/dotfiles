@@ -22,6 +22,10 @@
   yay -S tlpui-git
   ```
 
+  - ThinkPad Battery (레거시 모듈 사용 해제)
+    - `TPACPI_ENABLE = 0`
+    - `TPSMAPI_ENABLE = 0`
+
 - gnupg: `sudo pacman -S gnupg`
 
 - stacer: `yay -S stacer`
