@@ -1,14 +1,19 @@
 # 리눅스 한글입력
 
-## Manjaro & nimf
+- 입력장치 조회: `xinput list`
+- 입력장치 입력 확인: `xinput test <id>`
 
-<https://github.com/hamonikr/nimf/wiki/Manjaro-build>
+## Manjaro & nimf
 
 ## nimf 설치
 
+- <https://github.com/hamonikr/nimf/wiki/Manjaro-build>
+- <https://wiki.archlinux.org/index.php/Nimf>
+
 ```sh
-sudo pacman -S binutils base-devel intltool qt4 libappindicator-gtk3 libhangul anthy librime m17n-lib m17n-db gtk-doc
-yay -S nimf
+# 빌드한 패키지를 다운로드 받아 바로 설치할 수도 있음
+# https://github.com/hamonikr/nimf/tree/master/archlinux
+sudo pacman -U ./nimf-2019.08.14-1-any.pkg.tar.xz
 ```
 
 ### nimf 설정
@@ -20,9 +25,11 @@ export GTK_IM_MODULE=nimf
 export QT4_IM_MODULE="nimf"
 export QT_IM_MODULE=nimf
 export XMODIFIERS="@im=nimf"
+nimf
 ```
 
-nimf-settings 에서 환경 변수 설정 옵션을 켠다(ON)
+- nimf-settings 에서 `환경 변수 설정` 옵션을 켠다(ON)
+- 한국어를 제외한 엔진을 비활성화 한다
 
 gnome 데스크탑 환경의 경우 다음 실행
 
@@ -39,7 +46,7 @@ fcitx: `sudo apt install fcitx-hangul` 설치 후 `im-config`에서 기본 입�
 - `;`키 충돌: 입력기 설정 → 부가기능 → QuickPhrase → 맨위 옵션을 없음으로 → 아래의 고급 설정 클릭 → 철자 힌트 보이지 않기 체크
 - `ctrl`+`alt`+`h` 단축키 충돌: 입력기 설정 → 부가기능 → Keyboard Layout → 단어 힌트 전환 단축기 해제
 
-### 전체 설정 변경
+### 글로벌 설정 변경
 
 xkb 설정 디렉토리로 간다
 
@@ -81,37 +88,8 @@ key <RCTL> {        [ Hangul_Hanja          ]       };
 
 ### 로컬 설정 변경
 
-> Ubuntu Tweak > 키보드와 마우스 > 추가 배치 옵션 > 한국어 한/영, 한자 키 설정과 동일하며 Fcitx 시작/재시작과 함께 초기화 되는 문제점도 동일함
+> 로컬설정은 Fcitx 시작/재시작과 함께 초기화 되는 문제점이 있음
 
-xkb 로컬 설정을 위한 디렉토리 생성
+gnome-tweaks > 키보드와 마우스 > 추가 배치 옵션 > 한국어 한/영, 한자 키 설정
 
-```sh
-mkdir -p ~/.xkb/symbols
-mkdir -p ~/.xkb/keymap
-```
-
-xkb 설정 복사
-
-```sh
-setxkbmap -print > ~/.xkb/keymap/hangul.xkb
-```
-
-xkb 로컬 설정 변경
-
-```text
-xkb_keymap {
-    xkb_keycodes  { include "evdev+aliases(qwerty)" };
-    xkb_types     { include "complete"      };
-    xkb_compat    { include "complete"      };
-    xkb_symbols   {
-        include "pc+us+kr(kr104):2+inet(evdev)+terminate(ctrl_alt_bksp)+kr(ralt_hangul)+kr(rctrl_hanja)"
-    };
-    xkb_geometry  { include "pc(pc105)"     };
-};
-```
-
-xkb 로컬 설정 적용 (`~/.xinitrc` 파일)
-
-```sh
-xkbcomp -I$HOME/.xkb ~/.xkb/keymap/hangul.xkb $DISPLAY
-```
+> gnome-tweaks에서 변경한 설정 위치: dconf > `/org/gnome/desktop/input-sources/xkb-options`
