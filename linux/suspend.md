@@ -12,6 +12,10 @@ multi boot 사용중이라면 윈도우즈 절전 설정 및 바이오스 설정
 - (현재 사용할 수 없는 설정 변경)
 - `빠른 시작 켜기` 해제
 
+## 대기상태에서 USB 전력 비활성화
+
+BIOS 설정 `Configuration`에서 `Always on USB` 설정을 비활성화 한다
+
 ## Enabling S3
 
 The BIOS has two "Sleep State" options, called "Windows" and "Linux", which you can find in at Config -> Power -> Sleep State.
