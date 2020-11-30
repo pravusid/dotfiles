@@ -18,7 +18,6 @@
 - Emoji Selector
 - Lock Keys
 - Multi Monitors Add-On
-- Night Theme Switcher
 - No Topleft Hot Corner
 - OpenWeather
 - Pamac Updates Indicator
