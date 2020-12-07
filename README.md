@@ -46,6 +46,45 @@
   ZSH_THEME="spaceship"
   ```
 
+## version manager
+
+### asdf
+
+```sh
+# asdf
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf
+cd ~/.asdf
+git checkout "$(git describe --abbrev=0 --tags)"
+chmod +x asdf.sh
+
+# for help
+asdf
+
+# for update
+asdf update
+
+# add plugin
+asdf plugin add <name> [git-url]
+# update plugin
+asdf plugin update --all
+# for me
+asdf plugin add go https://github.com/kennyp/asdf-golang
+asdf plugin add python https://github.com/danhper/asdf-python
+```
+
+### fnm
+
+```sh
+# fnm
+curl -fsSL https://fnm.vercel.app/install | bash
+
+# for update
+curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
+
+# for help
+fnm
+```
+
 ## vim
 
 ```sh

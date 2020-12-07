@@ -79,57 +79,18 @@
 
 ## 런타임/컴파일러
 
-- Java: <https://adoptopenjdk.net/installation.html#linux-pkg>
+- Java
 
   - Manjaro: `sudo pacman -S jdk8-openjdk`
+  - RPM|DEB: <https://adoptopenjdk.net/installation.html#linux-pkg>
 
-  - Ubuntu
+- NodeJS: <https://nodejs.org/en/download/package-manager/>
 
-    ```sh
-    # repository 등록
-    wget -qO - https://adoptopenjdk.jfrog.io/adoptopenjdk/api/gpg/key/public | sudo apt-key add -
-    sudo add-apt-repository --yes https://adoptopenjdk.jfrog.io/adoptopenjdk/deb/
-
-    # 위의 명령어가 실행되지 않으면(command not found)
-    sudo apt-get install -y software-properties-common
-
-    # openjdk 설치: <adoptopenjdk-version-jvm>
-    sudo apt-get install <adoptopenjdk-8-hotspot>
-    ```
-
-- NodeJS: <https://github.com/Schniz/fnm>
-
-  ```sh
-  curl -fsSL https://github.com/Schniz/fnm/raw/master/.ci/install.sh | bash
-
-  # for help
-  fnm
-  ```
-
-- golang: <https://github.com/golang/go/wiki/Ubuntu>
-
-  - `sudo pacman -S go`
-
-  - <https://golang.org/dl/>
-
-    ```sh
-    sudo tar -C /usr/local -xzf go[VERSION].linux-amd64.tar.gz
-    # 환경변수 설정
-    # export PATH="$PATH:/usr/local/go/bin"
-    # 만약 기본경로를 사용하지 않는다면
-    # export GOROOT="$HOME/go"
-    # export PATH="$PATH:$GOROOT/bin"
-    ```
+- golang: <https://golang.org/doc/install>
 
 - python
 
   - python3-pip: `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python get-pip.py`
-
-  - virtualenv: `sudo pip install virtualenv`
-
-  - autoenv: `sudo pip install autoenv`
-
-  - [pyenv](https://github.com/pyenv/pyenv): `git clone https://github.com/pyenv/pyenv.git ~/.pyenv`
 
 ## 개발툴
 

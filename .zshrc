@@ -3,6 +3,7 @@
 
 # oh-my-zsh plugins
 plugins=(
+  asdf
   command-not-found
   docker
   docker-compose
