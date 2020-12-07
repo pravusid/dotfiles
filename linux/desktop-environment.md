@@ -28,3 +28,10 @@
 - <https://github.com/arcticicestudio/nord-dircolors/>
 - <https://github.com/arcticicestudio/nord-gnome-terminal>
 - <https://github.com/arcticicestudio/nord-gedit>
+
+## 하드웨어 가속
+
+- <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>
+- <https://wiki.archlinux.org/index.php/Firefox#Hardware_video_acceleration>
+- <https://wiki.archlinux.org/index.php/Chromium#Hardware_video_acceleration>
+- <https://wiki.archlinux.org/index.php/Mpv#Hardware_video_acceleration>
