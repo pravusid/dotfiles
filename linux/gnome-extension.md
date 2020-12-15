@@ -26,4 +26,3 @@
 - Sensory Perception
 - Sound Input & Output Device Chooser
 - User Themes
-- Workspace indicator
