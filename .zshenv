@@ -10,5 +10,3 @@ source ~/.zsh-async/async.zsh
 async_start_worker zsh_async_worker -n
 async_register_callback zsh_async_worker lazy_loader
 async_job zsh_async_worker sleep 0
-
-eval "$(starship init zsh)"

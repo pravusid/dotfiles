@@ -17,3 +17,6 @@ plugins=(
 
 # User functions
 [ -f ~/.zshfunc ] && source ~/.zshfunc
+
+# starship
+eval "$(starship init zsh)"
