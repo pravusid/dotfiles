@@ -84,7 +84,10 @@
   - Manjaro: `sudo pacman -S jdk8-openjdk`
   - RPM|DEB: <https://adoptopenjdk.net/installation.html#linux-pkg>
 
-- NodeJS: <https://nodejs.org/en/download/package-manager/>
+- NodeJS
+
+  - runtime: <https://nodejs.org/en/download/package-manager/>
+  - yarn: `sudo pacman -S yarn`
 
 - golang: <https://golang.org/doc/install>
 
