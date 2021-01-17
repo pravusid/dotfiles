@@ -55,6 +55,8 @@
     # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
     ```
 
+  - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
+
 - Chrome: `yay -S google-chrome`
 
 - remmina: `sudo pacman -S remmina`
