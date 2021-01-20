@@ -101,6 +101,8 @@
 
 - git: `sudo pacman -S git`
 
+- git-delta: `yay -S git-delta-bin`
+
 - curl: `sudo pacman -S curl`
 
 - jq: `sudo pacman -S jq`
