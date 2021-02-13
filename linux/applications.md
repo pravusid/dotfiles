@@ -77,6 +77,8 @@
 
 - Notion: `yay -S notion-app`
 
+- zettlr: `yay -S zettlr-bin`
+
 - VeraCrypt: `sudo pacman -S veracrypt`
 
 ## 런타임/컴파일러
