@@ -352,15 +352,15 @@
             "path" : "path",
             "maxwidth" : 1.7976931348623157e+308,
             "base: priority" : 5,
+            "base: compression resistance" : 1,
+            "minwidth" : 0,
             "shared text color" : {
               "Red Component" : 0.90000000000000002,
               "Color Space" : "sRGB",
               "Blue Component" : 0.63,
               "Alpha Component" : 1,
               "Green Component" : 0.79200000000000004
-            },
-            "base: compression resistance" : 1,
-            "minwidth" : 0
+            }
           },
           "layout advanced configuration dictionary value" : {
             "font" : ".AppleSystemUIFont 12",
@@ -511,7 +511,7 @@
     }
   },
   "Silence Bell" : false,
-  "Unicode Normalization" : 0,
+  "Unicode Normalization" : 1,
   "Ansi 14 Color" : {
     "Red Component" : 0.49344515800476074,
     "Color Space" : "Calibrated",
@@ -519,7 +519,7 @@
     "Alpha Component" : 1,
     "Green Component" : 0.68614721298217773
   },
-  "ASCII Ligatures" : true,
+  "ASCII Ligatures" : false,
   "Name" : "pravusid",
   "Cursor Text Color" : {
     "Red Component" : 0.17621420323848724,
@@ -595,5 +595,5 @@
     "Alpha Component" : 1,
     "Green Component" : 0.8916594386100769
   },
-  "Transparency" : 0.078932027284263961
+  "Transparency" : 0.078932027284263975
 }
