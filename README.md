@@ -33,19 +33,6 @@
   echo 'eval "$(starship init zsh)"' >> .zshenv
   ```
 
-- ~~zsh spaceship theme~~: <https://github.com/denysdovhan/spaceship-prompt>
-
-  ```sh
-  # 다운로드
-  git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-
-  # 해당위치에 심볼릭 링크 생성
-  ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
-
-  # .zshrc에 적용
-  ZSH_THEME="spaceship"
-  ```
-
 ## version manager
 
 ### asdf
@@ -70,6 +57,7 @@ asdf plugin update --all
 # for me
 asdf plugin add go https://github.com/kennyp/asdf-golang
 asdf plugin add python https://github.com/danhper/asdf-python
+asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
 ```
 
 ### fnm
