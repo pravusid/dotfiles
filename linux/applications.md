@@ -23,6 +23,7 @@
   ```
 
   - ThinkPad Battery (레거시 모듈 사용 해제)
+
     - `TPACPI_ENABLE = 0`
     - `TPSMAPI_ENABLE = 0`
 
@@ -49,13 +50,22 @@
   - `yay -S ulauncher`
 
     ```sh
+    # in X11
     # Make sure no app is using ALT+SPACE.
     # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
     # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
     # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
+
+    # in Wayland
+    # Install package wmctrl (needed to activate app focus)
+    # Open Ulauncher Preferences and set hotkey to something you'll never use
+    # Open OS Settings > Devices > Keyboard > Add Hotkey > Scroll all the way down > Click +
+    # In Command enter ulauncher-toggle, set name and shortcut, then click Add
     ```
 
   - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
+
+- Chromium: `sudo pacman -S chromium`
 
 - Chrome: `yay -S google-chrome`
 
@@ -71,7 +81,7 @@
 
 - GIMP: `sudo pacman -S gimp`
 
-- mpv: `sudo pacman -S mpv`
+- vlc: `sudo pacman -S vlc`
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
@@ -81,11 +91,13 @@
 
 - VeraCrypt: `sudo pacman -S veracrypt`
 
+- dropbox: `yay -S dropbox`
+
 ## 런타임/컴파일러
 
 - Java
 
-  - Manjaro: `sudo pacman -S jdk8-openjdk`
+  - Manjaro: `sudo pacman -S jdk11-openjdk`
   - RPM|DEB: <https://adoptopenjdk.net/installation.html#linux-pkg>
 
 - NodeJS
