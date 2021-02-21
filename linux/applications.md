@@ -143,3 +143,5 @@
 - shellcheck: `sudo pacman -S shellcheck`
 
 - tokei: `sudo pacman -S tokei`
+
+- figma: `yay -S figma-linux`
