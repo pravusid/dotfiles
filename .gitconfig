@@ -1,0 +1,30 @@
+[user]
+    name = Sangdon Park
+    email = pravusid@gmail.com
+    signingkey = 4B0A009C0CC438F4
+
+[core]
+    autocrlf = input
+    excludesfile = ~/.gitignore_global
+    pager = delta
+
+[delta]
+    plus-color = "#012800"
+    minus-color = "#340001"
+    syntax-theme = Nord
+
+[interactive]
+    diffFilter = delta --color-only
+
+[commit]
+    gpgsign = true
+
+[pull]
+    rebase = true
+
+[alias]
+    a = "!git add $(git status -s | fzf -m | awk '{print $2}')"
+    b = "!git checkout $(\
+        _height=$(stty size | awk '{print $1}');\
+        git branch | egrep -v '^\\*' | fzf --preview \"git log {1} | head -n $_height\";\
+    )"

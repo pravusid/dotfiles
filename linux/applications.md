@@ -71,11 +71,7 @@
 
 - remmina: `sudo pacman -S remmina`
 
-- flameshot
-
-  - `sudo pacman -S flameshot`
-  - config: `flameshot config`
-  - hotkey: 데스크톱 환경 단축키와 `flameshot gui` 연결
+- flameshot: `sudo pacman -S flameshot`
 
 - peek: `sudo pacman -S peek`
 
@@ -130,7 +126,7 @@
     - Set `disable-hardware-acceleration: true`
     - Restart
 
-- IDEA Ultimate: `yay -S intellij-idea-ultimate-edition intellij-idea-ultimate-edition-jre`
+- IntelliJ CE: `sudo pacman -S intellij-idea-community-edition`
 
 - Android Studio: `yay -S android-studio`
 
