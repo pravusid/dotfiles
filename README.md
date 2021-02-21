@@ -26,7 +26,7 @@
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
 
-- starship theme: <https://starship.rs/>
+- starship: <https://starship.rs/>
 
   ```sh
   curl -fsSL https://starship.rs/install.sh | bash
