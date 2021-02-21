@@ -5,6 +5,8 @@
 
 ## xkb 설정
 
+> 설정 > 키보드 바로 가기 > 대체 문자 키 옵션을 사용하지 않는 키로 설정: `Menu 키`
+
 ### 글로벌 설정 변경
 
 xkb 설정 디렉토리로 간다
@@ -81,6 +83,10 @@ XMODIFIERS=@im=fcitx
 ### fcitx 설정 in Debian
 
 기본 입력기 설정: `im-config`
+
+## kime
+
+<https://github.com/Riey/kime>
 
 ## nimf
 

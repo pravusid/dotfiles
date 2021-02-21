@@ -33,6 +33,23 @@
   echo 'eval "$(starship init zsh)"' >> .zshenv
   ```
 
+### dotfiles
+
+- env
+
+  - [`.zprofile`](./.zprofile)
+  - [`.zshenv`](./.zshenv)
+
+- env for interactive
+
+  - [`.zshrc`](./.zshrc)
+  - [`.zshalias`](./.zshalias)
+  - [`.zshfunc`](./.zshfunc)
+
+- git
+
+  - [`.gitconfig`](./.gitconfig)
+
 ## version manager
 
 ### asdf
@@ -54,6 +71,7 @@ asdf update
 asdf plugin add <name> [git-url]
 # update plugin
 asdf plugin update --all
+
 # for me
 asdf plugin add go https://github.com/kennyp/asdf-golang
 asdf plugin add python https://github.com/danhper/asdf-python
@@ -74,6 +92,8 @@ fnm
 ```
 
 ## vim
+
+[`.vimrc`](./.vimrc)
 
 ```sh
 # linux
