@@ -39,8 +39,6 @@
 
 - mitmproxy: `sudo pacman -S mitmproxy`
 
-- fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
-
 - fd-find: `sudo pacman -S fd`
 
 - bat: `sudo pacman -S bat`

@@ -1,4 +1,5 @@
 # oh-my-zsh 기본 설정 생략
+
 # ...
 
 # oh-my-zsh plugins
@@ -11,6 +12,8 @@ plugins=(
   git
   z
 )
+
+# ...
 
 # User aliases
 [ -f ~/.zshalias ] && source ~/.zshalias
