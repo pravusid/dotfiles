@@ -15,3 +15,5 @@
 - [터미널](./terminal.md)
 
 - [절전](./suspend.md)
+
+- [Troubleshooting](./troubleshooting.md)
