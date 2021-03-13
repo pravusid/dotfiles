@@ -15,6 +15,7 @@
 - Dash to Dock
 - Dynamic Panel Transparency
 - Emoji Selector
+- Extended Gestures
 - KStatusNotifierItem/AppIndicator Support
 - Lock Keys
 - Multi Monitors Add-On
