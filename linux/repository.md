@@ -12,6 +12,9 @@ sudo pacman-mirrors --country all
 
 # 업데이트
 sudo pacman -Syu
+
+# 브랜치 변경
+sudo pacman-mirrors --api --set-branch <stable|testing|unstable>
 ```
 
 ## Ubuntu
