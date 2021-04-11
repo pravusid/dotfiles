@@ -41,3 +41,16 @@ xcode-select --install
 # inline
 sudo rm -rf $(xcode-select -p) && xcode-select --install
 ```
+
+## 아이콘캐시 초기화
+
+```sh
+# The command to remove the main store is
+sudo rm -rfv /Library/Caches/com.apple.iconservices.store
+
+# That for the subsidiary data is
+# which includes the Dock icon cache too.
+sudo find /private/var/folders/ \( -name com.apple.dock.iconcache -or -name com.apple.iconservices \) -exec rm -rfv {} \;
+
+killall Dock Finder
+```
