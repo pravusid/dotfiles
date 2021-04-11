@@ -2,7 +2,15 @@
 
 multi boot 사용중이라면 윈도우즈 절전 설정 및 바이오스 설정 변경이 필요
 
-## Windows10 빠른 시작(Fast Startup) 비활성화
+## Windows10 절전 설정
+
+> 다음 중 하나를 수행함
+
+(A) 최대절전(Hibernate) 비활성화
+
+`powercfg /h off`
+
+(B) 빠른 시작(Fast Startup) 비활성화
 
 - 설정
 - 시스템
