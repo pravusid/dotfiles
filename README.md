@@ -2,23 +2,11 @@
 
 ## SHELL
 
-`sudo pacman -S zsh`
-
-- zsh
-
-  ```sh
-  chsh -s /usr/bin/zsh
-  ```
-
 - zsh-async
 
-  - `git clone https://github.com/mafredri/zsh-async.git ~/.zsh-async`
-
-  - `.zshrc`
-
-    ```sh
-    source ~/.zsh-async/async.zsh
-    ```
+  ```sh
+  git clone https://github.com/mafredri/zsh-async.git ~/.zsh-async
+  ```
 
 - oh-my-zsh
 
@@ -33,7 +21,11 @@
   echo 'eval "$(starship init zsh)"' >> .zshenv
   ```
 
-- fzf: `git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install`
+- fzf
+
+  ```sh
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+  ```
 
 ### dotfiles
 
@@ -50,7 +42,7 @@
 
 - git
 
-  - [`.gitconfig`](./.gitconfig)
+  - [`.gitconfig`](./.gitconfig) #(git-delta 필요)
 
 ## version manager
 
@@ -98,11 +90,6 @@ fnm
 [`.vimrc`](./.vimrc)
 
 ```sh
-# linux
-sudo pacman -S vim
-# macOS
-brew install vim
-
 # with curl
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

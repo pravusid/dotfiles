@@ -6,6 +6,13 @@
 
 ## 일반
 
+- zsh
+
+  ```sh
+  sudo pacman -S zsh
+  chsh -s /usr/bin/zsh
+  ```
+
 - gnome
 
   - gnome-tweak-tool: `sudo pacman -S gnome-tweaks`
@@ -106,6 +113,8 @@
   - python3-pip: `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python get-pip.py`
 
 ## 개발툴
+
+- vim: `sudo pacman -S vim`
 
 - git: `sudo pacman -S git`
 
