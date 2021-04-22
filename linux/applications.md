@@ -101,16 +101,7 @@
   - Manjaro: `sudo pacman -S jdk11-openjdk`
   - RPM|DEB: <https://adoptopenjdk.net/installation.html#linux-pkg>
 
-- NodeJS
-
-  - runtime: <https://nodejs.org/en/download/package-manager/>
-  - yarn: `sudo pacman -S yarn`
-
-- golang: <https://golang.org/doc/install>
-
-- python
-
-  - python3-pip: `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py && sudo python get-pip.py`
+> [use asdf](../README.md#asdf)
 
 ## 개발툴
 
