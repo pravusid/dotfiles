@@ -2,17 +2,21 @@
 
 <https://pqrs.org/osx/karabiner/>
 
-- Karabiner-Elements 실행
+Karabiner-Elements 실행
 
-- Simple Modifications > Target Device: 외부 키보드 선택
+## Simple Modifications > Target Device: Apple Internal Keyboard / Trackpad
 
-  - FROM `left_command` TO `left_option`
-  - FROM `left_option` TO `left_command`
+- FROM `left_control` TO `fn`
 
-- Simple Modifications > Target Device: Apple Internal Keyboard / Trackpad
+- FROM `fn` TO `left_control`
 
-  - FROM `left_control` TO `fn`
-  - FROM `fn` TO `left_control`
+- FROM `right_command` TO `f18`
+
+## Simple Modifications > Target Device: 외부 키보드
+
+- FROM `left_command` TO `left_option`
+
+- FROM `left_option` TO `left_command`
 
 - 한/영 키 설정
 
@@ -25,4 +29,6 @@
     - FROM `lang1` TO `f18`
     - FROM `lang2` TO `right_control`
 
-  - `환경설정 > 키보드 > 단축키(탭) > 입력 소스 > 입력 메뉴에서 다음 소스 선택: F18
+## 입력 소스 선택 단축키
+
+> 환경설정 > 키보드 > 단축키(탭) > 입력 소스 > 입력 메뉴에서 다음 소스 선택: `f18`
