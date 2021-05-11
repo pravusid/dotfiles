@@ -54,3 +54,9 @@ sudo find /private/var/folders/ \( -name com.apple.dock.iconcache -or -name com.
 
 killall Dock Finder
 ```
+
+## 네트워크 드라이브 `.DS_Store` 생성 방지
+
+```sh
+defaults write com.apple.desktopservices DSDontWriteNetworkStores true
+```
