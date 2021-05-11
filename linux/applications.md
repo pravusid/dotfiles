@@ -138,6 +138,8 @@
 
 - docker: `sudo pacman -S docker`
 
+- docker-compose: `sudo pacman -S docker-compose`
+
 - shellcheck: `sudo pacman -S shellcheck`
 
 - tokei: `sudo pacman -S tokei`
