@@ -46,6 +46,8 @@
 
 - mitmproxy: `sudo pacman -S mitmproxy`
 
+- broot: `sudo pacman -S broot`
+
 - fd-find: `sudo pacman -S fd`
 
 - bat: `sudo pacman -S bat`
