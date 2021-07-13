@@ -64,6 +64,11 @@ gnome-tweaks > 키보드와 마우스 > 추가 배치 옵션 > 한국어 한/영
 
 설치: `sudo pacman -S fcitx fcitx-configtool fcitx-hangul`
 
+- 입력 방법 설정
+
+  - `키보드-한국어-한국어(101/104키 호환)`
+  - `Hangul`
+
 - 한영 전환 팝업 삭제
 
   - `~/.config/fcitx/config` 파일 수정: `ShowInputWindowAfterTriggering=False`
