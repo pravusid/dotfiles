@@ -10,13 +10,11 @@
 
 ## list
 
+- AppIndicator and KStatusNotifierItem Support
 - Auto Move Windows
 - Caffeine
 - Dash to Dock
-- Dynamic Panel Transparency
 - Emoji Selector
-- Extended Gestures
-- KStatusNotifierItem/AppIndicator Support
 - Lock Keys
 - Multi Monitors Add-On
 - No Topleft Hot Corner

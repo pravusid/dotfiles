@@ -3,9 +3,14 @@
 - 입력장치 조회: `xinput list`
 - 입력장치 입력 확인: `xinput test <id>`
 
-## xkb 설정
+## 키보드 설정
 
-> 설정 > 키보드 바로 가기 > 대체 문자 키 옵션을 사용하지 않는 키로 설정: `Menu 키`
+> 설정 > 키보드
+
+- 입력 소스: 한국어(101/104키 호환): `AltR` 키를 `Hangul`, `CtrlR` 키를 `Hangulhanja` 키로 배치함
+- 특수 문자 입력 > 대체 문자 키 옵션을 사용하지 않는 키로 설정: `Menu 키`
+
+## xkb 설정 (입력 소스 변경대신)
 
 ### 글로벌 설정 변경
 
@@ -75,7 +80,7 @@ gnome-tweaks > 키보드와 마우스 > 추가 배치 옵션 > 한국어 한/영
 ```conf
 GTK_IM_MODULE=fcitx
 QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx 
+XMODIFIERS=@im=fcitx
 ```
 
 `fcitx` 시작 프로그램 등록
@@ -87,38 +92,3 @@ XMODIFIERS=@im=fcitx
 ## kime
 
 <https://github.com/Riey/kime>
-
-## nimf
-
-### nimf 설치
-
-- <https://github.com/hamonikr/nimf/wiki/Manjaro-build>
-- <https://wiki.archlinux.org/index.php/Nimf>
-
-```sh
-# 빌드한 패키지를 다운로드 받아 바로 설치할 수도 있음
-# https://github.com/hamonikr/nimf/tree/master/archlinux
-sudo pacman -U ./nimf-2019.08.14-1-any.pkg.tar.xz
-```
-
-### nimf 설정 in X11
-
-`~/.xprofile`
-
-```sh
-export GTK_IM_MODULE=nimf
-export QT4_IM_MODULE="nimf"
-export QT_IM_MODULE=nimf
-export XMODIFIERS="@im=nimf"
-nimf
-```
-
-- nimf-settings 에서 `환경 변수 설정` 옵션을 켠다(ON)
-- 한국어를 제외한 엔진을 비활성화 한다
-
-gnome 데스크탑 환경의 경우 다음 실행
-
-```sh
-gsettings set org.gnome.settings-daemon.plugins.keyboard active false
-gsettings set org.gnome.settings-daemon.plugins.xsettings overrides "{'Gtk/IMModule':<'nimf'>}"
-```
