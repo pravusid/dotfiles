@@ -12,6 +12,7 @@
 
 - AppIndicator and KStatusNotifierItem Support
 - Auto Move Windows
+- Blur my Shell
 - Caffeine
 - Dash to Dock
 - Emoji Selector
@@ -23,4 +24,5 @@
 - Removable Drive Menu
 - Sensory Perception
 - Sound Input & Output Device Chooser
+- Tweaks & Extensions in System Menu
 - User Themes
