@@ -11,13 +11,11 @@
 ## list
 
 - AppIndicator and KStatusNotifierItem Support
-- Auto Move Windows
 - Blur my Shell
 - Caffeine
 - Dash to Dock
 - Emoji Selector
 - Lock Keys
-- Multi Monitors Add-On
 - No Topleft Hot Corner
 - Pamac Updates Indicator
 - Places Status Indicator
