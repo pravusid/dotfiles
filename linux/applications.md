@@ -90,7 +90,7 @@
 
 - Notion: `yay -S notion-app`
 
-- zettlr: `yay -S zettlr-bin`
+- Obsidian: `yay -S obsidian`
 
 - VeraCrypt: `sudo pacman -S veracrypt`
 
