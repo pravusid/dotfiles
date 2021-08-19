@@ -52,6 +52,8 @@
 
 - bat: `sudo pacman -S bat`
 
+- ripgrep: `sudo pacman -S ripgrep`
+
 - ulauncher
 
   - `yay -S ulauncher`
