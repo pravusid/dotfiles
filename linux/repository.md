@@ -1,20 +1,15 @@
 # Repository 변경
 
-## Manjaro
+## Arch
 
 ```sh
-# 가까운 다섯곳
-sudo pacman-mirrors --fasttrack 5
-# 국가 직접지정
-sudo pacman-mirrors --country South_Korea Japan Taiwan China Hong_Kong
-# 초기화
-sudo pacman-mirrors --country all
+sudo pacman -S reflector
 
-# 업데이트
-sudo pacman -Syu
+# backup mirror list
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
 
-# 브랜치 변경
-sudo pacman-mirrors --api --set-branch <stable|testing|unstable>
+# sort by rate
+sudo reflector --country Korea,Japan --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
 ```
 
 ## Ubuntu

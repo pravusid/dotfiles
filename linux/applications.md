@@ -6,17 +6,12 @@
 
 ## 일반
 
-- zsh
-
-  ```sh
-  sudo pacman -S zsh
-  chsh -s /usr/bin/zsh
-  ```
+- grub-customizer: `sudo pacman -S grub-customizer`
 
 - gnome
 
-  - gnome-tweak-tool: `sudo pacman -S gnome-tweaks`
-  - gconf: `sudo pacman -S gconf`
+  - gnome tweak tool: `sudo pacman -S gnome-tweaks`
+  - dconf editor: `sudo pacman -S dconf-editor`
 
 - lm-sensors: `sudo pacman -S lm_sensors`
 
@@ -98,11 +93,20 @@
 
 - dropbox: `yay -S dropbox`
 
+- gnome apps: `sudo pacman -S gnome-software-packagekit-plugin`
+
+  - pdf: `sudo pacman -S evince`
+  - image viewer: `sudo pacman -S eog`
+  - email: `sudo pacman -S geary`
+  - calendar: `sudo pacman -S gnome-calendar`
+  - calculator: `sudo pacman -S gnome-calculator`
+  - weather: `sudo pacman -S gnome-weather`
+
 ## 런타임/컴파일러
 
 - Java
 
-  - Manjaro: `sudo pacman -S jdk11-openjdk`
+  - Arch: `sudo pacman -S jdk11-openjdk`
   - RPM|DEB: <https://adoptopenjdk.net/installation.html#linux-pkg>
 
 > [use asdf](../README.md#asdf)
@@ -113,7 +117,7 @@
 
 - git: `sudo pacman -S git`
 
-- git-delta: `yay -S git-delta-bin`
+- git-delta: `sudo pacman -S git-delta`
 
 - curl: `sudo pacman -S curl`
 

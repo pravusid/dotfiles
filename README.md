@@ -2,6 +2,13 @@
 
 ## SHELL
 
+- zsh
+
+  ```sh
+  sudo pacman -S zsh
+  chsh -s /usr/bin/zsh
+  ```
+
 - zsh-async
 
   ```sh
@@ -25,6 +32,12 @@
 
   ```sh
   git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+  ```
+
+- broot
+
+  ```sh
+  broot --install
   ```
 
 ### dotfiles
