@@ -2,9 +2,18 @@
 
 확장 설정: dconf-editor: `org > gnome > shell > extension`
 
-## Dock 설정
+## dconf dump & load
 
-## install shell
+```sh
+# dconf 백업
+dconf dump /org/gnome/shell/extensions/<extension-name>/ > <file-name>
+# 설정 불러오기 전 기존 설정 초기화
+dconf reset -f /org/gnome/shell/extensions/<extension-name>/
+# 설정 불러오기
+dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
+```
+
+## install
 
 - `sudo pacman -S gnome-shell-extensions`
 - `yay -S chrome-gnome-shell`

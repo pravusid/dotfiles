@@ -4,17 +4,6 @@
 
 `echo $XDG_SESSION_TYPE`
 
-## dconf dump & load
-
-```sh
-# dconf 백업
-dconf dump /org/gnome/shell/extensions/<extension-name>/ > <file-name>
-# 설정 불러오기 전 기존 설정 초기화
-dconf reset -f /org/gnome/shell/extensions/<extension-name>/
-# 설정 불러오기
-dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
-```
-
 ## 단축키 설정
 
 `dconf-editor`: `/org/gnome/desktop/wm/keybindings/`
