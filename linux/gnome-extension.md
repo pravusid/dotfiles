@@ -6,18 +6,17 @@
 
 ## install shell
 
-- `sudo pacman -S chrome-gnome-shell`
+- `sudo pacman -S gnome-shell-extensions`
+- `yay -S chrome-gnome-shell`
+- `yay -S gnome-shell-extension-dash-to-dock`
 
 ## list
 
 - AppIndicator and KStatusNotifierItem Support
 - Blur my Shell
-- Caffeine
-- Dash to Dock
 - Emoji Selector
+- Espresso
 - Lock Keys
-- No Topleft Hot Corner
-- Pamac Updates Indicator
 - Places Status Indicator
 - Removable Drive Menu
 - Sensory Perception

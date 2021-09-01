@@ -23,22 +23,19 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 - `switch-to-workspace-up`, `switch-to-workspace-down`: 비활성화
 - `switch-to-workspace-left`, `switch-to-workspace-right`: `'<Control><Alt>Left'`, `'<Control><Alt>Right'` 비활성화
 
-> 설정 > 키보드 바로 가기 메뉴에서도 설정 가능
-
-키보드 바로 가기
+## 설정 -> 키보드 바로 가기
 
 - 스크린샷을 사진 위치에 저장: 비활성화
 
-사용자 설정 바로가기
+- 사용자 설정 바로가기
 
-- `gnome-terminal`: `Ctrl+Alt+T`
-- `flameshot gui`: `Print`
+  - `gnome-terminal`: `Ctrl+Alt+T`
+  - `flameshot gui`: `Print`
 
 ## color schemes
 
 - <https://github.com/arcticicestudio/nord-dircolors/>
 - <https://github.com/arcticicestudio/nord-gnome-terminal>
-- <https://github.com/arcticicestudio/nord-gedit>
 
 ## 하드웨어 가속
 
