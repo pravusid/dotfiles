@@ -4,7 +4,7 @@
 
 `sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list`
 
-## 일반
+## Apps
 
 - grub-customizer: `sudo pacman -S grub-customizer`
 
@@ -13,9 +13,21 @@
   - gnome tweak tool: `sudo pacman -S gnome-tweaks`
   - dconf editor: `sudo pacman -S dconf-editor`
 
+- gnome apps: `sudo pacman -S gnome-software-packagekit-plugin`
+
+  - pdf: `sudo pacman -S evince`
+  - image viewer: `sudo pacman -S eog`
+  - email: `sudo pacman -S geary`
+  - calendar: `sudo pacman -S gnome-calendar`
+  - calculator: `sudo pacman -S gnome-calculator`
+  - weather: `sudo pacman -S gnome-weather`
+  - google drive: `sudo pacman -S gvfs-google`
+
+- papirus icon theme: `sudo pacman -S papirus-icon-theme`
+
 - lm-sensors: `sudo pacman -S lm_sensors`
 
-- tlp
+- TLP
 
   ```sh
   # BE
@@ -29,25 +41,7 @@
     - `TPACPI_ENABLE = 0`
     - `TPSMAPI_ENABLE = 0`
 
-- gnupg: `sudo pacman -S gnupg`
-
 - stacer: `yay -S stacer`
-
-- tldr: `sudo pacman -S tldr`
-
-- xclip: `sudo pacman -S xclip`
-
-- aria2: `sudo pacman -S aria2`
-
-- mitmproxy: `sudo pacman -S mitmproxy`
-
-- broot: `sudo pacman -S broot`
-
-- fd-find: `sudo pacman -S fd`
-
-- bat: `sudo pacman -S bat`
-
-- ripgrep: `sudo pacman -S ripgrep`
 
 - ulauncher
 
@@ -69,9 +63,11 @@
 
   - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
 
+- Dropbox: `yay -S dropbox`
+
 - Chromium: `sudo pacman -S chromium`
 
-- Chrome: `yay -S google-chrome`
+- GoogleChrome: `yay -S google-chrome`
 
 - remmina: `sudo pacman -S remmina`
 
@@ -81,7 +77,9 @@
 
 - GIMP: `sudo pacman -S gimp`
 
-- vlc: `sudo pacman -S vlc`
+- VLC: `sudo pacman -S vlc`
+
+- Slack: `yay -S slack-desktop`
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
@@ -90,17 +88,6 @@
 - Obsidian: `yay -S obsidian`
 
 - VeraCrypt: `sudo pacman -S veracrypt`
-
-- dropbox: `yay -S dropbox`
-
-- gnome apps: `sudo pacman -S gnome-software-packagekit-plugin`
-
-  - pdf: `sudo pacman -S evince`
-  - image viewer: `sudo pacman -S eog`
-  - email: `sudo pacman -S geary`
-  - calendar: `sudo pacman -S gnome-calendar`
-  - calculator: `sudo pacman -S gnome-calculator`
-  - weather: `sudo pacman -S gnome-weather`
 
 ## 런타임/컴파일러
 
@@ -112,16 +99,6 @@
 > [use asdf](../README.md#asdf)
 
 ## 개발툴
-
-- vim: `sudo pacman -S vim`
-
-- git: `sudo pacman -S git`
-
-- git-delta: `sudo pacman -S git-delta`
-
-- curl: `sudo pacman -S curl`
-
-- jq: `sudo pacman -S jq`
 
 - Visual Studio Code
 
@@ -136,20 +113,14 @@
 
 - Android Studio: `yay -S android-studio`
 
-- lnav: `yay -S lnav`
-
-- Slack: `yay -S slack-desktop`
-
 - dbeaver: `sudo pacman -S dbeaver`
 
-- insomnia: `yay -S insomnia-designer`
+- insomnia: `yay -S insomnia-bin`
 
 - docker: `sudo pacman -S docker`
 
 - docker-compose: `sudo pacman -S docker-compose`
 
 - shellcheck: `sudo pacman -S shellcheck`
-
-- tokei: `sudo pacman -S tokei`
 
 - figma: `yay -S figma-linux`

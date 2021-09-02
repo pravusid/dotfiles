@@ -37,7 +37,15 @@
 - broot
 
   ```sh
+  sudo pacman -S broot
   broot --install
+  ```
+
+- utils
+
+  ```sh
+  sudo pacman -S fd bat ripgrep tokei jq xclip gnupg curl aria2 mitmproxy
+  yay -S lnav
   ```
 
 ### dotfiles
@@ -55,7 +63,8 @@
 
 - git
 
-  - [`.gitconfig`](./.gitconfig) #(git-delta 필요)
+  - `sudo pacman -S git git-delta`
+  - [`.gitconfig`](./.gitconfig)
 
 ## version manager
 
@@ -100,14 +109,15 @@ fnm
 
 ## vim
 
-[`.vimrc`](./.vimrc)
+- `sudo pacman -S vim`
+- [`.vimrc`](./.vimrc)
 
 ```sh
-# with curl
+# vim-plug with curl
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# with wget
+# vim-plug with wget
 mkdir -p ~/.vim/autoload/
 cd ~/.vim/autoload/
 wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
