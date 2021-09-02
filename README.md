@@ -1,5 +1,9 @@
 # system configurations
 
+## Terminal
+
+- color theme: <https://github.com/arcticicestudio/nord-gnome-terminal>
+
 ## SHELL
 
 - zsh

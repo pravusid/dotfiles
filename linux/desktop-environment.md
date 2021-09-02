@@ -21,11 +21,6 @@
   - `gnome-terminal`: `Ctrl+Alt+T`
   - `flameshot gui`: `Print`
 
-## color schemes
-
-- <https://github.com/arcticicestudio/nord-dircolors/>
-- <https://github.com/arcticicestudio/nord-gnome-terminal>
-
 ## 하드웨어 가속
 
 - <https://wiki.archlinux.org/index.php/Hardware_video_acceleration>

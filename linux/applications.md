@@ -25,6 +25,8 @@
 
 - papirus icon theme: `sudo pacman -S papirus-icon-theme`
 
+- finger print: `sudo pacman -S fprintd`
+
 - lm-sensors: `sudo pacman -S lm_sensors`
 
 - TLP
