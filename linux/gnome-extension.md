@@ -30,5 +30,6 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 - Removable Drive Menu
 - Sensory Perception
 - Sound Input & Output Device Chooser
+- Status Area Horizontal Spacing
 - Tweaks & Extensions in System Menu
 - User Themes

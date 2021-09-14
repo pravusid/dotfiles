@@ -91,6 +91,8 @@
 
 - VeraCrypt: `sudo pacman -S veracrypt`
 
+- 7z: `yay -S 7-zip`
+
 ## 런타임/컴파일러
 
 - Java
