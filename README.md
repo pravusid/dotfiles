@@ -68,6 +68,7 @@
 - git
 
   - `sudo pacman -S git git-delta`
+  - `yay -S gitleaks`
   - [`.gitconfig`](./.gitconfig)
 
 ## version manager
