@@ -4,9 +4,9 @@ PATH="$PATH:/usr/local/bin"
 PATH="$PATH:$HOME/.fnm"
 eval "$(fnm env)"
 
-# yarn path
-PATH="$PATH:$HOME/.yarn/bin"
-# cargo home
+# go bin path
+PATH="$PATH:$HOME/go/bin"
+# cargo bin path
 PATH="$PATH:$HOME/.cargo/bin"
 
 export PATH
