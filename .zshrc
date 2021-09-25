@@ -15,23 +15,11 @@ plugins=(
 
 # ...
 
+# init
+[ -f ~/.zshrc_init ] && source ~/.zshrc_init
+
 # User aliases
-[ -f ~/.zshalias ] && source ~/.zshalias
+[ -f ~/.zshrc_alias ] && source ~/.zshrc_alias
 
 # User functions
-[ -f ~/.zshfunc ] && source ~/.zshfunc
-
-# starship
-eval "$(starship init zsh)"
-
-function lazy_loader() {
-  export FZF_DEFAULT_COMMAND="fd --type f"
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-  source ~/.config/broot/launcher/bash/br
-}
-
-source ~/.zsh-async/async.zsh
-async_start_worker zsh_async_worker -n
-async_register_callback zsh_async_worker lazy_loader
-async_job zsh_async_worker sleep 0
+[ -f ~/.zshrc_func ] && source ~/.zshrc_func

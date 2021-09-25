@@ -56,14 +56,15 @@
 
 - env
 
-  - [`.zprofile`](./.zprofile)
   - [`.zshenv`](./.zshenv)
+  - [`.zshenv_darwin_arm64`](./.zshenv_darwin_arm64)
 
 - env for interactive
 
   - [`.zshrc`](./.zshrc)
-  - [`.zshalias`](./.zshalias)
-  - [`.zshfunc`](./.zshfunc)
+  - [`.zshrc_init`](./.zshrc_init)
+  - [`.zshrc_alias`](./.zshrc_alias)
+  - [`.zshrc_func`](./.zshrc_func)
 
 - git
 
