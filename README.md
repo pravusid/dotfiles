@@ -2,7 +2,7 @@
 
 ## Terminal
 
-- color theme: <https://github.com/arcticicestudio/nord-gnome-terminal>
+- theme: <https://github.com/arcticicestudio/nord-gnome-terminal>
 
 ## SHELL
 
@@ -25,7 +25,7 @@
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   ```
 
-- starship: <https://starship.rs/>
+- starship
 
   ```sh
   curl -fsSL https://starship.rs/install.sh | bash
