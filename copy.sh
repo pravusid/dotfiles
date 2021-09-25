@@ -23,4 +23,9 @@ echo ".gitconfig 설정파일 복사"
 cp -f .vimrc ~
 echo ".vimrc 설정파일 복사"
 
+if [[ $(uname) == Darwin && $(arch) == arm64 ]]; then
+  cat .zprofile_darwin_arm64 >> ~/.zprofile
+  echo "Apple Silicon 설정"
+fi
+
 echo "완료"
