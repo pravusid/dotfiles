@@ -70,6 +70,7 @@
   - `sudo pacman -S git git-delta`
   - `yay -S gitleaks`
   - [`.gitconfig`](./.gitconfig)
+  - [`.gitignore_global`](./.gitignore_global)
 
 ## version manager
 

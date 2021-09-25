@@ -20,6 +20,9 @@ echo -e "${RED}.zshrc 파일은 직접변경 필요${NC}"
 cp -f .gitconfig ~
 echo ".gitconfig 설정파일 복사"
 
+cp -f .gitignore_global ~
+echo ".gitignore_global 설정파일 복사"
+
 cp -f .vimrc ~
 echo ".vimrc 설정파일 복사"
 
