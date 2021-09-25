@@ -48,7 +48,7 @@
 
   ```sh
   sudo pacman -S fd bat ripgrep tokei jq xclip gnupg curl aria2 mitmproxy
-  yay -S lnav
+  yay -S gitleaks lnav
   ```
 
 ### dotfiles
@@ -68,7 +68,6 @@
 - git
 
   - `sudo pacman -S git git-delta`
-  - `yay -S gitleaks`
   - [`.gitconfig`](./.gitconfig)
   - [`.gitignore_global`](./.gitignore_global)
 
