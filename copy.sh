@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 RED='\033[0;31m'
+YELLOW='\033[0;33m'
 NC='\033[0m'
 
 cp -f .zshenv ~
@@ -28,7 +29,7 @@ echo ".vimrc 설정파일 복사"
 
 if [[ $(uname) == Darwin && $(arch) == arm64 ]]; then
   echo -e "$(cat .zshenv_darwin_arm64)\n\n$(cat ~/.zshenv)" > ~/.zshenv
-  echo "Apple Silicon 설정"
+  echo -e "${YELLOW}Apple Silicon 설정${NC}"
 fi
 
 echo "완료"
