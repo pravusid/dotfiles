@@ -5,10 +5,12 @@
 # oh-my-zsh plugins
 plugins=(
   asdf
+  colored-man-pages
   command-not-found
   docker
   docker-compose
   fancy-ctrl-z
+  fnm
   git
   z
 )
@@ -23,3 +25,6 @@ plugins=(
 
 # User functions
 [ -f ~/.zshrc_func ] && source ~/.zshrc_func
+
+# mac coreutils
+PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
