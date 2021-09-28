@@ -25,6 +25,3 @@ plugins=(
 
 # User functions
 [ -f ~/.zshrc_func ] && source ~/.zshrc_func
-
-# mac coreutils
-PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
