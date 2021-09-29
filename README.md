@@ -53,15 +53,11 @@
 
 ### dotfiles
 
-- env
-
-  - [`.zshenv`](./.zshenv)
-  - [`.zshenv_darwin_arm64`](./.zshenv_darwin_arm64)
-
-- env for interactive
+- zsh
 
   - [`.zshrc`](./.zshrc)
   - [`.zshrc_init`](./.zshrc_init)
+    - [`.zshrc_init_darwin_arm64`](./.zshrc_init_darwin_arm64)
   - [`.zshrc_alias`](./.zshrc_alias)
   - [`.zshrc_func`](./.zshrc_func)
 

@@ -1,6 +1,10 @@
 # starship
 eval "$(starship init zsh)"
 
+# fnm for nodejs
+PATH="$PATH:$HOME/.fnm"
+eval "$(fnm env)"
+
 function lazy_loader() {
   export FZF_DEFAULT_COMMAND="fd --type f"
   [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
