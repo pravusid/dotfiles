@@ -60,3 +60,8 @@ killall Dock Finder
 ```sh
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 ```
+
+## 시스템 환경설정 > 인터넷 계정 (동기화)
+
+- iCloud (제외): Mail, 연락처, 캘린더
+- Google (포함): Mail, 캘린더
