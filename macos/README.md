@@ -61,7 +61,13 @@ killall Dock Finder
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 ```
 
-## 시스템 환경설정 > 인터넷 계정 (동기화)
+## 동기화 설정
+
+`시스템 환경설정 > 인터넷 계정 (동기화)`
 
 - iCloud (제외): Mail, 연락처, 캘린더
 - Google (포함): Mail, 캘린더
+
+## 핫 코너 설정
+
+`시스템 환경설정 > Mission Control > 핫 코너`
