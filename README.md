@@ -51,6 +51,19 @@
   yay -S gitleaks lnav
   ```
 
+- nodejs cli
+
+  ```sh
+  npm i -g npm-check-updates npm pnpm yarn
+  ```
+
+- aws cli
+
+  ```sh
+  python -m ensurepip --upgrade
+  python -m pip install --user awscli aws-sam-cli
+  ```
+
 ### dotfiles
 
 - zsh
@@ -106,17 +119,6 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 
 # for help
 fnm
-```
-
-## cli
-
-```sh
-# nodejs
-npm i -g npm-check-updates npm pnpm yarn
-
-# aws
-python -m ensurepip --upgrade
-python -m pip install --user awscli aws-sam-cli
 ```
 
 ## vim
