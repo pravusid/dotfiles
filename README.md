@@ -108,6 +108,17 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 fnm
 ```
 
+## cli
+
+```sh
+# nodejs
+npm i -g npm-check-updates npm pnpm yarn
+
+# aws
+python -m ensurepip --upgrade
+python -m pip install --user awscli aws-sam-cli
+```
+
 ## vim
 
 - `sudo pacman -S vim`

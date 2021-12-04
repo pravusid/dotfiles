@@ -2,7 +2,7 @@
 eval "$(starship init zsh)"
 
 # fnm for nodejs
-PATH="$PATH:$HOME/.fnm"
+export PATH="$PATH:$HOME/.fnm"
 eval "$(fnm env)"
 
 function lazy_loader() {
