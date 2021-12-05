@@ -4,9 +4,6 @@ RED='\033[0;31m'
 YELLOW='\033[0;33m'
 NC='\033[0m'
 
-cp -f .zshenv ~
-echo ".zshenv 설정파일 복사"
-
 echo -e "${RED}.zshrc 파일은 직접변경 필요${NC}"
 
 cp -f .zshrc_init ~

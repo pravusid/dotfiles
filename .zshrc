@@ -4,13 +4,11 @@
 
 # oh-my-zsh plugins
 plugins=(
-  asdf
   colored-man-pages
   command-not-found
   docker
   docker-compose
   fancy-ctrl-z
-  fnm
   git
   z
 )
