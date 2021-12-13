@@ -23,7 +23,7 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 
 - AppIndicator and KStatusNotifierItem Support
 - Blur my Shell
-- Emoji Selector
+- Emoji Selector: `dconf write /org/gnome/shell/extensions/emoji-selector/emoji-keybinding "['<Super>period']"`
 - Espresso
 - Lock Keys
 - Places Status Indicator
@@ -37,5 +37,5 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 ## 버전확인 비활성화
 
 ```sh
-gsettings set org.gnome.shell disable-extension-version-validation "true"
+dconf write /org/gnome/shell/disable-extension-version-validation true
 ```
