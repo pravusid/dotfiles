@@ -18,8 +18,13 @@ echo ".zshrc_alias 설정파일 복사"
 cp -f .zshrc_func ~
 echo ".zshrc_func 설정파일 복사"
 
-cp -f .gitconfig ~
-echo ".gitconfig 설정파일 복사"
+if [[ -f ~/.gitconfig_private ]]; then
+  cp -f .gitconfig ~/.gitconfig_private
+  echo -e "${YELLOW}.gitconfig_private 설정파일 복사${NC}"
+else
+  cp -f .gitconfig ~
+  echo ".gitconfig 설정파일 복사"
+fi
 
 cp -f .gitignore_global ~
 echo ".gitignore_global 설정파일 복사"
