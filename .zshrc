@@ -111,7 +111,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# init
+# Init
 [ -f ~/.zshrc_init ] && source ~/.zshrc_init
 
 # User aliases
@@ -119,3 +119,6 @@ source $ZSH/oh-my-zsh.sh
 
 # User functions
 [ -f ~/.zshrc_func ] && source ~/.zshrc_func
+
+# Local vars
+[ -f ~/.zshrc_local ] && source ~/.zshrc_local
