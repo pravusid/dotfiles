@@ -63,7 +63,10 @@
     # In Command enter ulauncher-toggle, set name and shortcut, then click Add
     ```
 
-  - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
+  - Troubleshooting
+
+    - `No module named 'ulauncher'` 오류 발생하는 경우 -> 재설치 (w/ clean build)
+    - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
 
 - Dropbox: `yay -S dropbox`
 

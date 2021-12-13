@@ -33,3 +33,9 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 - Status Area Horizontal Spacing
 - Tweaks & Extensions in System Menu
 - User Themes
+
+## 버전확인 비활성화
+
+```sh
+gsettings set org.gnome.shell disable-extension-version-validation "true"
+```
