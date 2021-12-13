@@ -1,7 +1,7 @@
 ASDF_DIR="$HOME/.asdf"
 FNM_DIR="$HOME/.fnm"
 
-export PATH="$PATH:~/.local/bin:$ASDF_DIR:$FNM_DIR"
+export PATH="$PATH:$HOME/.local/bin:$ASDF_DIR:$FNM_DIR"
 
 # starship
 [ -x "$(command -v starship)" ] && eval "$(starship init zsh)"
