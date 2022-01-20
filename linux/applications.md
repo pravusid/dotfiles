@@ -29,20 +29,6 @@
 
 - lm-sensors: `sudo pacman -S lm_sensors`
 
-- TLP
-
-  ```sh
-  # BE
-  sudo pacman -S tlp tlp-rdw
-  # FE
-  yay -S tlpui-git
-  ```
-
-  - ThinkPad Battery (레거시 모듈 사용 해제)
-
-    - `TPACPI_ENABLE = 0`
-    - `TPSMAPI_ENABLE = 0`
-
 - stacer: `yay -S stacer`
 
 - ulauncher
