@@ -74,6 +74,8 @@
 
 - Telegram Desktop: `sudo pacman -S telegram-desktop`
 
+- Discord: `sudo pacman -S discord`
+
 - Notion: `yay -S notion-app`
 
 - Obsidian: `yay -S obsidian`
