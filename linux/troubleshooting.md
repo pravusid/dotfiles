@@ -20,3 +20,9 @@ sudo systemctl start bluetooth
 ## 디스플레이 Backlight 오류
 
 <https://wiki.archlinux.org/index.php/Backlight#Backlight_is_always_at_full_brightness_after_a_reboot_with_amdgpu_driver>
+
+## pacman (eos)
+
+- <https://wiki.archlinux.org/title/Pacman#Troubleshooting>
+- <https://forum.endeavouros.com/t/update-problem-gpme-error-no-data/23381/14>
+- <https://forum.endeavouros.com/t/pacman-endeavouros-db-error-need-to-renew-korean-mirror-domain/23353>
