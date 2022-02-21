@@ -1,7 +1,7 @@
 [user]
     name = Sangdon Park
-    email = pravusid@gmail.com
-    signingkey = 4B0A009C0CC438F4
+    email = 24415130+pravusid@users.noreply.github.com
+    signingkey = D258EA8797558F10
 
 [core]
     autocrlf = input
