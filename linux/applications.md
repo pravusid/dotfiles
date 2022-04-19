@@ -62,8 +62,6 @@
 
 - remmina: `sudo pacman -S remmina`
 
-- flameshot: `sudo pacman -S flameshot`
-
 - peek: `sudo pacman -S peek`
 
 - GIMP: `sudo pacman -S gimp`

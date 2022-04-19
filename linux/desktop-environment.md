@@ -19,7 +19,6 @@
 - 사용자 설정 바로가기
 
   - `gnome-terminal`: `Ctrl+Alt+T`
-  - `flameshot gui`: `Print`
 
 ## 하드웨어 가속
 
