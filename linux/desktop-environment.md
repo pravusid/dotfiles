@@ -12,6 +12,12 @@
 - `switch-to-workspace-up`, `switch-to-workspace-down`: 비활성화
 - `switch-to-workspace-left`, `switch-to-workspace-right`: `'<Control><Alt>Left'`, `'<Control><Alt>Right'` 비활성화
 
+60% 이하 배열 키보드 사용시
+
+- `cycle-windows`, `cycle-windows-backward`: 비활성화
+- `cycle-group`: `'<Alt>Escape'` 추가
+- `cycle-group-backward`: `'<Shift><Alt>Escape'` 추가
+
 ## 설정 -> 키보드 바로 가기
 
 - 스크린샷을 사진 위치에 저장: 비활성화
