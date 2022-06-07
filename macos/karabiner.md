@@ -20,11 +20,11 @@ Karabiner-Elements 실행
 
 - 한/영 키 설정
 
-  - 한/영 키가 `right_alt`인 경우 (표준)
+  - 한/영 키가 `right_option`인 경우 (표준)
 
-    - FROM `right_alt` TO `f18`
+    - FROM `right_option` TO `f18`
 
-  - 한/영 키가 `right_alt` 대신 `KanjiMode`, RControl 대신 `Eisu` 인 경우
+  - 한/영 키가 `right_option` 대신 `KanjiMode`, RControl 대신 `Eisu` 인 경우
 
     - FROM `lang1` TO `f18`
     - FROM `lang2` TO `right_control`
