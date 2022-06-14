@@ -2,7 +2,7 @@
 
 ## 블루투스 오류
 
-블루투스 서비스가 켜져있지 않은 경우
+### 블루투스 서비스가 켜져있지 않은 경우
 
 ```sh
 # 확인
@@ -13,9 +13,13 @@ sudo systemctl enable bluetooth
 sudo systemctl start bluetooth 
 ```
 
-커널문제로 재부팅마다 페어링 해제 되는 경우
+### 커널문제로 재부팅마다 페어링 해제 되는 경우
 
 <https://wiki.archlinux.org/index.php/Bluetooth#Problems_with_all_BLE_devices_on_kernel_5.9+>
+
+### 부팅 직후 꺼져있는 경우
+
+<https://wiki.archlinux.org/title/bluetooth#Auto_power-on_after_boot/resume>
 
 ## 디스플레이 Backlight 오류
 
