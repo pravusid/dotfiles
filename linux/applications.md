@@ -116,4 +116,4 @@
 
 - shellcheck: `sudo pacman -S shellcheck`
 
-- figma: `yay -S figma-linux`
+- figma: `yay -S figma-linux-bin`
