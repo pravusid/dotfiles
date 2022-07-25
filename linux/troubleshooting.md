@@ -34,3 +34,11 @@ sudo systemctl start bluetooth
 ## 종료(재부팅)시 비프음
 
 <https://wiki.archlinux.org/title/PC_speaker#In_Linux>
+
+## grub-customizer 실행오류
+
+> locale 변경 후 실행한다
+
+```sh
+LC_ALL=C grub-customizer
+```
