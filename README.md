@@ -1,17 +1,29 @@
-# system configurations
+# System Configurations
 
-## Terminal
+## prerequisite
 
-- theme: <https://github.com/arcticicestudio/nord-gnome-terminal>
+- [Linux](./linux/applications.md#cli)
 
-## SHELL
+- [MacOS](./macos/README.md#homebrew)
 
-- zsh
+- 공통
 
-  ```sh
-  sudo pacman -S zsh
-  chsh -s /usr/bin/zsh
-  ```
+  - fzf
+
+    ```sh
+    # install
+    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+    # upgrade
+    cd ~/.fzf && git pull && ./install
+    ```
+
+## terminal
+
+- [gnome-terminal](https://github.com/arcticicestudio/nord-gnome-terminal)
+
+- [iTerm](./macos/README.md#iterm2)
+
+## shell
 
 - zsh-async
 
@@ -37,39 +49,6 @@
   curl -fsSL https://starship.rs/install.sh | bash
   ```
 
-- fzf
-
-  ```sh
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-  ```
-
-- broot
-
-  ```sh
-  sudo pacman -S broot
-  broot --install
-  ```
-
-- utils
-
-  ```sh
-  sudo pacman -S fd bat ripgrep tokei jq xclip gnupg curl aria2 mitmproxy
-  yay -S gitleaks lnav
-  ```
-
-- nodejs cli
-
-  ```sh
-  npm i -g npm-check-updates npm pnpm yarn
-  ```
-
-- aws cli
-
-  ```sh
-  python -m ensurepip --upgrade
-  python -m pip install --user awscli aws-sam-cli
-  ```
-
 ### dotfiles
 
 - zsh
@@ -82,7 +61,6 @@
 
 - git
 
-  - `sudo pacman -S git git-delta`
   - [`.gitconfig`](./.gitconfig)
   - [`.gitignore_global`](./.gitignore_global)
 
@@ -125,12 +103,14 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 
 # for help
 fnm
+
+# global cli
+npm i -g npm-check-updates npm pnpm yarn
 ```
 
 ## vim
 
-- `sudo pacman -S vim`
-- [`.vimrc`](./.vimrc)
+[`.vimrc`](./.vimrc)
 
 ```sh
 # vim-plug with curl

@@ -91,7 +91,40 @@
 
 > [use asdf](../README.md#asdf)
 
+## CLI
+
+- zsh
+
+  ```sh
+  sudo pacman -S zsh
+  chsh -s /usr/bin/zsh
+  ```
+
+- git: `sudo pacman -S git git-delta`
+
+- utils
+
+  ```sh
+  sudo pacman -S fzf fd bat ripgrep tokei jq xclip gnupg curl aria2 mitmproxy
+  yay -S gitleaks lnav
+  ```
+
+- broot: `sudo pacman -S broot && broot --install`
+
+- docker: `sudo pacman -S docker docker-compose`
+
+- shellcheck: `sudo pacman -S shellcheck`
+
+- aws
+
+  ```sh
+  python -m ensurepip --upgrade
+  python -m pip install --user awscli aws-sam-cli
+  ```
+
 ## 개발툴
+
+- vim: `sudo pacman -S vim`
 
 - Visual Studio Code
 
@@ -109,11 +142,5 @@
 - dbeaver: `sudo pacman -S dbeaver`
 
 - insomnia: `yay -S insomnia-bin`
-
-- docker: `sudo pacman -S docker`
-
-- docker-compose: `sudo pacman -S docker-compose`
-
-- shellcheck: `sudo pacman -S shellcheck`
 
 - figma: `yay -S figma-linux-bin`
