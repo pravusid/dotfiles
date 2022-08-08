@@ -14,3 +14,7 @@
 Exec=/usr/bin/tilix -e vim %F
 Terminal=false
 ```
+
+## gnome terminal theme
+
+<https://github.com/arcticicestudio/nord-gnome-terminal>

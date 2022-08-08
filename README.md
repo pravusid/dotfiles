@@ -19,9 +19,9 @@
 
 ## terminal
 
-- [gnome-terminal](https://github.com/arcticicestudio/nord-gnome-terminal)
+- [Linux](./linux/terminal.md)
 
-- [iTerm](./macos/README.md#iterm2)
+- [MacOS](./macos/README.md#iterm2)
 
 ## shell
 
