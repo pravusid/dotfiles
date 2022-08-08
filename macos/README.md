@@ -1,4 +1,4 @@
-# MacOS 환경설정
+# macOS 환경설정
 
 ## homebrew
 

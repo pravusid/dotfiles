@@ -4,7 +4,7 @@
 
 - [Linux](./linux/applications.md#cli)
 
-- [MacOS](./macos/README.md#homebrew)
+- [macOS](./macos/README.md#homebrew)
 
 - 공통
 
@@ -21,7 +21,7 @@
 
 - [Linux](./linux/terminal.md)
 
-- [MacOS](./macos/README.md#iterm2)
+- [macOS](./macos/README.md#iterm2)
 
 ## shell
 
