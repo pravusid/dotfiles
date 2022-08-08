@@ -2,91 +2,103 @@
 
 ## 기본앱 변경
 
-`sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list`
+```sh
+sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
+```
 
 ## Apps
 
-- grub-customizer: `sudo pacman -S grub-customizer`
+- `sudo pacman -S grub-customizer`
 
 - gnome
 
-  - gnome tweak tool: `sudo pacman -S gnome-tweaks`
-  - dconf editor: `sudo pacman -S dconf-editor`
+  ```sh
+  sudo pacman -S gnome-tweaks
+  sudo pacman -S dconf-editor
+  ```
 
-- gnome apps: `sudo pacman -S gnome-software-packagekit-plugin`
+- gnome apps
 
-  - pdf: `sudo pacman -S evince`
-  - image viewer: `sudo pacman -S eog`
-  - email: `sudo pacman -S geary`
-  - calendar: `sudo pacman -S gnome-calendar`
-  - calculator: `sudo pacman -S gnome-calculator`
-  - weather: `sudo pacman -S gnome-weather`
-  - google drive: `sudo pacman -S gvfs-google`
+  ```sh
+  sudo pacman -S gnome-software-packagekit-plugin
+  # pdf
+  sudo pacman -S evince
+  # image viewer
+  sudo pacman -S eog
+  # email
+  sudo pacman -S geary
+  # calendar
+  sudo pacman -S gnome-calendar
+  # calculator
+  sudo pacman -S gnome-calculator
+  # weather
+  sudo pacman -S gnome-weather
+  # google drive
+  sudo pacman -S gvfs-google
+  ```
 
-- papirus icon theme: `sudo pacman -S papirus-icon-theme`
+- `sudo pacman -S papirus-icon-theme`
 
-- finger print: `sudo pacman -S fprintd`
+- `sudo pacman -S fprintd`
 
-- lm-sensors: `sudo pacman -S lm_sensors`
+- `sudo pacman -S lm_sensors`
 
-- stacer: `yay -S stacer`
+- `yay -S stacer`
 
-- ulauncher
+- `yay -S ulauncher`
 
-  - `yay -S ulauncher`
+  ```sh
+  # in X11
+  # Make sure no app is using ALT+SPACE.
+  # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
+  # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
+  # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
 
-    ```sh
-    # in X11
-    # Make sure no app is using ALT+SPACE.
-    # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
-    # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
-    # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
-
-    # in Wayland
-    # Install package wmctrl (needed to activate app focus)
-    # Open Ulauncher Preferences and set hotkey to something you'll never use
-    # Open OS Settings > Devices > Keyboard > Add Hotkey > Scroll all the way down > Click +
-    # In Command enter ulauncher-toggle, set name and shortcut, then click Add
-    ```
+  # in Wayland
+  # Install package wmctrl (needed to activate app focus)
+  # Open Ulauncher Preferences and set hotkey to something you'll never use
+  # Open OS Settings > Devices > Keyboard > Add Hotkey > Scroll all the way down > Click +
+  # In Command enter ulauncher-toggle, set name and shortcut, then click Add
+  ```
 
   - Troubleshooting
 
     - `No module named 'ulauncher'` 오류 발생하는 경우 -> 재설치 (w/ clean build)
     - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
 
-- Dropbox: `yay -S dropbox`
+- `yay -S dropbox`
 
-- Chromium: `sudo pacman -S chromium`
+- `sudo pacman -S chromium`
 
-- GoogleChrome: `yay -S google-chrome`
+- `yay -S google-chrome`
 
-- remmina: `sudo pacman -S remmina`
+- `sudo pacman -S remmina`
 
-- peek: `sudo pacman -S peek`
+- `sudo pacman -S peek`
 
-- GIMP: `sudo pacman -S gimp`
+- `sudo pacman -S gimp`
 
-- VLC: `sudo pacman -S vlc`
+- `sudo pacman -S vlc`
 
-- Slack: `yay -S slack-desktop`
+- `yay -S slack-desktop`
 
-- Telegram Desktop: `sudo pacman -S telegram-desktop`
+- `sudo pacman -S telegram-desktop`
 
-- Discord: `sudo pacman -S discord`
+- `sudo pacman -S discord`
 
-- Notion: `yay -S notion-app`
+- `yay -S notion-app`
 
-- Obsidian: `yay -S obsidian`
+- `yay -S obsidian`
 
-- VeraCrypt: `sudo pacman -S veracrypt`
+- `sudo pacman -S veracrypt`
 
-- 7z: `yay -S 7-zip`
+- `yay -S 7-zip`
 
 ## 런타임/컴파일러
 
 - Java
 
-  - Arch: `sudo pacman -S jdk11-openjdk`
+  - `sudo pacman -S jdk11-openjdk`
   - RPM|DEB: <https://adoptopenjdk.net/installation.html#linux-pkg>
 
 > [use asdf](../README.md#asdf)
@@ -100,20 +112,21 @@
   chsh -s /usr/bin/zsh
   ```
 
-- git: `sudo pacman -S git git-delta`
+- `sudo pacman -S git git-delta`
 
 - utils
 
   ```sh
-  sudo pacman -S fzf fd bat ripgrep tokei jq xclip gnupg curl aria2 mitmproxy
+  sudo pacman -S fd bat ripgrep jq xclip gnupg tokei
+  sudo pacman -S curl aria2 mitmproxy
   yay -S gitleaks lnav
   ```
 
-- broot: `sudo pacman -S broot && broot --install`
+- `sudo pacman -S broot && broot --install`
 
-- docker: `sudo pacman -S docker docker-compose`
+- `sudo pacman -S docker docker-compose`
 
-- shellcheck: `sudo pacman -S shellcheck`
+- `sudo pacman -S shellcheck`
 
 - aws
 
@@ -124,23 +137,21 @@
 
 ## 개발툴
 
-- vim: `sudo pacman -S vim`
+- `sudo pacman -S vim`
 
-- Visual Studio Code
-
-  - 설치: `yay -S visual-studio-code-bin`
+- `yay -S visual-studio-code-bin`
 
   - [background issue](https://github.com/microsoft/vscode/issues/85452)
     - Command Palette search for "Configure Runtime Arguments"
     - Set `disable-hardware-acceleration: true`
     - Restart
 
-- IntelliJ CE: `sudo pacman -S intellij-idea-community-edition`
+- `sudo pacman -S intellij-idea-community-edition`
 
-- Android Studio: `yay -S android-studio`
+- `yay -S android-studio`
 
-- dbeaver: `sudo pacman -S dbeaver`
+- `sudo pacman -S dbeaver`
 
-- insomnia: `yay -S insomnia-bin`
+- `yay -S insomnia-bin`
 
-- figma: `yay -S figma-linux-bin`
+- `yay -S figma-linux-bin`
