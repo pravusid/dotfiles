@@ -61,13 +61,29 @@ killall Dock Finder
 defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 ```
 
-## 동기화 설정
+## 시스템 환경설정
+
+### 동기화
 
 `시스템 환경설정 > 인터넷 계정 (동기화)`
 
 - iCloud (제외): Mail, 연락처, 캘린더
 - Google (포함): Mail, 캘린더
 
-## 핫 코너 설정
+### 핫 코너
 
 `시스템 환경설정 > Mission Control > 핫 코너`
+
+### 배터리
+
+`시스템 환경설정 > 배터리`
+
+- 배터리
+
+  - 제외: `배터리 전원을 사용하는 동안 Power Nap 활성화하기`
+  - 나머지 선택
+
+- 전원 어댑터
+
+  - 선택: `자동 그래픽 전환`
+  - 나머지 제외
