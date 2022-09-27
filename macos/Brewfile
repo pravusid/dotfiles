@@ -18,6 +18,7 @@ brew "gitleaks"
 brew "gnu-sed"
 brew "jq"
 brew "lnav"
+brew "mas"
 brew "mitmproxy"
 brew "mysql-client"
 brew "mysql-client@5.7"
@@ -64,3 +65,15 @@ cask "visual-studio-code"
 cask "visual-studio-code-insiders"
 cask "webstorm"
 cask "zeplin"
+mas "Amphetamine", id: 937984704
+mas "Channel.io", id: 1102655071
+mas "Cleaner One", id: 1473079126
+mas "iShot Pro", id: 1611347086
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "RunCat", id: 1429033973
+mas "Slack", id: 803453959
+mas "Velja", id: 1607635845
+mas "Xcode", id: 497799835
