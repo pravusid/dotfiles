@@ -51,18 +51,22 @@
 
 ### dotfiles
 
-- zsh
+#### zsh
 
-  - [`.zshrc`](./.zshrc)
-  - [`.zshrc_init`](./.zshrc_init)
-    - [`.zshrc_init_darwin_arm64`](./.zshrc_init_darwin_arm64)
-  - [`.zshrc_alias`](./.zshrc_alias)
-  - [`.zshrc_func`](./.zshrc_func)
+- [`.zshrc`](./.zshrc)
+- [`.zshrc_init`](./.zshrc_init)
+  - [`.zshrc_init_darwin_arm64`](./.zshrc_init_darwin_arm64)
+- [`.zshrc_alias`](./.zshrc_alias)
+- [`.zshrc_func`](./.zshrc_func)
 
-- git
+> <https://github.com/pravusid/TIL/blob/main/Linux/oh-my-zsh-alias.md>
 
-  - [`.gitconfig`](./.gitconfig)
-  - [`.gitignore_global`](./.gitignore_global)
+#### git
+
+- [`.gitconfig`](./.gitconfig)
+- [`.gitignore_global`](./.gitignore_global)
+
+> <https://github.com/pravusid/TIL/blob/main/Git/git-config.md>
 
 ## version manager
 
