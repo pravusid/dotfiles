@@ -33,3 +33,21 @@
         _height=$(stty size | awk '{print $1}');\
         git branch | egrep -v '^\\*' | fzf --preview \"git log {1} | head -n $_height\";\
     )"
+    d = "!\
+        git diff --name-only |\
+        fzf --header \"$(git diff --shortstat)\"\
+            --preview \"git diff --color=always {1}\"\
+            --preview-window=top:75%\
+            --bind \"ctrl-u:preview-page-up,ctrl-d:preview-page-down\"\
+    "
+    l = "!\
+        f() {\
+            _hash=$(\
+                git log --format=\"%H %ci %s%d\" |\
+                fzf --no-sort |\
+                head -1 |\
+                cut -d \" \" -f 1\
+            );\
+            [[ ! -z "$_hash" ]] && git show "$_hash";\
+        }; f\
+    "
