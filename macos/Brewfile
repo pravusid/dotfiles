@@ -6,6 +6,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
+tap "robotsandpencils/made"
+brew "aria2"
 brew "awscli"
 brew "bat"
 brew "broot"
@@ -29,6 +31,7 @@ brew "tokei"
 brew "trash"
 brew "vim"
 brew "aws/tap/aws-sam-cli"
+brew "robotsandpencils/made/xcodes"
 cask "adoptopenjdk11"
 cask "android-studio"
 cask "authy"
@@ -76,4 +79,3 @@ mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
 mas "Velja", id: 1607635845
-mas "Xcode", id: 497799835
