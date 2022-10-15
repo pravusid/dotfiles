@@ -74,8 +74,6 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 
 - `sudo pacman -S remmina`
 
-- `sudo pacman -S peek`
-
 - `sudo pacman -S gimp`
 
 - `sudo pacman -S vlc`

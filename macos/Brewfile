@@ -63,6 +63,7 @@ cask "notion"
 cask "openinterminal"
 cask "outline-manager"
 cask "paw"
+cask "redisinsight"
 cask "sublime-text"
 cask "visual-studio-code"
 cask "visual-studio-code-insiders"
@@ -75,6 +76,7 @@ mas "iShot Pro", id: 1611347086
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
+mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
