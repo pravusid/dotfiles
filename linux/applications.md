@@ -88,6 +88,8 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 
 - `sudo pacman -S veracrypt`
 
+- `yay -S cryptomator-bin`
+
 - `yay -S 7-zip`
 
 - `yay -S drawio-desktop-bin`
