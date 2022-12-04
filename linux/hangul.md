@@ -14,6 +14,8 @@
 
 ## fcitx
 
+<https://wiki.archlinux.org/title/Fcitx5>
+
 > Warning: Fcitx is now in maintenance mode. It is recommended to use Fcitx5 instead.
 
 설치: `sudo pacman -S fcitx5 fcitx5-configtool fcitx5-hangul`
