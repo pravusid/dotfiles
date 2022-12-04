@@ -81,9 +81,10 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 - 배터리
 
   - 제외: `배터리 전원을 사용하는 동안 Power Nap 활성화하기`
-  - 나머지 선택
+  - 선택: (최적화된 배터리 충전) or (AlDente app)
+  - 나머지 포함
 
 - 전원 어댑터
 
-  - 선택: `자동 그래픽 전환`
+  - 포함: `자동 그래픽 전환`
   - 나머지 제외
