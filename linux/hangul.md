@@ -14,21 +14,27 @@
 
 ## fcitx
 
-설치: `sudo pacman -S fcitx fcitx-configtool fcitx-hangul`
+> Warning: Fcitx is now in maintenance mode. It is recommended to use Fcitx5 instead.
 
-- **입력 방법 설정**
+설치: `sudo pacman -S fcitx5 fcitx5-configtool fcitx5-hangul`
 
-  - `키보드-한국어-한국어(101/104키 호환)`
-  - `Hangul`
+### **입력 방법 설정**
 
-- 한영 전환 팝업 삭제
+- `키보드-한국어-한국어(101/104키 호환)`
+- `Hangul`
 
-  - `~/.config/fcitx/config` 파일 수정: `ShowInputWindowAfterTriggering=False`
-  - in gui: 입력기 설정 -> 전역설정 -> 추가 설정 보기 -> 모양새 -> 입력기 변경후 입력기 힌트 표시 해제
+### fcitx 전역 옵션
 
-- `;`키 충돌: 입력기 설정 → 부가기능 → QuickPhrase → 트리거키 옵션 없음으로 → 아래의 추가 설정 클릭 → 철자 힌트 보지 않음 체크
+`~/.config/fcitx5/config`
 
-- `ctrl`+`alt`+`h` 단축키 충돌: 입력기 설정 → 부가기능 → Keyboard Layout → 단어 힌트 전환 단축기 해제
+- fcitx 구성 → 전역 옵션
+
+  - 단축키: 트리거 입력기 제외 해제
+  - 동작방식: 입력기 변경시 입력기 정보 표시 (한영 전환 팝업 삭제)
+
+- fcitx 구성 → 애드온
+
+  - 입력기: 키보드 → 트리거 힌트 모드, 힌트 모드를 한 번만 트리거 단축키 해제 (`ctrl`+`alt`+`h`(`j`) 단축키 충돌)
 
 ### fcitx 설정 in Wayland
 
