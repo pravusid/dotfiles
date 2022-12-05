@@ -12,13 +12,47 @@
 - 입력 소스: 한국어(101/104키 호환): `AltR` 키를 `Hangul`, `CtrlR` 키를 `Hangulhanja` 키로 배치함
 - 특수 문자 입력 > 대체 문자 키 옵션을 사용하지 않는 키로 설정: `Menu 키`
 
+## IM_MODULE 설정
+
+### in Wayland
+
+`~/.config/environment.d/99-imsetting.conf`
+
+```conf
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+
+GTK_IM_MODULE=ibus
+QT_IM_MODULE=ibus
+XMODIFIERS=@im=ibus
+```
+
+### in X11
+
+`~/.xinitrc`
+
+```sh
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+```
+
+### (GUI) in Debian
+
+기본 입력기 설정: `im-config`
+
 ## fcitx
 
 <https://wiki.archlinux.org/title/Fcitx5>
 
 > Warning: Fcitx is now in maintenance mode. It is recommended to use Fcitx5 instead.
 
-설치: `sudo pacman -S fcitx5 fcitx5-configtool fcitx5-hangul`
+설치: `sudo pacman -S fcitx5 fcitx5-configtool fcitx5-hangul fcitx5-qt fcitx5-gtk`
 
 ### **입력 방법 설정**
 
@@ -36,31 +70,45 @@
 
 - fcitx 구성 → 애드온
 
-  - 입력기: 키보드 → 트리거 힌트 모드, 힌트 모드를 한 번만 트리거 단축키 해제 (`ctrl`+`alt`+`h`(`j`) 단축키 충돌)
+  - 입력기: 키보드 → 변환 키 선택 → 없음
+  - 입력기: 키보드 → 트리거 힌트 모드, 힌트 모드를 한 번만 트리거 → 단축키 해제 (`ctrl`+`alt`+`h`(`j`) 단축키 충돌)
+  - 입력기: 한글 → 한자 모드 변환 키 → `F9` 삭제
 
-### fcitx 설정 in Wayland
+### fcitx Troubleshooting
 
-`~/.config/environment.d/99-imsetting.conf`
+[fcitx5 한글 단어 커밋 이전 caret 오류](https://forum.manjaro.org/t/fcitx5-korean-hangul-space-is-inserted-in-a-wrong-position-when-typing-in-gedit/105291)
 
-```conf
-GTK_IM_MODULE=fcitx
-QT_IM_MODULE=fcitx
-XMODIFIERS=@im=fcitx
+> 원인은 알 수 없으나 설정을 지우고 다시 설치하니 작동함 (또는 fcitx5-qt fcitx5-gtk 설치로 해결되었을 수도 있음)
+
+## ibus
+
+<https://wiki.archlinux.org/title/IBus>
+
+> 한글 끝글자 버그는 대부분 수정되었으나, JetBrains IDE 에서 여러 문제가 발생
+
+```sh
+sudo pacman -S ibus ibus-hangul
+ibus start
 ```
 
-### fcitx 설정 in X11
+### ibus 설정 (GNOME DE)
 
-`~/.xinitrc`
+> Note: GNOME has integrated IBus since version 3.6 and makes use of it by default
 
-```conf
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS=@im=fcitx
-```
+설정 → 키보드 → 입력소스 설정을 다음과 같이 한다
 
-### fcitx 설정 in Debian
+- `키보드-한국어-한국어(101/104키 호환)`
+- `Hangul`
 
-기본 입력기 설정: `im-config`
+`meta + spacebar` 버튼을 눌러 입력방식을 ibus-hangul로 변경한다
+
+### ibus 설정 (Other DE)
+
+To launch the IBus preferences window, you can:
+
+- Right-click on its tray icon and select Preferences, or
+- Find and launch the GUI application IBus Preferences, or
+- Run the command `ibus-setup` in a terminal
 
 ## kime
 
