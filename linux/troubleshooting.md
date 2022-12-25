@@ -31,6 +31,12 @@ sudo systemctl start bluetooth
 - <https://forum.endeavouros.com/t/update-problem-gpme-error-no-data/23381/14>
 - <https://forum.endeavouros.com/t/pacman-endeavouros-db-error-need-to-renew-korean-mirror-domain/23353>
 
+### 업데이트 중 signature 오류 발생
+
+```sh
+sudo pacman -S archlinux-keyring
+```
+
 ## 종료(재부팅)시 비프음
 
 <https://wiki.archlinux.org/title/PC_speaker#In_Linux>
