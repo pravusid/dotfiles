@@ -88,3 +88,20 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
   - 포함: `자동 그래픽 전환`
   - 나머지 제외
+
+### 키보드
+
+`시스템 환경설정 > 키보드`
+
+- 키보드 탐색을 사용하여 컨트롤 간에 초점 이동 활성화 (ventura 이전에는 단축키탭)
+
+`시스템 환경설정 > 키보드 > 단축키`
+
+- 디스플레이
+
+  - 밝기 감소|증가 비활성화
+
+- Mission Control
+
+  - Mission Control (`ctrl + arrow`) 항목 전체 활성화
+  - 기타 항목 (데스크탑 보기, 데스크탑 1로 전환, 빠른메모 ...) 비활성화
