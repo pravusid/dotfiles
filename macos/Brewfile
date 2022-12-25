@@ -70,7 +70,6 @@ cask "sublime-text"
 cask "visual-studio-code"
 cask "visual-studio-code-insiders"
 cask "webstorm"
-cask "zeplin"
 mas "Amphetamine", id: 937984704
 mas "Channel.io", id: 1102655071
 mas "Cleaner One", id: 1473079126
