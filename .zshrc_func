@@ -3,8 +3,8 @@ getmpeg() {
 }
 
 getportconn() {
-  grep -v "rem_address" /proc/net/tcp  \
-    | awk 'function hextodec(str,ret,n,i,k,c)  {
+  grep -v "rem_address" /proc/net/tcp \
+    | awk 'function hextodec(str,ret,n,i,k,c) {
       ret = 0
       n = length(str)
       for (i = 1; i <= n; i++) {
@@ -25,4 +25,16 @@ getportconn() {
 kp() {
   lsof -ti :$1 | xargs -r -I {} kill -9 {}
   echo "kill port $1"
+}
+
+# https://pravusid.kr/wiki/Docker/docker-volume.html
+docker-vol() {
+  if [[ $1 == "ls" ]]; then
+    docker ps -a --format '{{ .ID }}' \
+      | xargs -I {} docker inspect -f '{{ .Name }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
+  elif [[ $1 == "clean" ]]; then
+    docker volume rm $(docker volume ls -qf dangling=true)
+  else
+    echo "unknown command"
+  fi
 }
