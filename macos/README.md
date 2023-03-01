@@ -21,7 +21,7 @@
 
 color schemes: <https://iterm2colorschemes.com/>
 
-[설정파일](./iterm-pravusid.json)
+[설정파일](./iterm2.json)
 
 ## karabiner
 
