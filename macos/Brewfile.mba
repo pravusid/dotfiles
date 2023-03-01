@@ -1,14 +1,10 @@
-tap "adoptopenjdk/openjdk"
-tap "aws/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "homebrew/services"
-tap "robotsandpencils/made"
 brew "aria2"
-brew "awscli"
 brew "bat"
 brew "broot"
 brew "coreutils"
@@ -19,33 +15,18 @@ brew "git-delta"
 brew "git-quick-stats"
 brew "gitleaks"
 brew "gnu-sed"
-brew "harfbuzz"
 brew "jq"
-brew "libpq"
-brew "lnav"
 brew "mas"
-brew "mitmproxy"
-brew "mysql-client"
-brew "mysql-client@5.7"
-brew "nmap"
+brew "python@3.11"
 brew "ripgrep"
 brew "shellcheck"
 brew "tokei"
 brew "trash"
 brew "vim"
-brew "aws/tap/aws-sam-cli"
-brew "robotsandpencils/made/xcodes"
-cask "adoptopenjdk11"
-cask "aldente"
-cask "android-studio"
 cask "authy"
-cask "avibrazil-rdm"
-cask "dbeaver-community"
-cask "dbgate"
-cask "docker"
+cask "cryptomator"
 cask "drawio"
 cask "dropbox"
-cask "figma"
 cask "firefox"
 cask "font-d2coding"
 cask "font-fira-code"
@@ -54,37 +35,32 @@ cask "font-noto-sans-cjk-kr"
 cask "font-sauce-code-pro-nerd-font"
 cask "google-chrome"
 cask "gpg-suite"
-cask "http-toolkit"
-cask "insomnia"
-cask "intellij-idea-ce"
 cask "iterm2"
 cask "karabiner-elements"
 cask "keka"
-cask "linearmouse"
 cask "logseq"
-cask "monitorcontrol"
-cask "mysqlworkbench"
-cask "nosql-workbench-for-amazon-dynamodb"
 cask "notion"
 cask "openinterminal"
-cask "outline-manager"
-cask "paw"
-cask "redisinsight"
 cask "sublime-text"
 cask "visual-studio-code"
-cask "visual-studio-code-insiders"
-cask "webstorm"
+mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
-mas "Channel.io", id: 1102655071
+mas "Bitwarden", id: 1352778147
 mas "Cleaner One", id: 1473079126
+mas "Developer", id: 640199958
+mas "DuckDuckGo Privacy for Safari", id: 1482920575
+mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "iShot Pro", id: 1611347086
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
-mas "Microsoft Remote Desktop", id: 1295203466
+mas "Microsoft To Do", id: 1274495053
+mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825
 mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
+mas "Telegram", id: 747648890
 mas "Velja", id: 1607635845
+mas "카카오톡", id: 869223134
