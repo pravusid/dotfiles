@@ -37,8 +37,6 @@ brew "aws/tap/aws-sam-cli"
 brew "robotsandpencils/made/xcodes"
 cask "adoptopenjdk11"
 cask "aldente"
-cask "android-studio"
-cask "authy"
 cask "avibrazil-rdm"
 cask "dbeaver-community"
 cask "dbgate"
@@ -56,8 +54,8 @@ cask "google-chrome"
 cask "gpg-suite"
 cask "http-toolkit"
 cask "insomnia"
-cask "intellij-idea-ce"
 cask "iterm2"
+cask "jetbrains-toolbox"
 cask "karabiner-elements"
 cask "keka"
 cask "linearmouse"
@@ -73,9 +71,7 @@ cask "redisinsight"
 cask "sublime-text"
 cask "visual-studio-code"
 cask "visual-studio-code-insiders"
-cask "webstorm"
 mas "Amphetamine", id: 937984704
-mas "Channel.io", id: 1102655071
 mas "Cleaner One", id: 1473079126
 mas "iMovie", id: 408981434
 mas "iShot Pro", id: 1611347086
