@@ -48,3 +48,14 @@ sudo pacman -S archlinux-keyring
 ```sh
 LC_ALL=C grub-customizer
 ```
+
+## VSCode 설치 후 기본 파일매니저 오류
+
+<https://github.com/VSCodium/vscodium/blob/master/DOCS.md#how-do-i-fix-the-default-file-manager-linux>
+
+`~/.config/mimeapps.list` 생성(수정)
+
+```conf
+[Default Applications]
+inode/directory=org.gnome.Nautilus.desktop;
+```
