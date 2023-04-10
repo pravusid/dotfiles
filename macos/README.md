@@ -29,6 +29,29 @@ color schemes: <https://iterm2colorschemes.com/>
 
 [설정파일](./karabiner.json)
 
+## Binding Home/End keys
+
+- <https://damieng.com/blog/2015/04/24/make-home-end-keys-behave-like-windows-on-mac-os-x/>
+- <https://discussions.apple.com/thread/251108215?login=true>
+- <https://github.com/microsoft/vscode/issues/111950>
+
+`mkdir -p $HOME/Library/KeyBindings`
+
+`~/Library/KeyBindings/DefaultKeyBinding.dict`
+
+```conf
+{
+  "\UF729"  = moveToBeginningOfLine:; // home
+  "\UF72B"  = moveToEndOfLine:; // end
+  "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
+  "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
+  "^\UF729" = moveToBeginningOfDocument:; // ctrl-home
+  "^\UF72B" = moveToEndOfDocument:; // ctrl-end
+  "^$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl-shift-home
+  "^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
+}
+```
+
 ## xcode
 
 ### xcode-select 재설치
