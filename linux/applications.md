@@ -119,7 +119,7 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 - utils
 
   ```sh
-  sudo pacman -S fd bat ripgrep jq xclip gnupg tokei
+  sudo pacman -S fd bat ripgrep jq wl-clipboard gnupg tokei
   sudo pacman -S curl aria2 mitmproxy
   yay -S gitleaks lnav
   ```
