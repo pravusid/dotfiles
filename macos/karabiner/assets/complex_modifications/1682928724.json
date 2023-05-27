@@ -1,0 +1,25 @@
+{
+  "title": "f19 Key → Hyper Key (⌃⌥⇧⌘)",
+  "rules": [
+    {
+      "description": "f19 Key → Hyper Key (⌃⌥⇧⌘)",
+      "manipulators": [
+        {
+          "from": {
+            "key_code": "f19",
+            "modifiers": {
+              "optional": ["any"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_shift",
+              "modifiers": ["left_command", "left_control", "left_option"]
+            }
+          ],
+          "type": "basic"
+        }
+      ]
+    }
+  ]
+}

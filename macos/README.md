@@ -25,9 +25,7 @@ color schemes: <https://iterm2colorschemes.com/>
 
 ## karabiner
 
-[설정방법](./karabiner.md)
-
-[설정파일](./karabiner.json)
+[설정방법](./karabiner/README.md)
 
 ## Binding Home/End keys
 
