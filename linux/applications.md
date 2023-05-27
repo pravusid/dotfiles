@@ -86,8 +86,6 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 
 - `yay -S notion-app`
 
-- `yay -S obsidian`
-
 - `sudo pacman -S veracrypt`
 
 - `yay -S cryptomator-bin`

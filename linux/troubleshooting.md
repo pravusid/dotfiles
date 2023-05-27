@@ -34,7 +34,7 @@ sudo systemctl start bluetooth
 ### 업데이트 중 signature 오류 발생
 
 ```sh
-sudo pacman -S archlinux-keyring
+sudo pacman -Sy archlinux-keyring endeavouros-keyring
 ```
 
 ## 종료(재부팅)시 비프음
