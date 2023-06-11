@@ -43,7 +43,7 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 
 - `sudo pacman -S lm_sensors`
 
-- `yay -S stacer`
+- `yay -S stacer-bin`
 
 - `yay -S ulauncher`
 
