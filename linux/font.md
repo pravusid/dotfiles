@@ -7,7 +7,7 @@ monospace font 설치
 ```sh
 sudo pacman -S ttf-fira-code
 sudo pacman -S ttf-ibm-plex
-yay -S nerd-fonts-source-code-pro
+yay -S ttf-sourcecodepro-nerd
 yay -S ttf-d2coding
 ```
 

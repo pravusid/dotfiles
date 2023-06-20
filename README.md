@@ -46,7 +46,7 @@
 - starship
 
   ```sh
-  curl -fsSL https://starship.rs/install.sh | bash
+  curl -sS https://starship.rs/install.sh | sh
   ```
 
 ### dotfiles
