@@ -131,7 +131,7 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 - aws
 
   ```sh
-  sudo pacman -S aws-cli
+  sudo pacman -S aws-cli-v2
   yay -S aws-sam-cli-bin
   ```
 
