@@ -131,12 +131,8 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 - aws
 
   ```sh
-  # system
-  sudo python -m ensurepip --upgrade
-  # local
-  python -m ensurepip --upgrade
-
-  python -m pip install --user awscli aws-sam-cli
+  sudo pacman -S aws-cli
+  yay -S aws-sam-cli-bin
   ```
 
 ## 개발툴

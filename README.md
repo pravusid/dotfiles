@@ -94,7 +94,7 @@ asdf plugin update --all
 # for me
 asdf plugin add go https://github.com/kennyp/asdf-golang
 asdf plugin add python https://github.com/danhper/asdf-python
-asdf plugin-add rust https://github.com/code-lever/asdf-rust.git
+asdf plugin add rust https://github.com/code-lever/asdf-rust.git
 ```
 
 ### fnm
