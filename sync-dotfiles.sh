@@ -34,13 +34,4 @@ echo ".gitignore_global 설정파일 복사"
 cp -f .vimrc ~
 echo ".vimrc 설정파일 복사"
 
-if [[ $(uname) == "Darwin" && $(arch) == "i386" ]]; then
-  echo -e "${YELLOW}Apple x86 설정${NC}"
-fi
-
-if [[ $(uname) == "Darwin" && $(arch) == "arm64" ]]; then
-  echo -e "$(cat .zshrc_init_darwin_arm64)\n\n$(cat ~/.zshrc_init)" > ~/.zshrc_init
-  echo -e "${YELLOW}Apple Silicon 설정${NC}"
-fi
-
 echo "완료"

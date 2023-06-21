@@ -25,22 +25,21 @@
 
 ## shell
 
-- zsh-async
+- zsh-defer
 
   ```sh
-  git clone https://github.com/mafredri/zsh-async.git ~/.zsh-async
+  git clone https://github.com/romkatv/zsh-defer.git ~/.zsh-defer
   ```
 
 - oh-my-zsh
 
   ```sh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  ```
 
-- zsh-autosuggestions
-
-  ```sh
-  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  # plugins
+  git clone https://github.com/z-shell/F-Sy-H.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
+  git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+  git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-z
   ```
 
 - starship
@@ -54,9 +53,7 @@
 #### zsh
 
 - [`.zshrc`](./.zshrc)
-- .zshrc_init
-  - [`.zshrc_init`](./.zshrc_init)
-  - [`.zshrc_init_darwin_arm64`](./.zshrc_init_darwin_arm64)
+- [`.zshrc_init`](./.zshrc_init)
 - [`.zshrc_alias`](./.zshrc_alias)
 - [`.zshrc_func`](./.zshrc_func)
 

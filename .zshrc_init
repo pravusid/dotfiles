@@ -1,6 +1,16 @@
+# Apple x86
+if [[ $(uname) == "Darwin" && $(arch) == "i386" ]]; then
+  PATH="$PATH"
+fi
+
+# Apple Arm
+if [[ $(uname) == "Darwin" && $(arch) == "arm64" ]]; then
+  PATH="$PATH:/opt/homebrew/bin"
+  eval "$(brew shellenv)"
+fi
+
 ASDF_DIR="$HOME/.asdf"
 FNM_DIR="$HOME/.fnm"
-
 export PATH="$PATH:$HOME/.local/bin:$ASDF_DIR:$FNM_DIR"
 
 # starship
@@ -12,20 +22,15 @@ export PATH="$PATH:$HOME/.local/bin:$ASDF_DIR:$FNM_DIR"
 # fnm
 [ -x "$(command -v fnm)" ] && eval "$(fnm env)"
 
-function lazy_loader() {
-  # fzf
-  export FZF_DEFAULT_COMMAND="fd --type f"
-  [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.zsh-defer/zsh-defer.plugin.zsh
 
-  # completion
-  [ -x "$(command -v aws)" ] && complete -C aws_completer aws
-  [ -f "$ASDF_DIR/completions/asdf.bash" ] && source $ASDF_DIR/completions/asdf.bash
+# fzf
+export FZF_DEFAULT_COMMAND="fd --type f"
+[ -f ~/.fzf.zsh ] && zsh-defer source ~/.fzf.zsh
 
-  # broot
-  [ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br
-}
+# broot
+[ -f ~/.config/broot/launcher/bash/br ] && zsh-defer source ~/.config/broot/launcher/bash/br
 
-source ~/.zsh-async/async.zsh
-async_start_worker zsh_async_worker -n
-async_register_callback zsh_async_worker lazy_loader
-async_job zsh_async_worker sleep 0
+# extra completion
+[ -x "$(command -v aws)" ] && complete -C aws_completer aws
+[ -f "$ASDF_DIR/completions/asdf.bash" ] && zsh-defer source $ASDF_DIR/completions/asdf.bash
