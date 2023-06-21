@@ -64,6 +64,9 @@ export ZSH=$HOME/.oh-my-zsh
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
+# https://www.zsh.org/mla/users//2014/msg00715.html
+zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
+
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
