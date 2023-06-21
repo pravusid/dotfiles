@@ -1,4 +1,6 @@
-# System Configurations
+# dotfiles
+
+> my system configurations (dotfiles & instructions)
 
 ## prerequisite
 
@@ -48,9 +50,7 @@
   curl -sS https://starship.rs/install.sh | sh
   ```
 
-### dotfiles
-
-#### zsh
+### zshrc
 
 - [`.zshrc`](./.zshrc)
 - [`.zshrc_init`](./.zshrc_init)
@@ -59,7 +59,7 @@
 
 > <https://github.com/pravusid/TIL/blob/main/Linux/oh-my-zsh-alias.md>
 
-#### git
+### gitconfig
 
 - [`.gitconfig`](./.gitconfig)
 - [`.gitignore_global`](./.gitignore_global)
@@ -105,9 +105,6 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 
 # for help
 fnm
-
-# global cli
-npm i -g npm-check-updates npm pnpm yarn
 ```
 
 ## vim
