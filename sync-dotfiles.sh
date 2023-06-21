@@ -6,32 +6,40 @@ RED='\033[0;31m'
 YELLOW='\033[0;33m'
 NC='\033[0m'
 
-echo -e "${RED}설정파일을 동기화 합니다${NC}"
+echo -e "${RED}설정파일을 동기화 합니다${NC}\n"
 
-cp -f .zshrc ~
-echo ".zshrc 설정파일 복사"
+read -p "업무용 환경인가요? (y/n): " -r for_work
+echo ""
 
-cp -f .zshrc_init ~
-echo ".zshrc_init 설정파일 복사"
+ln -sf "$(pwd)"/.zshrc ~/.zshrc
+echo ".zshrc"
 
-cp -f .zshrc_alias ~
-echo ".zshrc_alias 설정파일 복사"
+ln -sf "$(pwd)"/.zshrc_init ~/.zshrc_init
+echo ".zshrc_init"
 
-cp -f .zshrc_func ~
-echo ".zshrc_func 설정파일 복사"
+ln -sf "$(pwd)"/.zshrc_alias ~/.zshrc_alias
+echo ".zshrc_alias"
 
-if [[ -f ~/.gitconfig_private ]]; then
-  cp -f .gitconfig ~/.gitconfig_private
-  echo -e "${YELLOW}.gitconfig_private 설정파일 복사${NC}"
+ln -sf "$(pwd)"/.zshrc_func ~/.zshrc_func
+echo ".zshrc_func"
+
+if [[ $for_work == 'y' ]]; then
+  ln -sf "$(pwd)"/.gitconfig_include ~/.gitconfig
+  echo -e "${YELLOW}.gitconfig_include to .gitconfig${NC}"
+
+  ln -sf "$(pwd)"/.gitconfig ~/.gitconfig_private
+  echo -e "${YELLOW}.gitconfig to .gitconfig_private${NC}"
 else
-  cp -f .gitconfig ~
-  echo ".gitconfig 설정파일 복사"
+  [ -f ~/.gitconfig_private ] && rm ~/.gitconfig_private
+
+  ln -sf "$(pwd)"/.gitconfig ~/.gitconfig
+  echo -e "${YELLOW}.gitconfig${NC}"
 fi
 
-cp -f .gitignore_global ~
-echo ".gitignore_global 설정파일 복사"
+ln -sf "$(pwd)"/.gitignore_global ~/.gitignore_global
+echo ".gitignore_global"
 
-cp -f .vimrc ~
-echo ".vimrc 설정파일 복사"
+ln -sf "$(pwd)"/.vimrc ~/.vimrc
+echo ".vimrc"
 
-echo "완료"
+echo -e "\n${RED}완료${NC}"
