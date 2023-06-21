@@ -74,13 +74,16 @@ export ZSH=$HOME/.oh-my-zsh
 # Add wisely, as too many plugins slow down shell startup.
 # oh-my-zsh plugins
 plugins=(
+  alias-finder
   colored-man-pages
   command-not-found
   docker
   docker-compose
   F-Sy-H
   fancy-ctrl-z
+  fd
   git
+  ripgrep
   zsh-autosuggestions
   zsh-z
 )
