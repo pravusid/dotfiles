@@ -62,6 +62,7 @@
 ### gitconfig
 
 - [`.gitconfig`](./.gitconfig)
+- [`.gitconfig_include`](./.gitconfig_include)
 - [`.gitignore_global`](./.gitignore_global)
 
 > <https://github.com/pravusid/TIL/blob/main/Git/git-config.md>
