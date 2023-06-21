@@ -28,6 +28,7 @@ alias python="python3"
 alias pip="pip3"
 
 alias npl="npm ls -g --depth=0"
+alias npgu="npm i -g corepack@latest npm-check-updates@latest npm@latest pnpm@latest"
 
 alias pn="pnpm"
 alias pnr="pnpm run"
