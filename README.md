@@ -6,7 +6,7 @@
 
 - [Linux](./linux/applications.md#cli)
 
-- [macOS](./macos/README.md#homebrew)
+- [macOS](./macos/README.md#Homebrew)
 
 - 공통
 
@@ -18,12 +18,6 @@
     # upgrade
     cd ~/.fzf && git pull && ./install
     ```
-
-## terminal
-
-- [Linux](./linux/terminal.md)
-
-- [macOS](./macos/README.md#iterm2)
 
 ## shell
 

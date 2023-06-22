@@ -1,17 +1,20 @@
 # macOS 환경설정
 
-## homebrew
+## Homebrew
 
-### homebrew 설치
+### Homebrew 설치
 
-```shell
+```sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 ### Brewfile
 
-- Brewfile 읽고 패키지 설치: `brew bundle`
-- 현재 설정으로 Brewfile 생성: `brew bundle dump`
+> 패키지 설치: `brew bundle`
+
+- Brewfile 생성
+  - 기본명령어: `brew bundle dump`
+  - 사용자정의: `./brew-dump <file-name>`
 - 설정파일
   - [Brewfile](./Brewfile)
   - [Brewfile.mba](./Brewfile.mba)
@@ -39,12 +42,12 @@
 
 ```conf
 {
-  "\UF729"  = moveToBeginningOfLine:; // home
-  "\UF72B"  = moveToEndOfLine:; // end
-  "$\UF729" = moveToBeginningOfLineAndModifySelection:; // shift-home
-  "$\UF72B" = moveToEndOfLineAndModifySelection:; // shift-end
-  "^\UF729" = moveToBeginningOfDocument:; // ctrl-home
-  "^\UF72B" = moveToEndOfDocument:; // ctrl-end
+  "\UF729"   = moveToBeginningOfLine:; // home
+  "\UF72B"   = moveToEndOfLine:; // end
+  "$\UF729"  = moveToBeginningOfLineAndModifySelection:; // shift-home
+  "$\UF72B"  = moveToEndOfLineAndModifySelection:; // shift-end
+  "^\UF729"  = moveToBeginningOfDocument:; // ctrl-home
+  "^\UF72B"  = moveToEndOfDocument:; // ctrl-end
   "^$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl-shift-home
   "^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
 }
