@@ -8,150 +8,122 @@ sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 
 ## Apps
 
-- `sudo pacman -S grub-customizer`
+```sh
+sudo pacman -S \
+    grub-customizer \
+    gnome-tweaks \
+    dconf-editor \
+    \
+    gnome-calendar \
+    gnome-calculator \
+    gnome-weather \
+    evince \
+    eog \
+    geary \
+    gvfs-google \
+    \
+    papirus-icon-theme \
+    fprintd \
+    lm_sensors \
+    \
+    chromium \
+    remmina \
+    gimp \
+    vlc \
+    telegram-desktop \
+    discord \
+    veracrypt
 
-- gnome
+yay -S \
+    google-chrome \
+    dropbox \
+    ulauncher \
+    slack-desktop \
+    notion-app \
+    stacer-bin \
+    cryptomator-bin \
+    7-zip \
+    drawio-desktop-bin
+```
 
-  ```sh
-  sudo pacman -S gnome-tweaks
-  sudo pacman -S dconf-editor
-  ```
+### ulauncher
 
-- gnome apps
+- 단축키 설정
 
-  ```sh
-  sudo pacman -S gnome-software-packagekit-plugin
-  # pdf
-  sudo pacman -S evince
-  # image viewer
-  sudo pacman -S eog
-  # email
-  sudo pacman -S geary
-  # calendar
-  sudo pacman -S gnome-calendar
-  # calculator
-  sudo pacman -S gnome-calculator
-  # weather
-  sudo pacman -S gnome-weather
-  # google drive
-  sudo pacman -S gvfs-google
-  ```
+  - in X11
 
-- `sudo pacman -S papirus-icon-theme`
+    - Make sure no app is using ALT+SPACE.
+    - Open ULauncher Preferences. Map keys to `Alt+Super L` (the order is important) and exit ULauncher.
+    - Then, edit settings.json in home/user/.config/ulauncher and change `Super L` to `space`.
+    - You should have sth like this: `"hotkey-show-app": "<Alt>space"`. Save & launch ULauncher.
 
-- `sudo pacman -S fprintd`
+  - in Wayland
 
-- `sudo pacman -S lm_sensors`
+    - Install package wmctrl (needed to activate app focus)
+    - Open Ulauncher Preferences and set hotkey to something you'll never use
+    - Open OS Settings > Devices > Keyboard > Add Hotkey > Scroll all the way down > Click +
+    - In Command enter `ulauncher-toggle`, set name and shortcut, then click Add
 
-- `yay -S stacer-bin`
+- Troubleshooting
 
-- `yay -S ulauncher`
-
-  ```sh
-  # in X11
-  # Make sure no app is using ALT+SPACE.
-  # Open ULauncher Preferences. Map keys to Alt+Super L (the order is important) and exit ULauncher.
-  # Then, edit settings.json in home/user/.config/ulauncher and change Super L to space.
-  # You should have sth like this: "hotkey-show-app": "<Alt>space". Save & launch ULauncher.
-
-  # in Wayland
-  # Install package wmctrl (needed to activate app focus)
-  # Open Ulauncher Preferences and set hotkey to something you'll never use
-  # Open OS Settings > Devices > Keyboard > Add Hotkey > Scroll all the way down > Click +
-  # In Command enter ulauncher-toggle, set name and shortcut, then click Add
-  ```
-
-  - Troubleshooting
-
-    - `No module named 'ulauncher'` 오류 발생하는 경우 -> 재설치 (w/ clean build)
-    - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
-
-- `yay -S dropbox`
-
-- `sudo pacman -S chromium`
-
-- `yay -S google-chrome`
-
-- `sudo pacman -S remmina`
-
-- `sudo pacman -S gimp`
-
-- `sudo pacman -S vlc`
-
-- `yay -S slack-desktop`
-
-- `sudo pacman -S telegram-desktop`
-
-- `sudo pacman -S discord`
-
-- `yay -S notion-app`
-
-- `sudo pacman -S veracrypt`
-
-- `yay -S cryptomator-bin`
-
-- `yay -S 7-zip`
-
-- `yay -S drawio-desktop-bin`
-
-## 런타임/컴파일러
-
-- Java
-
-  - `sudo pacman -S jdk11-openjdk`
-  - RPM|DEB: <https://adoptopenjdk.net/installation.html#linux-pkg>
-
-> [use asdf](../README.md#asdf)
+  - `No module named 'ulauncher'` 오류 발생하는 경우 -> 재설치 (w/ clean build)
+  - 버전관리자(asdf, pyenv)에서 python global 설정한 경우 빌드 실패할 수 있음
 
 ## CLI
 
-- zsh
+zsh
 
-  ```sh
-  sudo pacman -S zsh
-  chsh -s /usr/bin/zsh
-  ```
+```sh
+sudo pacman -S zsh
+chsh -s /usr/bin/zsh
+```
 
-- `sudo pacman -S git git-delta`
+Apps
 
-- utils
+```sh
+sudo pacman -S \
+    wl-clipboard \
+    gnupg \
+    git git-delta \
+    fd \
+    bat \
+    ripgrep \
+    jq \
+    tokei \
+    curl \
+    aria2 \
+    mitmproxy \
+    docker docker-compose \
+    lnav \
+    shellcheck
 
-  ```sh
-  sudo pacman -S fd bat ripgrep jq wl-clipboard gnupg tokei
-  sudo pacman -S curl aria2 mitmproxy
-  yay -S gitleaks lnav
-  ```
+sudo pacman -S broot && broot --install
 
-- `sudo pacman -S broot && broot --install`
+yay -S \
+    gitleaks
 
-- `sudo pacman -S docker docker-compose`
-
-- `sudo pacman -S shellcheck`
-
-- aws
-
-  ```sh
-  sudo pacman -S aws-cli-v2
-  yay -S aws-sam-cli-bin
-  ```
+sudo pacman -S aws-cli-v2
+yay -S aws-sam-cli-bin
+```
 
 ## 개발툴
 
-- `sudo pacman -S vim`
+```sh
+sudo pacman -S \
+    vim \
+    intellij-idea-community-edition \
+    dbeaver
 
-- `yay -S visual-studio-code-bin`
+yay -S \
+    visual-studio-code-bin \
+    android-studio \
+    insomnia-bin \
+    figma-linux-bin
+```
 
-  - [background issue](https://github.com/microsoft/vscode/issues/85452)
-    - Command Palette search for "Configure Runtime Arguments"
-    - Set `disable-hardware-acceleration: true`
-    - Restart
+### visual-studio-code
 
-- `sudo pacman -S intellij-idea-community-edition`
-
-- `yay -S android-studio`
-
-- `sudo pacman -S dbeaver`
-
-- `yay -S insomnia-bin`
-
-- `yay -S figma-linux-bin`
+- [background issue](https://github.com/microsoft/vscode/issues/85452)
+  - Command Palette search for "Configure Runtime Arguments"
+  - Set `disable-hardware-acceleration: true`
+  - Restart
