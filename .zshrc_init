@@ -34,3 +34,5 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 # extra completion
 [ -x "$(command -v aws)" ] && complete -C aws_completer aws
 [ -f "$ASDF_DIR/completions/asdf.bash" ] && zsh-defer source $ASDF_DIR/completions/asdf.bash
+# tabtab source for packages (pnpm)
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && zsh-defer source ~/.config/tabtab/zsh/__tabtab.zsh || true
