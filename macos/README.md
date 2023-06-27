@@ -10,7 +10,7 @@
 
 ### Brewfile
 
-> 패키지 설치: `brew bundle`
+> 패키지 설치: `brew bundle --file=<file-name>` (file 생략하면 Brewfile 사용)
 
 - Brewfile 생성
   - 기본명령어: `brew bundle dump`

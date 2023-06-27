@@ -6,6 +6,11 @@ Karabiner-Elements 실행
 
 ## 설정파일
 
+```sh
+ln -sf "$(pwd)"/karabiner.json ~/.config/karabiner/karabiner.json
+rm -rf ~/.config/karabiner/assets/ && ln -sf "$(pwd)"/assets ~/.config/karabiner/assets
+```
+
 - [설정파일-mbp](./karabiner.json)
 - [설정파일-mba](./karabiner.mba.json)
 - [설정파일-complex-modifications](./assets/complex_modifications)
