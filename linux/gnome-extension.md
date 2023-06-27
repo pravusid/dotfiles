@@ -16,8 +16,8 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 ## install
 
 - `sudo pacman -S gnome-shell-extensions`
-- `yay -S chrome-gnome-shell`
 - `yay -S gnome-shell-extension-dash-to-dock`
+- `yay -S gnome-browser-connector-git`
 
 ## list
 
@@ -30,7 +30,6 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 - Removable Drive Menu
 - Sensory Perception
 - Status Area Horizontal Spacing
-- Tweaks & Extensions in System Menu
 - User Themes
 
 ## 버전확인 비활성화
