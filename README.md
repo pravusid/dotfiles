@@ -19,7 +19,7 @@
     cd ~/.fzf && git pull && ./install
     ```
 
-## shell
+## interactive shell
 
 - zsh-defer
 
@@ -43,23 +43,6 @@
   ```sh
   curl -sS https://starship.rs/install.sh | sh
   ```
-
-### zshrc
-
-- [`.zshrc`](./.zshrc)
-- [`.zshrc_init`](./.zshrc_init)
-- [`.zshrc_alias`](./.zshrc_alias)
-- [`.zshrc_func`](./.zshrc_func)
-
-> <https://github.com/pravusid/TIL/blob/main/Linux/oh-my-zsh-alias.md>
-
-### gitconfig
-
-- [`.gitconfig`](./.gitconfig)
-- [`.gitconfig_include`](./.gitconfig_include)
-- [`.gitignore_global`](./.gitignore_global)
-
-> <https://github.com/pravusid/TIL/blob/main/Git/git-config.md>
 
 ## version manager
 
@@ -103,26 +86,47 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 fnm
 ```
 
-## vim
-
-[`.vimrc`](./.vimrc)
+## vim-plug
 
 ```sh
-# vim-plug with curl
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-
-# vim-plug with wget
-mkdir -p ~/.vim/autoload/
-cd ~/.vim/autoload/
-wget https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-vim-plug 설치: `.vimrc` 수정 후
+플러그인 설치, 업데이트
+
+> `.vimrc` 설정, `vim` 실행 후
 
 ```vim
 :source %
 :PlugInstall
+
+:PlugUpdate
 ```
 
-만약 플러그인 설치가 제대로 되지 않았다면: `:PlugUpdate`
+## sync dotfiles
+
+```sh
+./sync-dotfiles.sh
+```
+
+### zshrc
+
+- [`.zshrc`](./.zshrc)
+- [`.zshrc_init`](./.zshrc_init)
+- [`.zshrc_alias`](./.zshrc_alias)
+- [`.zshrc_func`](./.zshrc_func)
+
+> <https://github.com/pravusid/TIL/blob/main/Linux/oh-my-zsh-alias.md>
+
+### gitconfig
+
+- [`.gitconfig`](./.gitconfig)
+- [`.gitconfig_include`](./.gitconfig_include)
+- [`.gitignore_global`](./.gitignore_global)
+
+> <https://github.com/pravusid/TIL/blob/main/Git/git-config.md>
+
+### vimrc
+
+- [`.vimrc`](./.vimrc)
