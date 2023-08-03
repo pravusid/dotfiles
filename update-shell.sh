@@ -8,7 +8,7 @@ NC='\033[0m'
 
 echo -e "${RED}패키지를 업데이트 합니다${NC}\n"
 
-cd ~/.fzf && git pull && ./install
+cd ~/.fzf && git pull && ./install --all --no-update-rc
 echo -e "${YELLOW}fzf 업데이트 완료${NC}"
 
 cd ~/.zsh-defer/ && git pull
