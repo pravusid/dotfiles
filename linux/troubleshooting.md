@@ -59,3 +59,12 @@ LC_ALL=C grub-customizer
 [Default Applications]
 inode/directory=org.gnome.Nautilus.desktop;
 ```
+
+## 오디오 오류
+
+### 웹브라우저에서 소리가 깨지는 현상
+
+<https://www.reddit.com/r/pop_os/comments/cvsirf/firefox_audio_crackling_and_popping/>
+
+- `about:config`
+- `media.webspeech.synth.enabled = false`
