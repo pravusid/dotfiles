@@ -24,6 +24,7 @@ alias converteol="find | xargs perl -pi -e 's/\r\n/\n/g'"
 alias rmedir="find . -empty -type d -delete -print"
 
 alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
+alias lgit="lazygit"
 
 alias dk="docker"
 compdef dk="docker"

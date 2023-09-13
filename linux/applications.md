@@ -95,7 +95,8 @@ sudo pacman -S \
     mitmproxy \
     docker docker-compose \
     lnav \
-    shellcheck
+    shellcheck \
+    lazygit
 
 sudo pacman -S broot && broot --install
 
