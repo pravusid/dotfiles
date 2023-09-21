@@ -61,16 +61,17 @@ asdf
 # for update
 asdf update
 
+# https://github.com/asdf-vm/asdf-plugins
 # add plugin
-asdf plugin add <name> [git-url]
+asdf plugin-add <name> [git-url]
 # update plugin
-asdf plugin update --all
+asdf plugin-update --all
 
 # for me
-asdf plugin add go https://github.com/kennyp/asdf-golang
-asdf plugin add python https://github.com/danhper/asdf-python
-asdf plugin add rust https://github.com/code-lever/asdf-rust
-asdf plugin add java https://github.com/halcyon/asdf-java
+asdf plugin-add python
+asdf plugin-add golang
+asdf plugin-add rust
+asdf plugin-add java
 ```
 
 ### fnm
