@@ -10,7 +10,7 @@ sudo systemctl status bluetooth
 # 활성화
 sudo systemctl enable bluetooth
 # 즉시 시작
-sudo systemctl start bluetooth 
+sudo systemctl start bluetooth
 ```
 
 ### 커널문제로 재부팅마다 페어링 해제 되는 경우
@@ -34,19 +34,41 @@ sudo systemctl start bluetooth
 ### 업데이트 중 signature 오류 발생
 
 ```sh
-sudo pacman -Sy archlinux-keyring endeavouros-keyring
+sudo pacman -Syy archlinux-keyring endeavouros-keyring
+```
+
+해결되지 않는 경우 추가조치
+
+```sh
+#!/usr/bin/env bash
+# https://forum.endeavouros.com/t/update-problem-gpme-error-no-data/23381/30
+
+sudo cp -f "/etc/pacman.conf" "/etc/pacman.conf.orig"
+sudo sed -i 's/SigLevel.*/SigLevel = Never/' /etc/pacman.conf
+sudo pacman -Syy gnupg archlinux-keyring endeavouros-keyring
+sudo mv -f "/etc/pacman.conf.orig" "/etc/pacman.conf"
+sudo pacman -Syu
 ```
 
 ## 종료(재부팅)시 비프음
 
 <https://wiki.archlinux.org/title/PC_speaker#In_Linux>
 
-## grub-customizer 실행오류
+## grub
+
+### grub-customizer 실행오류
 
 > locale 변경 후 실행한다
 
 ```sh
 LC_ALL=C grub-customizer
+```
+
+### update-grub 실행오류
+
+```sh
+#!/usr/bin/env bash
+LC_ALL=C sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## VSCode 설치 후 기본 파일매니저 오류
@@ -62,7 +84,7 @@ inode/directory=org.gnome.Nautilus.desktop;
 
 ## 오디오 오류
 
-### 웹브라우저에서 소리가 깨지는 현상
+### Firefox 브라우저에서 소리가 깨지는 현상
 
 <https://www.reddit.com/r/pop_os/comments/cvsirf/firefox_audio_crackling_and_popping/>
 
