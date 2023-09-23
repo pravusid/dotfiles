@@ -1,10 +1,10 @@
-getmpeg() {
+get-mpeg() {
   ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
 }
 
-getportconn() {
-  grep -v "rem_address" /proc/net/tcp \
-    | awk 'function hextodec(str,ret,n,i,k,c) {
+get-portconn() {
+  grep -v "rem_address" /proc/net/tcp |
+    awk 'function hextodec(str,ret,n,i,k,c) {
       ret = 0
       n = length(str)
       for (i = 1; i <= n; i++) {
@@ -18,8 +18,8 @@ getportconn() {
       for (i=5; i>0; i-=2) x = x"."hextodec(substr($2,i,2))
     } {
       print x":"hextodec(substr($2,index($2,":")+1,4))
-    }' \
-    | sort | uniq -c | sort -rn
+    }' |
+    sort | uniq -c | sort -rn
 }
 
 kp() {
@@ -30,11 +30,33 @@ kp() {
 # https://pravusid.kr/wiki/Docker/docker-volume.html
 docker-vol() {
   if [[ $1 == "ls" ]]; then
-    docker ps -a --format '{{ .ID }}' \
-      | xargs -I {} docker inspect -f '{{ .Name }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
+    docker ps -a --format '{{ .ID }}' |
+      xargs -I {} docker inspect -f '{{ .Name }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
   elif [[ $1 == "clean" ]]; then
     docker volume rm $(docker volume ls -qf dangling=true)
   else
     echo "unknown command"
+  fi
+}
+
+fd-nm() {
+  fd -H -I -t d --prune "node_modules"
+}
+
+# https://help.dropbox.com/sync/ignored-files
+
+drop-ignore() {
+  if [[ $(uname) == "Linux" ]]; then
+    attr -s com.dropbox.ignored -V 1 $1
+  elif [[ $(uname) == "Darwin" ]]; then
+    xattr -w "com.apple.fileprovider.ignore#P" 1 $1
+  fi
+}
+
+drop-unignore() {
+  if [[ $(uname) == "Linux" ]]; then
+    attr -r com.dropbox.ignored $1
+  elif [[ $(uname) == "Darwin" ]]; then
+    xattr -d "com.apple.fileprovider.ignore#P" $1
   fi
 }

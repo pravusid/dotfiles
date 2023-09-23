@@ -3,10 +3,12 @@ if [[ $(uname) == "Darwin" && $(arch) == "i386" ]]; then
   PATH="$PATH"
 fi
 
-# Apple Arm
+# Apple ARM
 if [[ $(uname) == "Darwin" && $(arch) == "arm64" ]]; then
   PATH="$PATH:/opt/homebrew/bin"
   eval "$(brew shellenv)"
+
+  fpath+="/opt/homebrew/share/zsh/site-functions"
 fi
 
 ASDF_DIR="$HOME/.asdf"
@@ -34,3 +36,6 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 # extra completion
 [ -x "$(command -v aws)" ] && complete -C aws_completer aws
 [ -f "$ASDF_DIR/completions/asdf.bash" ] && zsh-defer source $ASDF_DIR/completions/asdf.bash
+
+# compinit
+zsh-defer autoload -Uz compinit && compinit
