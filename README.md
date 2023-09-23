@@ -6,7 +6,7 @@
 
 - [Linux](./linux/applications.md#cli)
 
-- [macOS](./macos/README.md#Homebrew)
+- [macOS](./macos/homebrew/README.md)
 
 - 공통
 
@@ -99,7 +99,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 > `.vimrc` 설정, `vim` 실행 후
 
 ```vim
-:source %
+:source ~/.vimrc
 :PlugInstall
 
 :PlugUpdate

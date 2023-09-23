@@ -1,61 +1,19 @@
 # macOS 환경설정
 
-## Homebrew
-
-### Homebrew 설치
-
-```sh
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-### Brewfile
-
-> 패키지 설치: `brew bundle --file=<file-name>` (file 생략하면 Brewfile 사용)
-
-- Brewfile 생성
-  - 기본명령어: `brew bundle dump`
-  - 사용자정의: `./brew-dump <file-name>`
-- 설정파일
-  - [Brewfile](./Brewfile)
-  - [Brewfile.mba](./Brewfile.mba)
-
-> sublime-text: 심볼릭링크: `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
-
 ## iTerm2
 
 - color schemes: <https://iterm2colorschemes.com/>
-- [설정파일](./iterm2.json)
+- [iTerm2 설정파일](./iterm2.json)
 
-## karabiner
+## Homebrew
 
-[설정방법](./karabiner/README.md)
+[Homebrew 설정방법](./homebrew/README.md)
 
-## Binding Home/End keys
+## Karabiner
 
-- <https://damieng.com/blog/2015/04/24/make-home-end-keys-behave-like-windows-on-mac-os-x/>
-- <https://discussions.apple.com/thread/251108215?login=true>
-- <https://github.com/microsoft/vscode/issues/111950>
+[Karabiner 설정방법](./karabiner/README.md)
 
-`mkdir -p $HOME/Library/KeyBindings`
-
-`~/Library/KeyBindings/DefaultKeyBinding.dict`
-
-```conf
-{
-  "\UF729"   = moveToBeginningOfLine:; // home
-  "\UF72B"   = moveToEndOfLine:; // end
-  "$\UF729"  = moveToBeginningOfLineAndModifySelection:; // shift-home
-  "$\UF72B"  = moveToEndOfLineAndModifySelection:; // shift-end
-  "^\UF729"  = moveToBeginningOfDocument:; // ctrl-home
-  "^\UF72B"  = moveToEndOfDocument:; // ctrl-end
-  "^$\UF729" = moveToBeginningOfDocumentAndModifySelection:; // ctrl-shift-home
-  "^$\UF72B" = moveToEndOfDocumentAndModifySelection:; // ctrl-shift-end
-}
-```
-
-## xcode
-
-### xcode-select 재설치
+## xcode-select 재설치
 
 ```sh
 # 각각 실행
@@ -89,43 +47,40 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 ### 동기화
 
-`시스템 환경설정 > 인터넷 계정 (동기화)`
+`시스템 설정 > 인터넷 계정 (동기화)`
 
 - iCloud (제외): Mail, 연락처, 캘린더
 - Google (포함): Mail, 캘린더
 
 ### 핫 코너
 
-`시스템 환경설정 > Mission Control > 핫 코너`
+`시스템 설정 > 데스크탑 및 Dock > 핫 코너 (버튼)`
 
 ### 배터리
 
-`시스템 환경설정 > 배터리`
+`시스템 설정 > 배터리`
 
-- 배터리
-
-  - 제외: `배터리 전원을 사용하는 동안 Power Nap 활성화하기`
-  - 선택: (최적화된 배터리 충전) or (AlDente app)
-  - 나머지 포함
-
-- 전원 어댑터
-
-  - 포함: `자동 그래픽 전환`
-  - 나머지 제외
+- 저전력 모드: 배터리 사용 시에만
+- 옵션
+  - 네트워크 연결 시 깨우기: 전원 어댑터 연결 시에만
+  - 배터리를 사용하는 동안 비디오 스트리밍 최적화: on
 
 ### 키보드
 
-`시스템 환경설정 > 키보드`
+`시스템 설정 > 키보드`
 
-- 키보드 탐색을 사용하여 컨트롤 간에 초점 이동 활성화 (ventura 이전에는 단축키탭)
+- **키보드 탐색**을 사용하여 컨트롤 간에 초점 이동 활성화 (ventura 이전에는 단축키탭)
 
-`시스템 환경설정 > 키보드 > 단축키`
+`시스템 설정 > 키보드 > 키보드 단축키 (버튼)`
 
+- Launchpad 및 Dock
+  - Dock 가리기 켜기/끄기 비활성화
 - 디스플레이
-
   - 밝기 감소|증가 비활성화
-
 - Mission Control
-
   - Mission Control (`ctrl + arrow`) 항목 전체 활성화
   - 기타 항목 (데스크탑 보기, 데스크탑 1로 전환, 빠른메모 ...) 비활성화
+- 스크린샷
+  - 전체 비활성화
+- 기능 키
+  - F1, F2 등의 키를 표준 기능 키로 사용: on
