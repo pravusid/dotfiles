@@ -131,3 +131,16 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ### vimrc
 
 - [`.vimrc`](./.vimrc)
+
+## Troubleshooting
+
+### zsh compinit 오류
+
+> zsh compinit: insecure directories, run compaudit for list.
+> Ignore insecure directories and continue [y] or abort compinit [n]
+
+소유권 변경으로 오류 해결
+
+```sh
+compaudit | xargs chmod g-w
+```
