@@ -128,3 +128,17 @@ yay -S \
   - Command Palette search for "Configure Runtime Arguments"
   - Set `disable-hardware-acceleration: true`
   - Restart
+
+## Java
+
+시스템 자바 버전 변경
+
+```sh
+# Arch
+# https://wiki.archlinux.org/title/Java#Switching_between_JVM
+sudo archlinux-java status
+sudo archlinux-java set <JAVA_ENV_NAME>
+
+# ubuntu
+sudo update-alternatives --config java
+```
