@@ -20,3 +20,16 @@
   - [Brewfile.mba](./Brewfile.mba)
 
 > sublime-text: 심볼릭링크: `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+
+## Troubleshooting
+
+### docker-compose
+
+<https://formulae.brew.sh/formula/docker-compose>
+
+> Compose is now a Docker plugin. For Docker to find this plugin, symlink it:
+
+```sh
+mkdir -p ~/.docker/cli-plugins
+ln -sfn $HOMEBREW_PREFIX/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
+```
