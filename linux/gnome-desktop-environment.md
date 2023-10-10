@@ -63,6 +63,7 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 - Removable Drive Menu
 - Sensory Perception
 - Status Area Horizontal Spacing
+- UPower Battery
 - User Themes
 
 ### 버전확인 비활성화
