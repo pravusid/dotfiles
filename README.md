@@ -36,6 +36,7 @@
   git clone https://github.com/z-shell/F-Sy-H.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
   git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-z
+  git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
   ```
 
 - starship
@@ -140,6 +141,8 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 > Ignore insecure directories and continue [y] or abort compinit [n]
 
 소유권 변경으로 오류 해결
+
+<https://github.com/ohmyzsh/ohmyzsh/blob/master/lib/compfix.zsh>
 
 ```sh
 compaudit | xargs chmod g-w
