@@ -1,18 +1,32 @@
+OS="$(uname -s)"
+
 # Apple x86
-if [[ $(uname) == "Darwin" && $(arch) == "i386" ]]; then
+if [[ "$OS" == "Darwin" && $(arch) == "i386" ]]; then
   PATH="$PATH"
 fi
 
 # Apple ARM
-if [[ $(uname) == "Darwin" && $(arch) == "arm64" ]]; then
+if [[ "$OS" == "Darwin" && $(arch) == "arm64" ]]; then
   PATH="$PATH:/opt/homebrew/bin"
   eval "$(brew shellenv)"
 
   fpath+="/opt/homebrew/share/zsh/site-functions"
 fi
 
+# https://asdf-vm.com/guide/getting-started.html
 ASDF_DIR="$HOME/.asdf"
-FNM_DIR="$HOME/.fnm"
+
+# https://github.com/Schniz/fnm/blob/master/.ci/install.sh
+if [ -d "$HOME/.fnm" ]; then
+  FNM_DIR="$HOME/.fnm"
+elif [ -n "$XDG_DATA_HOME" ]; then
+  FNM_DIR="$XDG_DATA_HOME/fnm"
+elif [ "$OS" = "Darwin" ]; then
+  FNM_DIR="$HOME/Library/Application Support/fnm"
+else
+  FNM_DIR="$HOME/.local/share/fnm"
+fi
+
 export PATH="$PATH:$HOME/.local/bin:$ASDF_DIR:$FNM_DIR"
 
 # starship
