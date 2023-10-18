@@ -1,8 +1,12 @@
-get-mpeg() {
+RED='\033[0;31m'
+YELLOW='\033[0;33m'
+NC='\033[0m'
+
+mpeg-dn() {
   ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
 }
 
-get-portconn() {
+portconn() {
   grep -v "rem_address" /proc/net/tcp |
     awk 'function hextodec(str,ret,n,i,k,c) {
       ret = 0
@@ -24,7 +28,7 @@ get-portconn() {
 
 kp() {
   lsof -ti :$1 | xargs -r -I {} kill -9 {}
-  echo "kill port $1"
+  echo "${RED}kill port $1${NC}"
 }
 
 # https://pravusid.kr/wiki/Docker/docker-volume.html
@@ -40,12 +44,13 @@ docker-vol() {
 }
 
 fd-nm() {
+  echo -e "${YELLOW}fd -H -I -t d --prune \"node_modules\"${NC}"
   fd -H -I -t d --prune "node_modules"
 }
 
 # https://help.dropbox.com/sync/ignored-files
 
-drop-ignore() {
+dropbox-ignore() {
   if [[ $(uname) == "Linux" ]]; then
     attr -s com.dropbox.ignored -V 1 $1
   elif [[ $(uname) == "Darwin" ]]; then
@@ -53,10 +58,15 @@ drop-ignore() {
   fi
 }
 
-drop-unignore() {
+dropbox-unignore() {
   if [[ $(uname) == "Linux" ]]; then
     attr -r com.dropbox.ignored $1
   elif [[ $(uname) == "Darwin" ]]; then
     xattr -d "com.apple.fileprovider.ignore#P" $1
   fi
+}
+
+du-sorted() {
+  echo -e "${YELLOW}du -kh -d1 | sort -rh${NC}"
+  du -kh -d1 | sort -rh
 }
