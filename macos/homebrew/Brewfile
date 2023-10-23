@@ -72,6 +72,7 @@ cask "sublime-text"
 cask "visual-studio-code"
 cask "visual-studio-code-insiders"
 cask "warp"
+cask "zed"
 mas "Amphetamine", id: 937984704
 mas "Cleaner One", id: 1473079126
 mas "iMovie", id: 408981434
