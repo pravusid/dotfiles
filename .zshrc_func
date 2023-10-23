@@ -31,8 +31,13 @@ docker-vol() {
 }
 
 fd-nm() {
-  echo -e "${YELLOW}fd -H -I -t d --prune \"node_modules\"${NC}"
-  fd -H -I -t d --prune "node_modules"
+  if [[ -x "$(command -v fd)" ]]; then
+    echo -e "${YELLOW}fd -H -I -t d --prune \"node_modules\"${NC}"
+    fd -H -I -t d --prune "node_modules"
+  else
+    echo -e "${YELLOW}find . -name \"node_modules\" -type d -prune${NC}"
+    find . -name 'node_modules' -type d -prune
+  fi
 }
 
 # https://help.dropbox.com/sync/ignored-files
