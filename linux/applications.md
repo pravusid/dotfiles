@@ -39,7 +39,7 @@ yay -S \
     dropbox \
     ulauncher \
     slack-desktop \
-    notion-app \
+    notion-app-electron \
     stacer-bin \
     cryptomator-bin \
     7-zip \
@@ -52,7 +52,7 @@ yay -S \
 
   - in X11
 
-    - Make sure no app is using ALT+SPACE.
+    - Make sure no app is using `ALT+SPACE`.
     - Open ULauncher Preferences. Map keys to `Alt+Super L` (the order is important) and exit ULauncher.
     - Then, edit settings.json in home/user/.config/ulauncher and change `Super L` to `space`.
     - You should have sth like this: `"hotkey-show-app": "<Alt>space"`. Save & launch ULauncher.
