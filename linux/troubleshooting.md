@@ -90,3 +90,32 @@ inode/directory=org.gnome.Nautilus.desktop;
 
 - `about:config`
 - `media.webspeech.synth.enabled = false`
+
+## Keyboard Function Keys
+
+> function keys 대신 multimedia shortcuts 으로 작동하는 경우
+
+<https://wiki.archlinux.org/title/Apple_Keyboard#Function_keys_do_not_work>
+
+`fnmode` - Mode of top-row keys
+
+- 0 - disabled
+- 1 - normally media keys, switchable to function keys by holding Fn key (=auto on Apple keyboards)
+- 2 - normally function keys, switchable to media keys by holding Fn key (=auto on non-Apple keyboards)
+- 3 - auto (Default)
+
+### 임시 적용
+
+```sh
+echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
+```
+
+### 영구 적용
+
+`/etc/modprobe.d/hid_apple.conf`
+
+```conf
+options hid_apple fnmode=2
+```
+
+수정 후 재부팅 하고, 자동으로 적용되지 않는다면 [initramfs 재생성](https://wiki.archlinux.org/title/Regenerate_the_initramfs)을 진행한다
