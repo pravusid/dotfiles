@@ -86,6 +86,10 @@ curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
 
 # for help
 fnm
+
+# https://github.com/Schniz/fnm/pull/129
+fnm install <latest|latest-codename|lts/codename>
+fnm use <latest|latest-codename|lts/codename>
 ```
 
 ## vim-plug
