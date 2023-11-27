@@ -62,6 +62,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 - 저전력 모드: 배터리 사용 시에만
 - 옵션
+  - 배터리를 사용할 때 화면 밝기를 약간 낮추기: on
   - 네트워크 연결 시 깨우기: 전원 어댑터 연결 시에만
   - 배터리를 사용하는 동안 비디오 스트리밍 최적화: on
 
@@ -76,13 +77,18 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 `시스템 설정 > 키보드 > 키보드 단축키 (버튼)`
 
 - Launchpad 및 Dock
-  - Dock 가리기 켜기/끄기 비활성화
+  - Dock 가리기 켜기/끄기 off
 - 디스플레이
-  - 밝기 감소|증가 비활성화
+  - 밝기 감소|증가 off
 - Mission Control
-  - Mission Control (`ctrl + arrow`) 항목 전체 활성화
-  - 기타 항목 (데스크탑 보기, 데스크탑 1로 전환, 빠른메모 ...) 비활성화
+  - Mission Control (`ctrl + arrow`) 항목 전체 on
+  - 기타 항목 (데스크탑 보기, 데스크탑 1로 전환, 빠른메모 ...) off
 - 스크린샷
-  - 전체 비활성화
+  - 전체 off
 - 기능 키
-  - F1, F2 등의 키를 표준 기능 키로 사용: on
+  - F1, F2 등의 키를 표준 기능 키로 사용 on
+
+`시스템 설정 > 키보드 > 텍스트 입력 > 입력소스 (편집)`
+
+- 먖춤법 자동 수정: 해제
+- 스페이스를 두 번 눌러 마침표 추가: 해제
