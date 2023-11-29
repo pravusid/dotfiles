@@ -36,7 +36,7 @@ export PATH="$PATH:$HOME/.local/bin:$ASDF_DIR:$FNM_DIR"
 [ -f "$ASDF_DIR/asdf.sh" ] && source $ASDF_DIR/asdf.sh
 
 # fnm
-[ -x "$(command -v fnm)" ] && eval "$(fnm env)"
+[ -x "$(command -v fnm)" ] && eval "$(fnm env --use-on-cd)"
 
 source ~/.zsh-defer/zsh-defer.plugin.zsh
 
