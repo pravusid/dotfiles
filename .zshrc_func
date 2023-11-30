@@ -2,10 +2,16 @@ RED='\033[0;31m'
 YELLOW='\033[0;33m'
 NC='\033[0m'
 
+funcs() {
+  cat ~/.zshrc_func | grep '^#@'
+}
+
+#@ mpeg-dn <input> <output>
 mpeg-dn() {
   ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
 }
 
+#@ port-scan <host> <port>
 port-scan() {
   HOST=$1
   PORT=$2
@@ -13,12 +19,15 @@ port-scan() {
   nc -z -v $HOST $PORT
 }
 
+#@ port-kill <port>
 port-kill() {
   lsof -ti :$1 | xargs -r -I {} kill -9 {}
   echo "${RED}kill port $1${NC}"
 }
 
 # https://pravusid.kr/wiki/Docker/docker-volume.html
+#@ docker-vol ls
+#@ docker-vol clean
 docker-vol() {
   if [[ $1 == "ls" ]]; then
     docker ps -a --format '{{ .ID }}' |
@@ -30,6 +39,7 @@ docker-vol() {
   fi
 }
 
+#@ fd-nm -- 하위경로의 node_modules 디렉토리 검색
 fd-nm() {
   if [[ -x "$(command -v fd)" ]]; then
     echo -e "${YELLOW}fd -H -I -t d --prune \"node_modules\"${NC}"
@@ -42,6 +52,7 @@ fd-nm() {
 
 # https://help.dropbox.com/sync/ignored-files
 
+#@ dropbox-ignore <path>
 dropbox-ignore() {
   if [[ $(uname) == "Linux" ]]; then
     attr -s com.dropbox.ignored -V 1 $1
@@ -50,6 +61,7 @@ dropbox-ignore() {
   fi
 }
 
+#@ dropbox-unignore <path>
 dropbox-unignore() {
   if [[ $(uname) == "Linux" ]]; then
     attr -r com.dropbox.ignored $1
@@ -58,7 +70,13 @@ dropbox-unignore() {
   fi
 }
 
+#@ du-sorted -- 현재경로의 디렉토리 용량순서대로 출력
 du-sorted() {
   echo -e "${YELLOW}du -kh -d1 | sort -rh${NC}"
   du -kh -d1 | sort -rh
+}
+
+#@ jless <path> -- jq & less
+jless() {
+  jq -C -R '. as $raw | try fromjson catch $raw' $1 | less -R
 }
