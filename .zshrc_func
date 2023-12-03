@@ -26,6 +26,7 @@ port-kill() {
 }
 
 # https://pravusid.kr/wiki/Docker/docker-volume.html
+
 #@ docker-vol ls
 #@ docker-vol clean
 docker-vol() {
@@ -33,7 +34,16 @@ docker-vol() {
     docker ps -a --format '{{ .ID }}' |
       xargs -I {} docker inspect -f '{{ .Name }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
   elif [[ $1 == "clean" ]]; then
-    docker volume rm $(docker volume ls -qf dangling=true)
+    docker volume ls -qf dangling=true | xargs -r docker volume rm
+  else
+    echo "unknown command"
+  fi
+}
+
+#@ docker-img clean
+docker-img() {
+  if [[ $1 == "clean" ]]; then
+    docker images -qf dangling=true | xargs docker rmi
   else
     echo "unknown command"
   fi
