@@ -56,13 +56,13 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 
 - AppIndicator and KStatusNotifierItem Support
 - Blur my Shell
-- Emoji Selector: `dconf write /org/gnome/shell/extensions/emoji-selector/emoji-keybinding "['<Super>period']"`
+- Emoji Copy: `dconf write /org/gnome/shell/extensions/emoji-selector/emoji-keybinding "['<Super>period']"`
 - Espresso
 - Lock Keys
 - Places Status Indicator
 - Removable Drive Menu
-- Sensory Perception
 - Status Area Horizontal Spacing
+- TopHat
 - UPower Battery
 - User Themes
 
