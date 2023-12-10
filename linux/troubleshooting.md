@@ -91,6 +91,34 @@ inode/directory=org.gnome.Nautilus.desktop;
 - `about:config`
 - `media.webspeech.synth.enabled = false`
 
+### 재부팅 후 선택한 오디오 출력장치가 초기화 되는 경우
+
+- <https://askubuntu.com/questions/1171614/output-channel-for-audio-resets-after-every-reboot>
+- <https://gist.github.com/ChriRas/b9aef9771a97249cb4620e0d6ef538c4>
+
+`sudo vim /etc/pulse/default.pa`
+
+```conf
+# 다음 옵션 주석처리
+load-module module-switch-on-port-available
+# 다음 옵션 주석처리
+load-module module-switch-on-connect
+```
+
+기본 sink 장치로 설정하려면 다음 옵션 추가 (장치연결하지 않은 상태면 오류발생함)
+
+```conf
+# 디바이스 조회는 pactl list short sinks 명령어 사용
+# e.g. set-default-sink alsa_output.pci-0000_00_1f.3.analog-stereo
+set-default-sink <DEVICE_NAME>
+```
+
+펄스오디오 재시작
+
+```bash
+pulseaudio --kill && sleep 10 && pulseaudio --start
+```
+
 ## Keyboard Function Keys
 
 > function keys 대신 multimedia shortcuts 으로 작동하는 경우
