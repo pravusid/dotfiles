@@ -96,7 +96,8 @@ sudo pacman -S \
     docker docker-compose \
     lnav \
     shellcheck \
-    lazygit
+    lazygit \
+    tree
 
 sudo pacman -S broot && broot --install
 
