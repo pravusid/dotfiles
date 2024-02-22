@@ -80,13 +80,43 @@ dropbox-unignore() {
   fi
 }
 
-#@ du-sorted -- 현재경로의 디렉토리 용량순서대로 출력
+#@ du-sorted -- 현재경로의 파일 용량순서대로 출력
 du-sorted() {
-  echo -e "${YELLOW}du -kh -d1 | sort -rh${NC}"
-  du -kh -d1 | sort -rh
+  echo -e "${YELLOW}du -kh -d0 * 2> /dev/null | sort -rh${NC}"
+  du -kh -d0 * 2> /dev/null | sort -rh
+}
+
+#@ du-dir-sorted -- 현재경로의 디렉토리 용량순서대로 출력
+du-dir-sorted() {
+  echo -e "${YELLOW}du -kh -d1 2> /dev/null | sort -rh${NC}"
+  du -kh -d1 2> /dev/null | sort -rh
 }
 
 #@ jless <path> -- jq & less
 jless() {
   jq -C -R '. as $raw | try fromjson catch $raw' $1 | less -R
+}
+
+# man zshexpn → ${~var}
+
+#@ count-files [glob] -- 파일 수 출력
+count-files() {
+  glob=${1:-.}
+  ls -1A ${~glob} | wc -l | tr -s " "
+}
+
+#@ count-lines [glob] -- 파일별 라인수 출력
+count-lines() {
+  glob=${1:-*}
+  for f in ${~glob}; do echo ${f} $(rg -c . $f); done;
+}
+
+#@ convert-eol -- \r\n to \n
+convert-eol() {
+  find | xargs perl -pi -e 's/\r\n/\n/g'
+}
+
+#@ rm-empty-dir -- 현재 경로의 비어있는 디렉토리 삭제
+rm-empty-dir() {
+  find . -empty -type d -delete -print
 }
