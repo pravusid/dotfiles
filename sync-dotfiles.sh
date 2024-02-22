@@ -42,4 +42,7 @@ echo ".gitignore_global"
 ln -sf "$(pwd)"/.vimrc ~/.vimrc
 echo ".vimrc"
 
+ln -sf "$(pwd)"/.bat.conf ~/.bat.conf
+echo ".bat.conf"
+
 echo -e "\n${RED}완료${NC}"

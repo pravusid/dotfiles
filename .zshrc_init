@@ -53,3 +53,6 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 
 # compinit
 zsh-defer autoload -Uz compinit && compinit
+
+# bat
+export BAT_CONFIG_PATH="$HOME/.bat.conf"
