@@ -16,7 +16,6 @@ alias tf="\tail -f"
 alias ssa="\ss -natp"
 alias ssl="\ss -nltp"
 
-alias fzfpv="fzf --preview 'cat {} 2> /dev/null | head -500'"
 alias lgit="lazygit"
 
 alias dk="docker"

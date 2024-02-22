@@ -120,3 +120,10 @@ convert-eol() {
 rm-empty-dir() {
   find . -empty -type d -delete -print
 }
+
+#@ fzfpv -- 현재경로 파일 미리보기 (fzf + bat)
+fzfpv() {
+  fzf --preview "bat --color=always --style=numbers --line-range=:500 {}" \
+    --bind shift-left:preview-page-up,shift-right:preview-page-down \
+    --preview-window 70%,border-double,top
+}
