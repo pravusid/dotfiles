@@ -32,7 +32,8 @@ sudo pacman -S \
     vlc \
     telegram-desktop \
     discord \
-    veracrypt
+    veracrypt \
+    bleachbit
 
 yay -S \
     google-chrome \
@@ -40,7 +41,6 @@ yay -S \
     ulauncher \
     slack-desktop \
     notion-app-electron \
-    stacer-bin \
     cryptomator-bin \
     7-zip \
     drawio-desktop-bin
