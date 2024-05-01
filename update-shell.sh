@@ -17,12 +17,7 @@ echo -e "${YELLOW}zsh-defer 업데이트 완료${NC}"
 curl -sS https://starship.rs/install.sh | sh -s -- --yes
 echo -e "${YELLOW}starship 업데이트 완료${NC}"
 
-asdf update
-asdf plugin update --all
-echo -e "${YELLOW}asdf 업데이트 완료${NC}"
-
-if [[ $(uname) == "Linux" ]]; then
-  curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
-fi
+mise self-update -y
+echo -e "${YELLOW}mise 업데이트 완료${NC}"
 
 echo -e "\n${RED}완료${NC}"

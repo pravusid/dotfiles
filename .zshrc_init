@@ -13,31 +13,18 @@ if [[ "$OS" == "Darwin" && $(arch) == "arm64" ]]; then
   fpath+="/opt/homebrew/share/zsh/site-functions"
 fi
 
-# https://asdf-vm.com/guide/getting-started.html
-ASDF_DIR="$HOME/.asdf"
-
-# https://github.com/Schniz/fnm/blob/master/.ci/install.sh
-if [ -d "$HOME/.fnm" ]; then
-  FNM_DIR="$HOME/.fnm"
-elif [ -n "$XDG_DATA_HOME" ]; then
-  FNM_DIR="$XDG_DATA_HOME/fnm"
-elif [ "$OS" = "Darwin" ]; then
-  FNM_DIR="$HOME/Library/Application Support/fnm"
-else
-  FNM_DIR="$HOME/.local/share/fnm"
-fi
-
-export PATH="$PATH:$HOME/.local/bin:$ASDF_DIR:$FNM_DIR"
+export PATH="$PATH:$HOME/.local/bin"
 
 # starship
 [ -x "$(command -v starship)" ] && eval "$(starship init zsh)"
 
-# asdf
-[ -f "$ASDF_DIR/asdf.sh" ] && source $ASDF_DIR/asdf.sh
+# mise
+[ -f ~/.local/bin/mise ] && eval "$(mise activate zsh)"
 
-# fnm
-[ -x "$(command -v fnm)" ] && eval "$(fnm env --use-on-cd)"
+# bat
+export BAT_CONFIG_PATH="$HOME/.bat.conf"
 
+# zsh-defer
 source ~/.zsh-defer/zsh-defer.plugin.zsh
 
 # fzf
@@ -48,11 +35,8 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 [ -f ~/.config/broot/launcher/bash/br ] && zsh-defer source ~/.config/broot/launcher/bash/br
 
 # extra completion
-[ -x "$(command -v aws)" ] && complete -C aws_completer aws
-[ -f "$ASDF_DIR/completions/asdf.bash" ] && zsh-defer source $ASDF_DIR/completions/asdf.bash
+[ -f ~/.local/bin/mise ] && zsh-defer eval "$(mise completion zsh)"
+[ -x "$(command -v aws)" ] && zsh-defer complete -C aws_completer aws
 
 # compinit
 zsh-defer autoload -Uz compinit && compinit
-
-# bat
-export BAT_CONFIG_PATH="$HOME/.bat.conf"

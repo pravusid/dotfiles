@@ -47,49 +47,14 @@
 
 ## version manager
 
-### asdf
+### mise
 
 ```sh
-# asdf
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf
-cd ~/.asdf
-git checkout "$(git describe --abbrev=0 --tags)"
-chmod +x asdf.sh
+# install
+curl https://mise.run | sh
 
-# for help
-asdf
-
-# for update
-asdf update
-
-# https://github.com/asdf-vm/asdf-plugins
-# add plugin
-asdf plugin-add <name> [git-url]
-# update plugin
-asdf plugin-update --all
-
-# for me
-asdf plugin-add python
-asdf plugin-add golang
-asdf plugin-add rust
-asdf plugin-add java
-```
-
-### fnm
-
-```sh
-# fnm
-curl -fsSL https://fnm.vercel.app/install | bash
-
-# for update
-curl -fsSL https://fnm.vercel.app/install | bash -s -- --skip-shell
-
-# for help
-fnm
-
-# https://github.com/Schniz/fnm/pull/129
-fnm install <latest|latest-codename|lts/codename>
-fnm use <latest|latest-codename|lts/codename>
+# install usage-cli
+mise use -g usage
 ```
 
 ## vim-plug
