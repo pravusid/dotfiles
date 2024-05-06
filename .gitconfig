@@ -57,8 +57,10 @@
             [[ ! -z "$_hash" ]] && git show "$_hash";\
         }; f\
     "
-    gone = "!git fetch -p && git for-each-ref --format '%(refname:short) %(upstream:track)' | awk '$2 == \"[gone]\" {print $1}' | xargs -r git branch -D"
     blow = "!git restore . && git clean -fd"
+
+[gt]
+    exclude = main master develop dev staging
 
 [filter "lfs"]
     clean = git-lfs clean -- %f

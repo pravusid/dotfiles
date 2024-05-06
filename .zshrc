@@ -100,6 +100,7 @@ plugins=(
   fancy-ctrl-z
   fd
   git
+  git-trim
   ripgrep
   zsh-autosuggestions
   zsh-z
