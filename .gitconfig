@@ -24,10 +24,14 @@
 [pull]
     rebase = true
 
+[diff]
+    colorMoved = default
+
 [interactive]
     diffFilter = delta --color-only
 
 [delta]
+    navigate = true
     line-numbers = true
     plus-style = syntax "#012800"
     minus-style = normal "#340001"
