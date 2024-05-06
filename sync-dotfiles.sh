@@ -11,6 +11,9 @@ echo -e "${RED}설정파일을 동기화 합니다${NC}\n"
 read -p "업무용 환경인가요? (y/N): " -r for_work
 echo ""
 
+ln -sf "$(pwd)"/.zprofile ~/.zprofile
+echo ".zprofile"
+
 ln -sf "$(pwd)"/.zshrc ~/.zshrc
 echo ".zshrc"
 
