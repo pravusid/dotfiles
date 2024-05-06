@@ -97,7 +97,8 @@ sudo pacman -S \
     lnav \
     shellcheck \
     lazygit \
-    tree
+    tree \
+    difftastic
 
 sudo pacman -S broot && broot --install
 
