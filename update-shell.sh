@@ -14,7 +14,7 @@ echo -e "${YELLOW}fzf 업데이트 완료${NC}"
 cd ~/.zsh-defer/ && git pull
 echo -e "${YELLOW}zsh-defer 업데이트 완료${NC}"
 
-curl -sS https://starship.rs/install.sh | sh -s -- --yes
+curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin -y
 echo -e "${YELLOW}starship 업데이트 완료${NC}"
 
 mise self-update -y

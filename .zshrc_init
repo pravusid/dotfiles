@@ -16,7 +16,7 @@ fi
 export PATH="$PATH:$HOME/.local/bin"
 
 # starship
-[ -x "$(command -v starship)" ] && eval "$(starship init zsh)"
+[ -f ~/.local/bin/starship ] && eval "$(starship init zsh)"
 
 # mise
 [ -f ~/.local/bin/mise ] && eval "$(mise activate zsh)"
@@ -35,6 +35,7 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 [ -f ~/.config/broot/launcher/bash/br ] && zsh-defer source ~/.config/broot/launcher/bash/br
 
 # extra completion
+[ -f ~/.local/bin/starship ] && zsh-defer eval "$(starship completions zsh)"
 [ -f ~/.local/bin/mise ] && zsh-defer eval "$(mise completion zsh)"
 [ -x "$(command -v aws)" ] && zsh-defer complete -C aws_completer aws
 
