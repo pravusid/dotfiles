@@ -35,7 +35,6 @@
   # plugins
   git clone https://github.com/z-shell/F-Sy-H.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/F-Sy-H
   git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-  git clone https://github.com/agkozak/zsh-z ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/plugins/zsh-z
   git clone https://github.com/TamCore/autoupdate-oh-my-zsh-plugins $ZSH_CUSTOM/plugins/autoupdate
   git clone https://github.com/jasonmccreary/git-trim.git $ZSH_CUSTOM/plugins/git-trim
   ```
@@ -44,6 +43,12 @@
 
   ```sh
   curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
+  ```
+
+- zoxide
+
+  ```sh
+  curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
   ```
 
 ## version manager

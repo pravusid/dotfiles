@@ -15,6 +15,9 @@ fi
 
 export PATH="$PATH:$HOME/.local/bin"
 
+# compinit
+autoload -Uz compinit && compinit
+
 # starship
 [ -f ~/.local/bin/starship ] && eval "$(starship init zsh)"
 
@@ -27,6 +30,9 @@ export BAT_CONFIG_PATH="$HOME/.bat.conf"
 # zsh-defer
 source ~/.zsh-defer/zsh-defer.plugin.zsh
 
+# zoxide
+[ -f ~/.local/bin/zoxide ] && zsh-defer eval "$(zoxide init zsh)"
+
 # fzf
 export FZF_DEFAULT_COMMAND="fd --type f"
 [ -f ~/.fzf.zsh ] && zsh-defer source ~/.fzf.zsh
@@ -38,6 +44,3 @@ export FZF_DEFAULT_COMMAND="fd --type f"
 [ -f ~/.local/bin/starship ] && zsh-defer eval "$(starship completions zsh)"
 [ -f ~/.local/bin/mise ] && zsh-defer eval "$(mise completion zsh)"
 [ -x "$(command -v aws)" ] && zsh-defer complete -C aws_completer aws
-
-# compinit
-zsh-defer autoload -Uz compinit && compinit
