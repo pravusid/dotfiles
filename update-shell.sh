@@ -8,14 +8,14 @@ NC='\033[0m'
 
 echo -e "${RED}패키지를 업데이트 합니다${NC}\n"
 
-cd ~/.fzf && git pull && ./install --all --no-update-rc
-echo -e "${YELLOW}fzf 업데이트 완료${NC}"
-
 cd ~/.zsh-defer/ && git pull
 echo -e "${YELLOW}zsh-defer 업데이트 완료${NC}"
 
 curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin -y
 echo -e "${YELLOW}starship 업데이트 완료${NC}"
+
+cd ~/.fzf && git pull && ./install --all --no-update-rc
+echo -e "${YELLOW}fzf 업데이트 완료${NC}"
 
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 echo -e "${YELLOW}zoxide 업데이트 완료${NC}"

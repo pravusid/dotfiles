@@ -8,17 +8,6 @@
 
 - [macOS](./macos/homebrew/README.md)
 
-- 공통
-
-  - fzf
-
-    ```sh
-    # install
-    git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-    # upgrade
-    cd ~/.fzf && git pull && ./install
-    ```
-
 ## interactive shell
 
 - zsh-defer
@@ -43,6 +32,15 @@
 
   ```sh
   curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
+  ```
+
+- fzf
+
+  ```sh
+  # install
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+  # upgrade
+  cd ~/.fzf && git pull && ./install
   ```
 
 - zoxide
