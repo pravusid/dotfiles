@@ -23,6 +23,7 @@ compdef dk="docker"
 
 alias python="python3"
 alias pip="pip3"
+alias venv="source .venv/bin/activate"
 
 alias npgl="npm ls -g --depth=0"
 alias npgu="npm i -g corepack@latest npm@latest pnpm@latest npm-check-updates@latest"
