@@ -52,9 +52,24 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 - iCloud (제외): Mail, 연락처, 캘린더
 - Google (포함): Mail, 캘린더
 
-### 핫 코너
+### 제어 센터
 
-`시스템 설정 > 데스크탑 및 Dock > 핫 코너 (버튼)`
+`시스템 설정 > 제어 센터`
+
+- 기타 모듈
+  - 배터리
+    - 퍼센트 보기: on
+- 메뉴 막대만
+  - 최근 문서, 응용 프로그램 및 서버: 없음
+
+### 데스크탑 및 Dock
+
+`시스템 설정 > 데스크탑 및 Dock`
+
+- Dock
+  - 자동으로 Dock 가리기와 보기: on
+  - Dock에서 제안된 앱 및 최근 앱 보기: off
+- 핫 코너 (버튼): off
 
 ### 배터리
 
@@ -92,3 +107,15 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 
 - 먖춤법 자동 수정: 해제
 - 스페이스를 두 번 눌러 마침표 추가: 해제
+
+### 트랙패드
+
+`시스템 설정 > 트랙패드`
+
+- 포인트 및 클릭
+  - 이동 속도: 5/9
+  - 클릭: 가볍게
+- 추가 제스처
+  - 페이지 쓸어넘기기: 두 손가락
+  - 전체 화면 응용 프로그램 쓸어넘기기: 세 손가락
+  - Mission Control: 세 손가락
