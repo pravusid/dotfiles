@@ -2,13 +2,11 @@
 
 > my system configurations (dotfiles & instructions)
 
-## prerequisite
+## interactive shell
 
 - [Linux](./linux/applications.md#cli)
 
 - [macOS](./macos/homebrew/README.md)
-
-## interactive shell
 
 - zsh-defer
 
