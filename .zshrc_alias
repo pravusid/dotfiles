@@ -1,6 +1,4 @@
-alias l="ls"
-alias la="ls -A"
-alias ll="ls -AFlh"
+# https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/common-aliases
 
 alias -g H="| head"
 alias -g T="| tail"
@@ -9,7 +7,6 @@ alias -g L="| less"
 alias -g M="| most"
 alias -g NE="2> /dev/null"
 
-alias lg="\ls -al | grep"
 alias pg="\pgrep -fl"
 alias tf="\tail -f"
 
