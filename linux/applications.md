@@ -103,7 +103,8 @@ sudo pacman -S \
 sudo pacman -S broot && broot --install
 
 yay -S \
-    gitleaks
+    gitleaks \
+    tlrc-bin
 
 sudo pacman -S aws-cli-v2
 yay -S aws-sam-cli-bin
