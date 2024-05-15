@@ -90,7 +90,6 @@ zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 # Add wisely, as too many plugins slow down shell startup.
 # oh-my-zsh plugins
 plugins=(
-  aliases
   autoupdate
   colored-man-pages
   command-not-found
