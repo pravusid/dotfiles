@@ -124,13 +124,6 @@ yay -S \
     figma-linux-bin
 ```
 
-### visual-studio-code
-
-- [background issue](https://github.com/microsoft/vscode/issues/85452)
-  - Command Palette search for "Configure Runtime Arguments"
-  - Set `disable-hardware-acceleration: true`
-  - Restart
-
 ## Java
 
 시스템 자바 버전 변경
