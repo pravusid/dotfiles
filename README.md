@@ -83,6 +83,10 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 ./sync-dotfiles.sh
 ```
 
+### .zprofile
+
+- [`.zprofile`](./.zprofile)
+
 ### zshrc
 
 - [`.zshrc`](./.zshrc)
