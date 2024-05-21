@@ -31,8 +31,14 @@ setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
 setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
 setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
 
-# https://www.zsh.org/mla/users//2014/msg00715.html
-zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1; }
+# https://superuser.com/a/902508
+zshaddhistory() {
+  local j=1
+  while ([[ ${${(z)1}[$j]} == *=* ]]) {
+    ((j++))
+  }
+  whence ${${(z)1}[$j]} >| /dev/null || return 1
+}
 
 #
 # plugins
