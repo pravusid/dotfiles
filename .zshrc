@@ -1,7 +1,7 @@
-# 69a45a9c98291dc485ee9c46c9bf79ec8533217b https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
+# a779d6563ffb2f0093b4b74c8d5ff0982fa3e930 https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
@@ -29,11 +29,9 @@ export ZSH=$HOME/.oh-my-zsh
 # zstyle ':omz:update' mode disabled  # disable automatic updates
 zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-# prompt: it asks for confirmation before updating Oh My Zsh. This is the default mode.
 
 # Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 7
-# export UPDATE_ZSH_DAYS=7
+# zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
 # DISABLE_MAGIC_FUNCTIONS="true"
@@ -74,7 +72,6 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# oh-my-zsh plugins
 # plugins=(git)
 
 source ~/.zshrc_init
