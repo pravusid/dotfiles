@@ -106,8 +106,7 @@ yay -S \
     gitleaks \
     tlrc-bin
 
-sudo pacman -S aws-cli-v2
-yay -S aws-sam-cli-bin
+yay -S aws-cli-v2-bin aws-sam-cli-bin
 ```
 
 ## 개발툴
