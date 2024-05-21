@@ -10,37 +10,70 @@ if [[ "$OS" == "Darwin" && $(arch) == "arm64" ]]; then
   PATH="$PATH:/opt/homebrew/bin"
   eval "$(brew shellenv)"
 
+  # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
   fpath+="/opt/homebrew/share/zsh/site-functions"
 fi
 
 export PATH="$PATH:$HOME/.local/bin"
 
-# compinit
-autoload -Uz compinit && compinit
+#
+# history
+#
 
-# starship
-[ -f ~/.local/bin/starship ] && eval "$(starship init zsh)"
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+
+# https://www.zsh.org/mla/users//2014/msg00715.html
+zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1; }
+
+#
+# plugins
+#
+
+export plugins=(
+  autoupdate
+  colored-man-pages
+  command-not-found
+  docker
+  docker-compose
+  F-Sy-H
+  fancy-ctrl-z
+  fd
+  fzf
+  git
+  git-trim
+  ripgrep
+  starship
+  zoxide
+  zsh-autosuggestions
+)
+
+export BAT_CONFIG_PATH="$HOME/.bat.conf"
+
+export FZF_BASE="$HOME/.fzf"
+export FZF_DEFAULT_COMMAND="fd --type f"
+
+export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # mise
 [ -f ~/.local/bin/mise ] && eval "$(mise activate zsh)"
 
-# bat
-export BAT_CONFIG_PATH="$HOME/.bat.conf"
-
 # zsh-defer
 source ~/.zsh-defer/zsh-defer.plugin.zsh
 
-# zoxide
-[ -f ~/.local/bin/zoxide ] && zsh-defer eval "$(zoxide init zsh)"
-
-# fzf
-export FZF_DEFAULT_COMMAND="fd --type f"
-[ -f ~/.fzf.zsh ] && zsh-defer source ~/.fzf.zsh
-
 # broot
-[ -f ~/.config/broot/launcher/bash/br ] && zsh-defer source ~/.config/broot/launcher/bash/br
+zsh-defer -c '[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br'
 
-# extra completion
-[ -f ~/.local/bin/starship ] && zsh-defer eval "$(starship completions zsh)"
-[ -f ~/.local/bin/mise ] && zsh-defer eval "$(mise completion zsh)"
-[ -x "$(command -v aws)" ] && zsh-defer complete -C aws_completer aws
+# mise completion
+zsh-defer - c '[ -f ~/.local/bin/mise ] && eval "$(mise completion zsh)"'
+
+# https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-usage-parameters-prompting.html
+zsh-defer -c '[ -z "${_comps[aws]}" ] && complete -C aws_completer aws'

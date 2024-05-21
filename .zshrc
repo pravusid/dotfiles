@@ -66,20 +66,6 @@ zstyle ':omz:update' mode auto      # update automatically without asking
 # see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
-setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
-setopt SHARE_HISTORY             # Share history between all sessions.
-
-setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
-setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
-setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
-setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
-setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
-setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
-setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
-
-# https://www.zsh.org/mla/users//2014/msg00715.html
-zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
-
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
@@ -89,20 +75,9 @@ zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # oh-my-zsh plugins
-plugins=(
-  autoupdate
-  colored-man-pages
-  command-not-found
-  docker
-  docker-compose
-  F-Sy-H
-  fancy-ctrl-z
-  fd
-  git
-  git-trim
-  ripgrep
-  zsh-autosuggestions
-)
+# plugins=(git)
+
+source ~/.zshrc_init
 
 source $ZSH/oh-my-zsh.sh
 
@@ -132,14 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Init
-[ -f ~/.zshrc_init ] && source ~/.zshrc_init
-
 # User aliases
-[ -f ~/.zshrc_alias ] && source ~/.zshrc_alias
-
+source ~/.zshrc_alias
 # User functions
-[ -f ~/.zshrc_func ] && source ~/.zshrc_func
-
-# Local vars
+source ~/.zshrc_func
+# User local vars
 [ -f ~/.zshrc_local ] && source ~/.zshrc_local || true
