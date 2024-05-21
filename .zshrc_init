@@ -79,7 +79,7 @@ source ~/.zsh-defer/zsh-defer.plugin.zsh
 zsh-defer -c '[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br'
 
 # mise completion
-zsh-defer - c '[ -f ~/.local/bin/mise ] && eval "$(mise completion zsh)"'
+zsh-defer -c '[ -f ~/.local/bin/mise ] && eval "$(mise completion zsh)"'
 
 # https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-usage-parameters-prompting.html
 zsh-defer -c '[ -z "${_comps[aws]}" ] && complete -C aws_completer aws'
