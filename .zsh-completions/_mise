@@ -1,0 +1,5 @@
+#compdef mise
+
+if [ -f ~/.local/bin/mise ]; then
+  eval "$(mise completion zsh)"
+fi

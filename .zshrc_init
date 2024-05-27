@@ -14,6 +14,8 @@ if [[ "$OS" == "Darwin" && $(arch) == "arm64" ]]; then
   fpath+="/opt/homebrew/share/zsh/site-functions"
 fi
 
+fpath+="$HOME/.zsh-completions"
+
 export PATH="$PATH:$HOME/.local/bin"
 
 #
@@ -77,9 +79,6 @@ source ~/.zsh-defer/zsh-defer.plugin.zsh
 
 # broot
 zsh-defer -c '[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/launcher/bash/br'
-
-# mise completion
-zsh-defer -c '[ -f ~/.local/bin/mise ] && eval "$(mise completion zsh)"'
 
 # https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-usage-parameters-prompting.html
 zsh-defer -c '[ -z "${_comps[aws]}" ] && complete -C aws_completer aws'

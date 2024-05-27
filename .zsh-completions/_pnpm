@@ -1,0 +1,6 @@
+#compdef pnpm
+
+if (( $+commands[pnpm] )); then
+  eval "$(pnpm completion zsh)"
+  _pnpm_completion "$@"
+fi

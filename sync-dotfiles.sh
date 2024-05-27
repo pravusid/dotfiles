@@ -26,6 +26,10 @@ echo ".zshrc_alias"
 ln -sf "$(pwd)"/.zshrc_func ~/.zshrc_func
 echo ".zshrc_func"
 
+ln -sfn "$(pwd)"/.zsh-completions ~/.zsh-completions
+rm -f ~/.zcompdump*;
+echo ".zsh-completions/"
+
 if [[ $for_work == 'y' ]]; then
   ln -sf "$(pwd)"/.gitconfig_include ~/.gitconfig
   echo -e "${YELLOW}.gitconfig_include to .gitconfig${NC}"
