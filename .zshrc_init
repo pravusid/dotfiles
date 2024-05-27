@@ -83,6 +83,3 @@ zsh-defer -c '[ -f ~/.local/bin/mise ] && eval "$(mise completion zsh)"'
 
 # https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-usage-parameters-prompting.html
 zsh-defer -c '[ -z "${_comps[aws]}" ] && complete -C aws_completer aws'
-
-# pnpm completion
-zsh-defer -c '[ -x "$(command -v pnpm)" ] && eval "$(pnpm completion zsh)"'
