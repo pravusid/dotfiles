@@ -19,7 +19,7 @@ port-scan() {
   nc -z -v $HOST $PORT
 }
 
-#@ port-kill <port>
+#@ port-kill <port> -- (alternative) fuser -k <port>/tcp
 port-kill() {
   lsof -ti :$1 | xargs -r -I {} kill -9 {}
   echo "${RED}kill port $1${NC}"
