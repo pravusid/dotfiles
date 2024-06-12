@@ -14,12 +14,13 @@ brew "bat"
 brew "broot"
 brew "cfn-lint"
 brew "cocoapods"
-brew "colima"
+brew "colima", restart_service: true
 brew "coreutils"
 brew "difftastic"
 brew "docker"
 brew "docker-compose"
 brew "docker-credential-helper"
+brew "duckdb"
 brew "fd"
 brew "git"
 brew "git-delta"
@@ -44,7 +45,6 @@ brew "trash"
 brew "tree"
 brew "vim"
 brew "jakehilborn/jakehilborn/displayplacer"
-brew "noborus/tap/trdsql"
 brew "robotsandpencils/made/xcodes"
 cask "aldente"
 cask "dbeaver-community"
@@ -85,6 +85,7 @@ cask "warp"
 cask "zed"
 mas "Amphetamine", id: 937984704
 mas "Cleaner One", id: 1473079126
+mas "Command X", id: 6448461551
 mas "iMovie", id: 408981434
 mas "iShot Pro", id: 1611347086
 mas "Keynote", id: 409183694
