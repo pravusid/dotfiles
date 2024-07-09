@@ -6,6 +6,7 @@ brew "aria2"
 brew "bat"
 brew "coreutils"
 brew "fd"
+brew "fzf"
 brew "git"
 brew "gnu-sed"
 brew "jq"
@@ -13,6 +14,7 @@ brew "mas"
 brew "ripgrep"
 brew "trash"
 brew "vim"
+brew "zoxide"
 cask "cryptomator"
 cask "dropbox"
 cask "google-chrome"
@@ -22,19 +24,20 @@ cask "logseq"
 cask "notion"
 cask "obsidian"
 cask "openinterminal"
+cask "rectangle-pro"
 cask "warp"
 cask "zed"
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Cleaner One", id: 1473079126
+mas "Command X", id: 6448461551
 mas "Developer", id: 640199958
 mas "DuckDuckGo Privacy for Safari", id: 1482920575
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "iShot Pro", id: 1611347086
 mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
 mas "Microsoft To Do", id: 1274495053
 mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825

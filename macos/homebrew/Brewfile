@@ -61,6 +61,7 @@ cask "font-noto-sans-cjk-kr"
 cask "font-sauce-code-pro-nerd-font"
 cask "google-chrome"
 cask "gpg-suite"
+cask "handbrake"
 cask "http-toolkit"
 cask "insomnia"
 cask "iterm2"
@@ -77,6 +78,7 @@ cask "notion"
 cask "openinterminal"
 cask "outline-manager"
 cask "rapidapi"
+cask "rectangle-pro"
 cask "redisinsight"
 cask "sublime-text"
 cask "visual-studio-code"
@@ -89,7 +91,6 @@ mas "Command X", id: 6448461551
 mas "iMovie", id: 408981434
 mas "iShot Pro", id: 1611347086
 mas "Keynote", id: 409183694
-mas "Magnet", id: 441258766
 mas "Microsoft Remote Desktop", id: 1295203466
 mas "Numbers", id: 409203825
 mas "Outline", id: 1356178125
