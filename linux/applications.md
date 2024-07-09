@@ -33,7 +33,8 @@ sudo pacman -S \
     telegram-desktop \
     discord \
     veracrypt \
-    bleachbit
+    bleachbit \
+    handbrake
 
 yay -S \
     google-chrome \
