@@ -48,9 +48,9 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 
 ### install
 
-- `sudo pacman -S gnome-shell-extensions`
+- `sudo pacman -S gnome-shell-extensions gnome-browser-connector`
+- `yay -S extension-manager`
 - `yay -S gnome-shell-extension-dash-to-dock`
-- `yay -S gnome-browser-connector-git`
 
 ### list
 
