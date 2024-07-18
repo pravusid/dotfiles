@@ -82,7 +82,7 @@ cask "rectangle-pro"
 cask "redisinsight"
 cask "sublime-text"
 cask "visual-studio-code"
-cask "visual-studio-code-insiders"
+cask "visual-studio-code@insiders"
 cask "warp"
 cask "zed"
 mas "Amphetamine", id: 937984704
@@ -98,3 +98,4 @@ mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
 mas "Velja", id: 1607635845
+mas "반디네이머", id: 6451223045
