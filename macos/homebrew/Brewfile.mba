@@ -23,7 +23,8 @@ cask "keka"
 cask "logseq"
 cask "notion"
 cask "obsidian"
-cask "openinterminal"
+cask "openineditor-lite"
+cask "openinterminal-lite"
 cask "rectangle-pro"
 cask "warp"
 cask "zed"
@@ -46,4 +47,5 @@ mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
 mas "Telegram", id: 747648890
 mas "Velja", id: 1607635845
+mas "반디네이머", id: 6451223045
 mas "카카오톡", id: 869223134

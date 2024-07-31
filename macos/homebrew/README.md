@@ -20,7 +20,22 @@
   - [Brewfile](./Brewfile)
   - [Brewfile.mba](./Brewfile.mba)
 
-> sublime-text: 심볼릭링크: `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
+### OpenInTerminal Lite
+
+```sh
+# Terminal
+defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal iTerm
+defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal Warp
+
+# Editor
+defaults write wang.jianing.app.OpenInEditor-Lite LiteDefaultEditor Zed
+```
+
+> In /Applications folder, hold down the Cmd key and drag the app into Finder Toolbar.
+
+### sublime-text
+
+> 심볼릭링크: `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl`
 
 ## Troubleshooting
 
