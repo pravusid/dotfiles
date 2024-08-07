@@ -99,7 +99,8 @@ sudo pacman -S \
     shellcheck \
     lazygit \
     tree \
-    difftastic
+    difftastic \
+    sniffnet
 
 sudo pacman -S broot && broot --install
 
