@@ -59,24 +59,6 @@ curl https://mise.run | sh
 mise use -g usage
 ```
 
-## vim-plug
-
-```sh
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-```
-
-플러그인 설치, 업데이트
-
-> `.vimrc` 설정, `vim` 실행 후
-
-```vim
-:source ~/.vimrc
-:PlugInstall
-
-:PlugUpdate
-```
-
 ## sync dotfiles
 
 ```sh
