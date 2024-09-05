@@ -26,6 +26,16 @@
 
 [diff]
     colorMoved = default
+    tool = difftastic
+
+[difftool]
+    prompt = false
+
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+    difftool = true
 
 [interactive]
     diffFilter = delta --color-only
@@ -38,29 +48,6 @@
     syntax-theme = Nord
 
 [alias]
-    a = "!git add $(git status -s | fzf -m | awk '{print $2}')"
-    b = "!git checkout $(\
-        _height=$(stty size | awk '{print $1}');\
-        git branch | egrep -v '^\\*' | fzf --preview \"git log {1} | head -n $_height\";\
-    )"
-    d = "!\
-        git diff --name-only |\
-        fzf --header \"$(git diff --shortstat)\"\
-            --preview \"git diff --color=always {1}\"\
-            --preview-window=top:75%\
-            --bind \"ctrl-u:preview-page-up,ctrl-d:preview-page-down\"\
-    "
-    l = "!\
-        f() {\
-            _hash=$(\
-                git log --format=\"%H %ci %s%d\" |\
-                fzf --no-sort |\
-                head -1 |\
-                cut -d \" \" -f 1\
-            );\
-            [[ ! -z "$_hash" ]] && git show "$_hash";\
-        }; f\
-    "
     blow = "!git restore . && git clean -fd"
 
 [gt]
