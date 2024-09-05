@@ -27,7 +27,7 @@ ln -sf "$(pwd)"/.zshrc_func ~/.zshrc_func
 echo ".zshrc_func"
 
 ln -sfn "$(pwd)"/.zsh-completions ~/.zsh-completions
-rm -f ~/.zcompdump*;
+rm -f ~/.zcompdump*
 echo ".zsh-completions/"
 
 if [[ $for_work == 'y' ]]; then
@@ -49,7 +49,10 @@ echo ".gitignore_global"
 ln -sf "$(pwd)"/.vimrc ~/.vimrc
 echo ".vimrc"
 
-ln -sf "$(pwd)"/.bat.conf ~/.bat.conf
+mkdir -p "$(bat --config-dir)" && ln -sf "$(pwd)"/.bat.conf "$(bat --config-file)"
 echo ".bat.conf"
+
+ln -sf "$(pwd)"/.lazygit.config.yml ~/.config/lazygit/config.yml
+echo ".lazygit.config.yml"
 
 echo -e "\n${RED}완료${NC}"
