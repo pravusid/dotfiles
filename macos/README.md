@@ -98,8 +98,6 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 - Mission Control
   - Mission Control (`ctrl + arrow`) 항목 전체 on
   - 기타 항목 (데스크탑 보기, 데스크탑 1로 전환, 빠른메모 ...) off
-- 스크린샷
-  - 전체 off
 - 기능 키
   - F1, F2 등의 키를 표준 기능 키로 사용 on
 
