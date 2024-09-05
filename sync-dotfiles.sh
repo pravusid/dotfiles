@@ -52,7 +52,7 @@ echo ".vimrc"
 mkdir -p "$(bat --config-dir)" && ln -sf "$(pwd)"/.bat.conf "$(bat --config-file)"
 echo ".bat.conf"
 
-ln -sf "$(pwd)"/.lazygit.config.yml ~/.config/lazygit/config.yml
+mkdir -p ~/.config/lazygit && ln -sf "$(pwd)"/.lazygit.config.yml ~/.config/lazygit/config.yml
 echo ".lazygit.config.yml"
 
 echo -e "\n${RED}완료${NC}"
