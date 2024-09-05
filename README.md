@@ -4,9 +4,7 @@
 
 ## interactive shell
 
-- [Linux](./linux/applications.md#cli)
-
-- [macOS](./macos/homebrew/README.md)
+- [Homebrew](./macos/homebrew/README.md)
 
 - zsh-defer
 
