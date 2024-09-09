@@ -76,6 +76,7 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
 `시스템 설정 > 배터리`
 
 - 저전력 모드: 배터리 사용 시에만
+- 배터리 성능 상태: 최적화된 배터리 충전: aldente 사용하면 off
 - 옵션
   - 배터리를 사용할 때 화면 밝기를 약간 낮추기: on
   - 네트워크 연결 시 깨우기: 전원 어댑터 연결 시에만
