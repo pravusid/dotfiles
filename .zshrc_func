@@ -34,7 +34,9 @@ docker-vol() {
     docker ps -a --format '{{ .ID }}' |
       xargs -I {} docker inspect -f '{{ .Name }}{{ range .Mounts }}{{ printf "\n\t" }}{{ .Type }} {{ if eq .Type "bind" }}{{ .Source }}{{ end }}{{ .Name }} => {{ .Destination }}{{ end }}{{ printf "\n" }}' {}
   elif [[ $1 == "clean" ]]; then
-    docker volume ls -qf dangling=true | xargs -r docker volume rm
+    # docker volume ls -qf dangling=true | xargs -r docker volume rm
+    # https://docs.docker.com/reference/cli/docker/volume/prune/
+    docker volume prune
   else
     echo "unknown command"
   fi
@@ -43,7 +45,9 @@ docker-vol() {
 #@ docker-img clean
 docker-img() {
   if [[ $1 == "clean" ]]; then
-    docker images -qf dangling=true | xargs docker rmi
+    # docker images -qf dangling=true | xargs docker rmi
+    # https://docs.docker.com/reference/cli/docker/image/prune/
+    docker image prune
   else
     echo "unknown command"
   fi
