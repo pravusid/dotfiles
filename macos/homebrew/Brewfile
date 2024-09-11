@@ -13,6 +13,7 @@ brew "cfn-lint"
 brew "cocoapods"
 brew "colima", restart_service: true
 brew "coreutils"
+brew "csvlens"
 brew "difftastic"
 brew "docker"
 brew "docker-compose"
