@@ -1,0 +1,5 @@
+#compdef delta
+
+if [ -x "$(command -v delta)" ]; then
+  eval "$(delta --generate-completion zsh)"
+fi
