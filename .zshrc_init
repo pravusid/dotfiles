@@ -81,4 +81,4 @@ zsh-defer -c '[ -f ~/.config/broot/launcher/bash/br ] && source ~/.config/broot/
 
 # https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-usage-parameters-prompting.html
 # /opt/homebrew/share/zsh/site-functions/_aws
-# zsh-defer -c 'complete -C aws_completer aws'
+# zsh-defer -c '[ -z "${_comps[aws]}" ] && complete -C aws_completer aws'
