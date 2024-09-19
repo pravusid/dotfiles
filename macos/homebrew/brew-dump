@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+file_name="${1:-Brewfile}"
+
+brew bundle dump -f --formula --cask --tap --mas --file="$(pwd)/$file_name"
