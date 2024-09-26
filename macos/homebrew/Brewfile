@@ -101,7 +101,6 @@ mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
-mas "Microsoft Remote Desktop", id: 1295203466
 mas "Microsoft To Do", id: 1274495053
 mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 409203825
@@ -110,5 +109,6 @@ mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
 mas "Velja", id: 1607635845
+mas "Windows App", id: 1295203466
 mas "반디네이머", id: 6451223045
 mas "카카오톡", id: 869223134
