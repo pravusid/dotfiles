@@ -58,6 +58,7 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 - Blur my Shell
 - Emoji Copy: `dconf write /org/gnome/shell/extensions/emoji-selector/emoji-keybinding "['<Super>period']"`
 - Espresso
+- Just Perfection
 - Lock Keys
 - Places Status Indicator
 - Removable Drive Menu
