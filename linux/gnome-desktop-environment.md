@@ -63,7 +63,7 @@ dconf load /org/gnome/shell/extensions/<extension-name>/ <file-name>
 - Places Status Indicator
 - Removable Drive Menu
 - Status Area Horizontal Spacing
-- Tactile
+- Tactile, Tiling Shell
 - TopHat
 - UPower Battery
 - User Themes
