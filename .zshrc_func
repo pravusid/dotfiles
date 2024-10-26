@@ -131,3 +131,8 @@ fzfpv() {
     --bind shift-left:preview-page-up,shift-right:preview-page-down \
     --preview-window 70%,border-double,top
 }
+
+#@ read_pkcs12
+read_pkcs12() {
+  file="$(fzf)" && read -s passwd && openssl pkcs12 -info -in "$file" -nodes -clcerts -passin pass:"$passwd"
+}
