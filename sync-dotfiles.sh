@@ -55,8 +55,11 @@ echo ".bat.conf"
 mkdir -p ~/.config/lazygit && ln -sf "$(pwd)"/.lazygit.config.yml ~/.config/lazygit/config.yml
 echo ".lazygit.config.yml"
 
-mkdir -p ~/Library/Application\ Support/vale && ln -sf "$(pwd)"/.vale.ini ~/Library/Application\ Support/vale/.vale.ini
-cd ~/Library/Application\ Support/vale && vale sync && cd -
+mkdir -p ~/.config/vale && ln -sf "$(pwd)"/.vale.ini ~/.config/vale/.vale.ini
+cd ~/.config/vale && vale sync && cd -
 echo ".vale.ini"
+
+mkdir -p ~/.config/ghostty && ln -sf "$(pwd)"/ghostty.config ~/.config/ghostty/config
+echo "ghostty.config"
 
 echo -e "\n${RED}완료${NC}"
