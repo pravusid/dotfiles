@@ -28,3 +28,8 @@ alias npgu="npm i -g corepack@latest npm@latest pnpm@latest npm-check-updates@la
 alias pn="pnpm"
 alias pnr="pnpm run"
 alias pnx="pnpm exec"
+
+# https://formulae.brew.sh/formula/coreutils
+if [[ -n "$HOMEBREW_PREFIX" ]]; then
+  alias git-quick-stats="PATH='$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH' git-quick-stats"
+fi
