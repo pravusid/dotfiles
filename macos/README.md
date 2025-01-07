@@ -13,6 +13,12 @@
 
 [Karabiner 설정방법](./karabiner/README.md)
 
+## LinearMouse
+
+```sh
+cp -f "$(pwd)"/linearmouse.json ~/.config/linearmouse/linearmouse.json
+```
+
 ## xcode-select 재설치
 
 ```sh

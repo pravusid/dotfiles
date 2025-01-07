@@ -1,0 +1,58 @@
+{
+  "schemes" : [
+    {
+      "scrolling" : {
+        "distance" : 3,
+        "acceleration" : 1,
+        "speed" : 0,
+        "reverse" : {
+          "vertical" : true
+        }
+      },
+      "pointer" : {
+        "speed" : 0.0689655172413792768,
+        "acceleration" : 2,
+        "disableAcceleration" : true
+      },
+      "buttons" : {
+        "mappings" : [
+          {
+            "action" : "missionControl.spaceLeft",
+            "option" : false,
+            "command" : false,
+            "button" : 3,
+            "control" : true,
+            "shift" : false
+          },
+          {
+            "command" : false,
+            "action" : "missionControl.spaceRight",
+            "button" : 4,
+            "shift" : false,
+            "option" : false,
+            "control" : true
+          },
+          {
+            "control" : false,
+            "button" : 5,
+            "option" : false,
+            "shift" : false,
+            "action" : "missionControl",
+            "command" : false
+          }
+        ],
+        "universalBackForward" : true
+      },
+      "if" : {
+        "device" : {
+          "vendorID" : "0x46d",
+          "serialNumber" : "D7915803",
+          "category" : "mouse",
+          "productID" : "0xb034",
+          "productName" : "MX Master 3S"
+        }
+      }
+    }
+  ],
+  "$schema" : "https:\/\/schema.linearmouse.app\/0.10.0"
+}
