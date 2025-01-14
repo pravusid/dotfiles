@@ -10,7 +10,7 @@ brew "awscli"
 brew "bat"
 brew "cfn-lint"
 brew "cocoapods"
-brew "colima", restart_service: true
+brew "colima", restart_service: :changed
 brew "coreutils"
 brew "csvlens"
 brew "difftastic"
