@@ -7,7 +7,7 @@ Karabiner-Elements 실행
 ## Karabiner 설정파일 Symlink
 
 ```sh
-ln -sf "$(pwd)"/karabiner.json ~/.config/karabiner/karabiner.json
+cp -f "$(pwd)"/karabiner.json ~/.config/karabiner/karabiner.json
 rm -rf ~/.config/karabiner/assets/ && ln -sf "$(pwd)"/assets ~/.config/karabiner/assets
 ```
 
