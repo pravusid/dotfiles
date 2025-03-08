@@ -136,3 +136,9 @@ fzfpv() {
 read_pkcs12() {
   file="$(fzf)" && read -s passwd && openssl pkcs12 -info -provider legacy -provider default -in "$file" -nodes -clcerts -passin pass:"$passwd"
 }
+
+#@ cp949 to utf8
+cp949() {
+  echo -e "${YELLOW}iconv -c -f cp949 -t utf-8${NC}"
+  iconv -c -f cp949 -t utf-8 $1
+}
