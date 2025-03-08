@@ -1,25 +1,37 @@
 [user]
     name = Sangdon Park
     email = 24415130+pravusid@users.noreply.github.com
-    signingkey = D258EA8797558F10
+    signingKey = D258EA8797558F10
 
 [core]
     autocrlf = input
-    excludesfile = ~/.gitignore_global
+    excludesFile = ~/.gitignore_global
     editor = vim
     pager = delta
 
 [commit]
-    gpgsign = true
+    gpgSign = true
+    verbose = true
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
 
 [init]
     defaultBranch = main
 
 [merge]
-    conflictstyle = zdiff3
+    conflictStyle = zdiff3
 
 [rebase]
-    autostash = true
+    autoStash = true
+    autoSquash = true
+
+[rerere]
+    enabled = true
+    autoUpdate = true
 
 [pull]
     rebase = true
