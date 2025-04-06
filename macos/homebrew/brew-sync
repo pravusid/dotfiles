@@ -2,4 +2,4 @@
 
 file_name="${1:-Brewfile}"
 
-brew bundle cleanup --force && brew bundle --no-lock --file="$(pwd)/$file_name"
+brew bundle cleanup --force && brew bundle --file="$(pwd)/$file_name"
