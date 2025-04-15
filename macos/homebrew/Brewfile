@@ -50,6 +50,7 @@ brew "tree"
 brew "vale"
 brew "vim"
 brew "webp"
+brew "xan"
 brew "jakehilborn/jakehilborn/displayplacer"
 brew "robotsandpencils/made/xcodes"
 cask "aldente"
@@ -122,5 +123,5 @@ mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
 mas "Velja", id: 1607635845
 mas "Windows App", id: 1295203466
-mas "반디네이머", id: 6451223045
-mas "카카오톡", id: 869223134
+mas "반디네이머", id: 6451223045
+mas "카카오톡", id: 869223134
