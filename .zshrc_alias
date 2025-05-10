@@ -23,11 +23,10 @@ alias pip="pip3"
 alias venv="source .venv/bin/activate"
 
 alias npgl="npm ls -g --depth=0"
-alias npgu="npm i -g corepack@latest npm@latest pnpm@latest npm-check-updates@latest"
+alias npgu="npm i -g npm@latest pnpm@latest npm-check-updates@latest"
 
 alias pn="pnpm"
-alias pnr="pnpm run"
-alias pnx="pnpm exec"
+compdef pn="pnpm"
 
 # https://formulae.brew.sh/formula/coreutils
 if [[ -n "$HOMEBREW_PREFIX" ]]; then
