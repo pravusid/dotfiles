@@ -1,10 +1,5 @@
 # macOS 환경설정
 
-## iTerm2
-
-- color schemes: <https://iterm2colorschemes.com/>
-- [iTerm2 설정파일](./iterm2.json)
-
 ## Homebrew
 
 [Homebrew 설정방법](./homebrew/README.md)

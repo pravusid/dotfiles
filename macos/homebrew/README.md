@@ -26,7 +26,6 @@
 ```sh
 # Terminal
 defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal Ghostty
-defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal iTerm
 defaults write wang.jianing.app.OpenInTerminal-Lite LiteDefaultTerminal Warp
 
 # Editor
