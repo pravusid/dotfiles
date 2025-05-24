@@ -62,7 +62,9 @@ echo ".vale.ini"
 mkdir -p ~/.config/ghostty && ln -sf "$(pwd)"/ghostty.config ~/.config/ghostty/config
 echo "ghostty.config"
 
-mkdir -p ~/.config/mise && ln -sf "$(pwd)"/mise.config.toml ~/.config/mise/config.toml
-echo "mise.config.toml"
+if [[ $for_work != 'y' ]]; then
+  mkdir -p ~/.config/mise && ln -sf "$(pwd)"/mise.config.toml ~/.config/mise/config.toml
+  echo "mise.config.toml"
+fi
 
 echo -e "\n${RED}완료${NC}"
