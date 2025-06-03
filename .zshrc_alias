@@ -13,7 +13,8 @@ alias tf="\tail -f"
 alias ssa="\ss -natp"
 alias ssl="\ss -nltp"
 
-alias lg="lazygit"
+alias lzg="lazygit"
+alias lzd="lazydocker"
 
 alias dk="docker"
 compdef dk="docker"
