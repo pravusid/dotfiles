@@ -2,4 +2,5 @@
 
 if [ -x "$(command -v delta)" ]; then
   eval "$(delta --generate-completion zsh)"
+  _delta "$@"
 fi
