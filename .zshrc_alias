@@ -20,7 +20,7 @@ alias dk="docker"
 compdef dk="docker"
 
 alias npgl="npm ls -g --depth=0"
-alias npgu="npm i -g npm@latest pnpm@latest npm-check-updates@latest @google/gemini-cli@latest @anthropic-ai/claude-code"
+alias npgu="npm i -g npm@latest pnpm@latest npm-check-updates@latest"
 
 alias pn="pnpm"
 compdef pn="pnpm"
