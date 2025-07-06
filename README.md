@@ -52,15 +52,12 @@
 ```sh
 # install
 curl https://mise.run | sh
-
-# install usage-cli
-mise use -g usage
 ```
 
 ## sync dotfiles
 
 ```sh
-./sync-dotfiles.sh
+./sync-shell.sh
 ```
 
 ### .zprofile
