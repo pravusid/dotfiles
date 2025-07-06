@@ -3,6 +3,9 @@ node = "latest"
 usage = "latest"
 uv = "latest"
 
+[alias.node.versions]
+global = "22"
+
 [settings]
 experimental = true
 idiomatic_version_file_enable_tools = ["node"]
