@@ -30,6 +30,7 @@ brew "gitleaks"
 brew "gnu-sed"
 brew "harfbuzz"
 brew "jq"
+brew "just"
 brew "lazydocker"
 brew "lazygit"
 brew "libpq"
@@ -82,7 +83,6 @@ cask "google-chrome"
 cask "google-drive"
 cask "gpg-suite"
 cask "handbrake-app"
-cask "hoppscotch"
 cask "insomnia"
 cask "jetbrains-toolbox"
 cask "karabiner-elements"
@@ -104,11 +104,13 @@ cask "rectangle-pro"
 cask "redis-insight"
 cask "visual-studio-code"
 cask "warp"
+cask "windsurf"
 cask "zed"
 mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Cleaner One", id: 1473079126
+mas "Color Picker", id: 1545870783
 mas "Command X", id: 6448461551
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
