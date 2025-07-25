@@ -141,3 +141,8 @@ read_pkcs12() {
 cp949() {
   iconv -c -f cp949 -t utf-8 $1
 }
+
+#@ calc_sum -- stdin 내의 숫자 합계, 공백 또는 개행으로 구분, pipe 가능
+calc_sum() {
+  { [ $# -gt 0 ] && echo "$*" || cat; } | tr -s '[:space:]' '+' | sed 's/+$//' | bc
+}
