@@ -1,10 +1,15 @@
 [tools]
-node = "latest"
 usage = "latest"
+node = "latest"
+deno = "latest"
 uv = "latest"
+"npm:npm-check-updates" = "latest"
+"npm:@anthropic-ai/claude-code" = "latest"
+"npm:ccusage" = "latest"
+"npm:@google/gemini-cli" = "latest"
 
-[alias.node.versions]
-global = "22"
+[env]
+_.path = ["{{cwd}}/node_modules/.bin", "{{config_root}}/node_modules/.bin"]
 
 [settings]
 experimental = true
