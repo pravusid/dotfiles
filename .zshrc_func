@@ -132,8 +132,8 @@ fzfpv() {
     --preview-window 70%,border-double,top
 }
 
-#@ read_pkcs12
-read_pkcs12() {
+#@ read-pkcs12
+read-pkcs12() {
   file="$(fzf)" && read -s passwd && openssl pkcs12 -info -provider legacy -provider default -in "$file" -nodes -clcerts -passin pass:"$passwd"
 }
 
@@ -142,7 +142,7 @@ cp949() {
   iconv -c -f cp949 -t utf-8 $1
 }
 
-#@ calc_sum -- stdin 내의 숫자 합계, 공백 또는 개행으로 구분, pipe 가능
-calc_sum() {
+#@ calc-sum -- stdin 내의 숫자 합계, 공백 또는 개행으로 구분, pipe 가능
+calc-sum() {
   { [ $# -gt 0 ] && echo "$*" || cat; } | tr -s '[:space:]' '+' | sed 's/+$//' | bc
 }
