@@ -109,7 +109,6 @@ cask "visual-studio-code"
 cask "warp"
 cask "windsurf"
 cask "zed"
-mas "AdGuard for Safari", id: 1440147259
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Cleaner One", id: 1473079126
@@ -126,6 +125,7 @@ mas "Outline", id: 1356178125
 mas "Pages", id: 409201541
 mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
+mas "uBlock Origin Lite", id: 6745342698
 mas "Velja", id: 1607635845
 mas "Windows App", id: 1295203466
 mas "반디네이머", id: 6451223045
