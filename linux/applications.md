@@ -6,129 +6,7 @@
 sudo sed -i 's/<현재>/<변경후>/' /usr/share/applications/defaults.list
 ```
 
-## Apps
-
-```sh
-sudo pacman -S \
-    grub-customizer \
-    gnome-tweaks \
-    dconf-editor \
-    \
-    gnome-calendar \
-    gnome-calculator \
-    gnome-weather \
-    evince \
-    eog \
-    geary \
-    gvfs-google \
-    \
-    papirus-icon-theme \
-    fprintd \
-    lm_sensors \
-    \
-    chromium \
-    remmina \
-    gimp \
-    vlc \
-    telegram-desktop \
-    discord \
-    veracrypt \
-    bleachbit \
-    handbrake
-
-yay -S \
-    google-chrome \
-    dropbox \
-    ulauncher \
-    slack-desktop \
-    notion-app-electron \
-    cryptomator-bin \
-    7-zip \
-    drawio-desktop-bin
-```
-
-### ulauncher
-
-- 단축키 설정
-
-  - in X11
-
-    - Make sure no app is using `ALT+SPACE`.
-    - Open ULauncher Preferences. Map keys to `Alt+Super L` (the order is important) and exit ULauncher.
-    - Then, edit settings.json in home/user/.config/ulauncher and change `Super L` to `space`.
-    - You should have sth like this: `"hotkey-show-app": "<Alt>space"`. Save & launch ULauncher.
-
-  - in Wayland
-
-    - Install package wmctrl (needed to activate app focus)
-    - Open Ulauncher Preferences and set hotkey to something you'll never use
-    - Open OS Settings > Devices > Keyboard > Add Hotkey > Scroll all the way down > Click +
-    - In Command enter `ulauncher-toggle`, set name and shortcut, then click Add
-
-- Troubleshooting
-
-  - `No module named 'ulauncher'` 오류 발생하는 경우 -> 재설치 (w/ clean build)
-  - 버전관리자에서 python global 설정한 경우 빌드 실패할 수 있음
-
-## CLI
-
-zsh
-
-```sh
-sudo pacman -S zsh
-chsh -s /usr/bin/zsh
-```
-
-Apps
-
-```sh
-sudo pacman -S \
-    wl-clipboard \
-    gnupg \
-    git git-delta \
-    fd \
-    bat \
-    ripgrep \
-    jq \
-    tokei \
-    curl \
-    aria2 \
-    mitmproxy \
-    docker docker-compose \
-    lnav \
-    shellcheck \
-    lazygit \
-    tree \
-    difftastic \
-    sniffnet
-
-sudo pacman -S broot && broot --install
-
-yay -S \
-    gitleaks \
-    tlrc-bin
-
-yay -S aws-cli-v2-bin aws-sam-cli-bin
-```
-
-## 개발툴
-
-```sh
-sudo pacman -S \
-    vim \
-    intellij-idea-community-edition \
-    dbeaver
-
-yay -S \
-    visual-studio-code-bin \
-    android-studio \
-    insomnia-bin \
-    figma-linux-bin
-```
-
-## Java
-
-시스템 자바 버전 변경
+## 시스템 자바 버전 변경
 
 ```sh
 # Arch
@@ -138,4 +16,51 @@ sudo archlinux-java set <JAVA_ENV_NAME>
 
 # ubuntu
 sudo update-alternatives --config java
+```
+
+## Repository 변경
+
+### Arch
+
+```sh
+sudo pacman -S reflector
+
+# backup mirror list
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.bak
+
+# sort by rate
+sudo reflector --country Korea,Japan --latest 5 --age 12 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+```
+
+#### 패키지 매니저
+
+`/etc/pacman.conf`
+
+```conf
+XferCommand = /usr/bin/aria2c --allow-overwrite=true --continue=true --file-allocation=none --log-level=error --max-tries=2 --max-connection-per-server=2 --max-file-not-found=5 --min-split-size=5M --no-conf --remote-time=true --summary-interval=60 --timeout=5 --dir=/ --out %o %u
+```
+
+> 국내에 저장소 미러가 있고 pacman6 부터 병렬 다운로드 지원(`ParallelDownloads` 옵션)하므로 변경필요성 낮음
+
+`/etc/makepkg.conf`
+
+```conf
+DLAGENTS=('ftp::/usr/bin/aria2c -UWget -s4 %u -o %o'
+          'http::/usr/bin/aria2c -UWget -s4 %u -o %o'
+          'https::/usr/bin/aria2c -UWget -s4 %u -o %o'
+          'rsync::/usr/bin/rsync --no-motd -z %u %o'
+          'scp::/usr/bin/scp -C %u %o')
+```
+
+references
+
+- <https://wiki.archlinux.org/title/Pacman/Tips_and_tricks#aria2>
+- <https://wiki.archlinux.org/title/Aria2#Using_Aria2_with_makepkg>
+- [use aria2c for downloader in pacman](https://bbs.archlinux.org/viewtopic.php?id=163744)
+
+### Ubuntu
+
+```sh
+sudo cp /etc/apt/sources.list ~/sources.list.old
+sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 ```
