@@ -1,4 +1,4 @@
-# 사용하는 패키지들
+# Applications
 
 ## 기본앱 변경
 
@@ -64,3 +64,14 @@ references
 sudo cp /etc/apt/sources.list ~/sources.list.old
 sudo sed -i 's/kr.archive.ubuntu.com/mirror.kakao.com/g' /etc/apt/sources.list
 ```
+
+## 앱 목록
+
+- system
+  - `grub-customizer`
+  - `gnome-tweaks`
+  - `dconf-editor`
+  - `wl-clipboard`
+- tiling
+  - <https://github.com/hyprwm/Hyprland>
+  - <https://github.com/YaLTeR/niri>
