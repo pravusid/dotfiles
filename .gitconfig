@@ -36,6 +36,9 @@
 [pull]
     rebase = true
 
+[push]
+    recurseSubmodules=check
+
 [diff]
     colorMoved = default
     tool = difftastic
