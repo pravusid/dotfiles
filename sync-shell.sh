@@ -65,4 +65,7 @@ echo "ghostty.config"
 mkdir -p ~/.config/mise && ln -sf "$(pwd)"/mise.config.toml ~/.config/mise/config.toml
 echo "mise.config.toml"
 
+ln -sf "$(pwd)"/.sqliterc ~/.sqliterc
+echo ".sqliterc"
+
 echo -e "\n${RED}완료${NC}"
