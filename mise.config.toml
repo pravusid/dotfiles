@@ -7,6 +7,8 @@ uv = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
 "npm:ccusage" = "latest"
 "npm:@google/gemini-cli" = "latest"
+"npm:@openai/codex" = "latest"
+"npm:repomix" = "latest"
 
 [env]
 _.path = ["{{cwd}}/node_modules/.bin", "{{config_root}}/node_modules/.bin"]
