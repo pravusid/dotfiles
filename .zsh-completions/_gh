@@ -1,0 +1,6 @@
+#compdef gh
+
+if [ -x "$(command -v gh)" ]; then
+  eval "$(gh completion --shell zsh)"
+  _gh "$@"
+fi
