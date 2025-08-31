@@ -38,7 +38,7 @@ setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording en
 setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
 setopt SHARE_HISTORY             # Share history between all sessions.
 
-HISTORY_IGNORE='(cd *|cat *|bat *|less *|more *|head * | tail *)'
+HISTORY_IGNORE='(cd *|ls *|touch *|cat *|bat *|less *|more *|head * | tail *)'
 
 # https://superuser.com/a/902508
 zshaddhistory() {

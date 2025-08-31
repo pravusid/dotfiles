@@ -33,6 +33,9 @@ alias venv="source .venv/bin/activate"
 alias uvx="uv tool run"
 compdef uvx="uv"
 
+alias j="just"
+compdef j="just"
+
 # https://formulae.brew.sh/formula/coreutils
 if [[ -n "$HOMEBREW_PREFIX" ]]; then
   alias git-quick-stats="PATH='$HOMEBREW_PREFIX/opt/coreutils/libexec/gnubin:$PATH' git-quick-stats"
