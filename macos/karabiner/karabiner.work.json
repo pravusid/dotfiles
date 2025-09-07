@@ -1,226 +1,213 @@
 {
-    "profiles": [
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "description": "Change Won (₩) to grave accent (`) in Korean layout",
+            "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "input_sources": [{ "language": "ko" }],
+                    "type": "input_source_if"
+                  }
+                ],
+                "from": { "key_code": "grave_accent_and_tilde" },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": ["option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "f19 Key → Hyper Key (⌃⌥⇧⌘)",
+            "manipulators": [
+              {
+                "from": { "key_code": "f19" },
+                "to": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_command", "left_control", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "Command-Esc → Command-Backtick",
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "escape",
+                  "modifiers": { "mandatory": ["command"] }
+                },
+                "to": [
+                  {
+                    "key_code": "grave_accent_and_tilde",
+                    "modifiers": ["command"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
         {
-            "complex_modifications": {
-                "rules": [
-                    {
-                        "description": "f19 Key → Hyper Key (⌃⌥⇧⌘)",
-                        "manipulators": [
-                            {
-                                "from": { "key_code": "f19" },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": ["left_command", "left_control", "left_option"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
-                        "description": "Command-Esc → Command-Backtick",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "escape",
-                                    "modifiers": { "mandatory": ["command"] }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "grave_accent_and_tilde",
-                                        "modifiers": ["command"]
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    }
-                ]
+          "identifiers": { "is_keyboard": true },
+          "simple_modifications": [
+            {
+              "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
+              "to": [{ "key_code": "left_control" }]
             },
-            "devices": [
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 49989,
-                        "vendor_id": 1046
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "f19" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f18" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 16400,
-                        "vendor_id": 12625
-                    },
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "f19" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f18" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": { "is_keyboard": true },
-                    "simple_modifications": [
-                        {
-                            "from": { "apple_vendor_top_case_key_code": "keyboard_fn" },
-                            "to": [{ "key_code": "left_control" }]
-                        },
-                        {
-                            "from": { "key_code": "left_control" },
-                            "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
-                        },
-                        {
-                            "from": { "key_code": "right_command" },
-                            "to": [{ "key_code": "f18" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f19" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 594,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "f19" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f18" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 591,
-                        "vendor_id": 1452
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "f19" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f18" }]
-                        }
-                    ]
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 43742,
-                        "vendor_id": 43670
-                    },
-                    "ignore": true
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "is_pointing_device": true,
-                        "product_id": 43742,
-                        "vendor_id": 43670
-                    },
-                    "ignore": false,
-                    "simple_modifications": [
-                        {
-                            "from": { "key_code": "left_command" },
-                            "to": [{ "key_code": "left_option" }]
-                        },
-                        {
-                            "from": { "key_code": "left_option" },
-                            "to": [{ "key_code": "left_command" }]
-                        },
-                        {
-                            "from": { "key_code": "right_control" },
-                            "to": [{ "key_code": "f19" }]
-                        },
-                        {
-                            "from": { "key_code": "right_option" },
-                            "to": [{ "key_code": "f18" }]
-                        }
-                    ]
-                }
-            ],
-            "fn_function_keys": [
-                {
-                    "from": { "key_code": "f3" },
-                    "to": [{ "key_code": "mission_control" }]
-                },
-                {
-                    "from": { "key_code": "f4" },
-                    "to": [{ "key_code": "launchpad" }]
-                },
-                {
-                    "from": { "key_code": "f5" },
-                    "to": [{ "key_code": "illumination_decrement" }]
-                },
-                {
-                    "from": { "key_code": "f6" },
-                    "to": [{ "key_code": "illumination_increment" }]
-                }
-            ],
-            "name": "pravusid",
-            "selected": true,
-            "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+            {
+              "from": { "key_code": "left_control" },
+              "to": [{ "apple_vendor_top_case_key_code": "keyboard_fn" }]
+            },
+            {
+              "from": { "key_code": "right_command" },
+              "to": [{ "key_code": "f18" }]
+            },
+            {
+              "from": { "key_code": "right_option" },
+              "to": [{ "key_code": "f19" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "keyboard_name": "gk",
+            "is_pointing_device": true,
+            "product_id": 594,
+            "vendor_id": 1452
+          },
+          "ignore": false,
+          "ignore_vendor_events": true,
+          "simple_modifications": [
+            {
+              "from": { "key_code": "left_command" },
+              "to": [{ "key_code": "left_option" }]
+            },
+            {
+              "from": { "key_code": "left_option" },
+              "to": [{ "key_code": "left_command" }]
+            },
+            {
+              "from": { "key_code": "right_control" },
+              "to": [{ "key_code": "f19" }]
+            },
+            {
+              "from": { "key_code": "right_option" },
+              "to": [{ "key_code": "f18" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "keyboard_name": "ne",
+            "is_pointing_device": true,
+            "product_id": 591,
+            "vendor_id": 1452
+          },
+          "ignore": false,
+          "ignore_vendor_events": true,
+          "simple_modifications": [
+            {
+              "from": { "key_code": "left_command" },
+              "to": [{ "key_code": "left_option" }]
+            },
+            {
+              "from": { "key_code": "left_option" },
+              "to": [{ "key_code": "left_command" }]
+            },
+            {
+              "from": { "key_code": "right_control" },
+              "to": [{ "key_code": "f19" }]
+            },
+            {
+              "from": { "key_code": "right_option" },
+              "to": [{ "key_code": "f18" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "keyboard_name": "tl",
+            "product_id": 43742,
+            "vendor_id": 43670
+          },
+          "ignore": false,
+          "ignore_vendor_events": true,
+          "simple_modifications": [
+            {
+              "from": { "key_code": "left_command" },
+              "to": [{ "key_code": "left_option" }]
+            },
+            {
+              "from": { "key_code": "left_option" },
+              "to": [{ "key_code": "left_command" }]
+            },
+            {
+              "from": { "key_code": "right_control" },
+              "to": [{ "key_code": "f19" }]
+            },
+            {
+              "from": { "key_code": "right_option" },
+              "to": [{ "key_code": "f18" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "keyboard_name": "8x",
+            "product_id": 2052,
+            "vendor_id": 21587
+          },
+          "ignore_vendor_events": true,
+          "simple_modifications": [
+            {
+              "from": { "key_code": "left_command" },
+              "to": [{ "key_code": "left_option" }]
+            },
+            {
+              "from": { "key_code": "left_option" },
+              "to": [{ "key_code": "left_command" }]
+            },
+            {
+              "from": { "key_code": "right_control" },
+              "to": [{ "key_code": "f19" }]
+            },
+            {
+              "from": { "key_code": "right_option" },
+              "to": [{ "key_code": "f18" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "keyboard_name": "np",
+            "product_id": 16387,
+            "vendor_id": 1121
+          },
+          "ignore_vendor_events": true
         }
-    ]
+      ],
+      "name": "pravusid",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+    }
+  ]
 }
