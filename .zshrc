@@ -1,5 +1,6 @@
 # a779d6563ffb2f0093b4b74c8d5ff0982fa3e930 https://github.com/ohmyzsh/ohmyzsh/blob/master/templates/zshrc.zsh-template
 
+# zmodload zsh/zprof
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
@@ -26,8 +27,8 @@ export ZSH=$HOME/.oh-my-zsh
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-zstyle ':omz:update' mode auto      # update automatically without asking
+zstyle ':omz:update' mode disabled  # disable automatic updates
+# zstyle ':omz:update' mode auto      # update automatically without asking
 # zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 # Uncomment the following line to change how often to auto-update (in days).
@@ -109,4 +110,4 @@ source ~/.zshrc_alias
 # User functions
 source ~/.zshrc_func
 # User local vars
-[ -f ~/.zshrc_local ] && source ~/.zshrc_local || true
+zsh-defer -c '[ -f ~/.zshrc_local ] && source ~/.zshrc_local || true'

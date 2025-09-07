@@ -6,6 +6,11 @@ funcs() {
   cat ~/.zshrc_func | grep '^#@'
 }
 
+#@ test-shell
+test-shell() {
+  for i in {1..10}; do /usr/bin/time $SHELL -i -c exit; done
+}
+
 #@ mpeg-dn <input> <output>
 mpeg-dn() {
   ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"

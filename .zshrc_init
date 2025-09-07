@@ -58,31 +58,31 @@ zshaddhistory() {
 export plugins=(
   autoupdate
   colored-man-pages
-  command-not-found
   docker
   docker-compose
-  F-Sy-H
   fancy-ctrl-z
-  fzf
   git
   git-trim
   starship
-  zoxide
   zsh-autosuggestions
+  zsh-syntax-highlighting # Note that zsh-syntax-highlighting must be the last plugin sourced
 )
 
+export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="30"
 export ZSH_AUTOSUGGEST_STRATEGY=(history completion)
-
-export FZF_BASE="$HOME/.fzf"
-export FZF_DEFAULT_COMMAND="fd --type f"
 
 export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 
-# mise
 [ -f ~/.local/bin/mise ] && eval "$(mise activate zsh)"
 
 # zsh-defer
 source ~/.zsh-defer/zsh-defer.plugin.zsh
+
+export FZF_BASE="$HOME/.fzf"
+export FZF_DEFAULT_COMMAND="fd --type f"
+zsh-defer -c '[ -x "$(command -v fzf)" ] && source <(fzf --zsh)'
+
+zsh-defer -c '[ -x "$(command -v zoxide)" ] && eval "$(zoxide init zsh)"'
 
 # https://docs.aws.amazon.com/ko_kr/cli/latest/userguide/cli-usage-parameters-prompting.html
 # /opt/homebrew/share/zsh/site-functions/_aws
