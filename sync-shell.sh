@@ -8,7 +8,8 @@ NC='\033[0m'
 
 echo -e "${RED}설정파일을 동기화 합니다${NC}\n"
 
-read -p "업무용 환경인가요? (y/N): " -r for_work
+echo -n "업무용 환경인가요? (y/N): "
+read for_work
 echo ""
 
 ln -sf "$(pwd)"/.zprofile ~/.zprofile
@@ -27,10 +28,10 @@ ln -sf "$(pwd)"/.zshrc_func ~/.zshrc_func
 echo ".zshrc_func"
 
 ln -sfn "$(pwd)"/.zsh-completions ~/.zsh-completions
-rm -f ~/.zcompdump*
+rm -f ~/.zcompdump* || true
 echo ".zsh-completions/"
 
-if [[ $for_work == 'y' ]]; then
+if [[ $for_work == [yY] ]]; then
   ln -sf "$(pwd)"/.gitconfig_include ~/.gitconfig
   echo -e "${YELLOW}.gitconfig_include to .gitconfig${NC}"
 
