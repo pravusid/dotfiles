@@ -45,6 +45,13 @@
   curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
   ```
 
+- gh-cli
+
+  ```sh
+  gh extension install dlvhdr/gh-dash
+  gh extension install nektos/gh-act
+  ```
+
 ## version manager
 
 ### mise
