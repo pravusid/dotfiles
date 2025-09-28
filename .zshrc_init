@@ -61,11 +61,11 @@ export plugins=(
   docker
   docker-compose
   fancy-ctrl-z
+  fast-syntax-highlighting
   git
   git-trim
   starship
   zsh-autosuggestions
-  zsh-syntax-highlighting # Note that zsh-syntax-highlighting must be the last plugin sourced
 )
 
 export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE="30"

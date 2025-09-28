@@ -110,4 +110,4 @@ source ~/.zshrc_alias
 # User functions
 source ~/.zshrc_func
 # User local vars
-zsh-defer -c '[ -f ~/.zshrc_local ] && source ~/.zshrc_local || true'
+[ -f ~/.zshrc_local ] && source ~/.zshrc_local || true
