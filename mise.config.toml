@@ -5,9 +5,9 @@ deno = "latest"
 uv = "latest"
 "npm:npm-check-updates" = "latest"
 "npm:@anthropic-ai/claude-code" = "latest"
-"npm:ccusage" = "latest"
 "npm:@google/gemini-cli" = "latest"
 "npm:@openai/codex" = "latest"
+"npm:@github/copilot" = "latest"
 "npm:repomix" = "latest"
 
 [env]
