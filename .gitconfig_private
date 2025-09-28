@@ -1,0 +1,75 @@
+[user]
+    name = Sangdon Park
+    email = 24415130+pravusid@users.noreply.github.com
+    signingKey = D258EA8797558F10
+
+[core]
+    autocrlf = input
+    excludesFile = ~/.gitignore_global
+    editor = vim
+    pager = delta
+
+[commit]
+    gpgSign = true
+    verbose = true
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
+
+[init]
+    defaultBranch = main
+
+[merge]
+    conflictStyle = zdiff3
+
+[rebase]
+    autoStash = true
+    autoSquash = true
+
+[rerere]
+    enabled = true
+    autoUpdate = true
+
+[pull]
+    rebase = true
+
+[push]
+    recurseSubmodules=check
+
+[diff]
+    colorMoved = default
+    tool = difftastic
+
+[difftool]
+    prompt = false
+
+[difftool "difftastic"]
+    cmd = difft "$LOCAL" "$REMOTE"
+
+[pager]
+    difftool = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    line-numbers = true
+    plus-style = syntax "#012800"
+    minus-style = normal "#340001"
+    syntax-theme = Nord
+
+[alias]
+    blow = "!git restore . && git clean -fd"
+
+[gt]
+    exclude = main master develop dev staging
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
