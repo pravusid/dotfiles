@@ -19,6 +19,9 @@ alias lzd="lazydocker"
 alias dk="docker"
 compdef dk="docker"
 
+alias mi="mise"
+compdef mi="mise"
+
 alias npgl="npm ls -g --depth=0"
 alias npgu="npm i -g npm@latest pnpm@latest"
 
