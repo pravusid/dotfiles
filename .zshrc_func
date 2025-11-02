@@ -185,3 +185,90 @@ keychain-env-del() {
   security delete-generic-password -a ${USER} -D "environment variable" -s "${1}" 2>/dev/null
   echo "키체인에서 ${1}이 삭제되었습니다"
 }
+
+_exec_agent() {
+  local prompt="$1"
+  shift
+
+  local agent=""
+  local query=""
+
+  if [[ "$1" == "--claude" ]] || [[ "$1" == "--gpt" ]] || [[ "$1" == "--gemini" ]]; then
+    agent="${1#--}" # -- 제거
+    shift
+    query="$*"
+  else
+    agent="$DEFAULT_AGENT"
+    query="$*"
+  fi
+
+  # pipe 입력 처리
+  if [ ! -t 0 ]; then
+    if [[ -n "$query" ]]; then
+      prompt+=$'\n'${query}
+    fi
+    query=$(cat)
+  fi
+
+  local input="
+  <instruction>${prompt}</instruction>
+  <query>${query}</query>
+  "
+
+  if [[ "$agent" == "claude" ]]; then
+    claude --model haiku -p "$input"
+  elif [[ "$agent" == "gpt" ]]; then
+    codex -c model="gpt-5-codex" -c sandbox_mode="read-only" -c model_reasoning_effort="low" -c model_verbosity="low" \
+      exec --skip-git-repo-check "$input"
+  elif [[ "$agent" == "gemini" ]]; then
+    gemini -m gemini-2.5-flash --sandbox -p "$input"
+  fi
+}
+
+#@ q <arg|pipe> - 개발 관련 단순 질의
+q() {
+  local prompt="
+  You are a software development assistant that responds in Korean.
+  The user wants fast, executable answers with verification links. Follow this format strictly.
+
+  ## Output Format
+  - TL;DR: 3–5 lines of core, immediately actionable points.
+  - Snippet/Steps: Copy-pastable minimal example (include install/import).
+  - Verification Links: 1–3 links, official docs first (optionally 1 auxiliary).
+  - Caveats/Tips: 1–3 common pitfalls or version/env differences.
+  - Assumptions: State reasonable defaults for ambiguities (e.g., Next.js 14, React 18, Node LTS).
+
+  ## Style Rules
+  - No fluff; be factual and concise. Provide one recommended approach + at most one alternative.
+  - For errors: Cause → Fix in 1–2 lines.
+  - If performance/security implications exist: add one line.
+  - If anything is uncertain, prefix with **Uncertain:** and provide how to verify (commands/links).
+
+  ## Link Policy
+  Prefer the latest stable official documentation (include version when possible).
+  "
+  _exec_agent "$prompt" "$@"
+}
+
+#@ doc <arg|pipe> - 공식문서 검색
+doc() {
+  local prompt="
+  USE context7 to get documentation for <query /> — if official documentation links exist, include them in the answer
+  "
+  _exec_agent "$prompt" "$@"
+}
+
+#@ translate <arg|pipe> - 한국어🔄영어
+translate() {
+  local prompt="
+  You are a bilingual translator between English and Korean.
+  - The input text to translate is located within <query></query> tags
+  - Detect the input language automatically
+  - If English, translate to Korean
+  - If Korean, translate to English
+  - Preserve original formatting, structure and sentences
+  - Remove unnecessary punctuation
+  - Output only the translation
+  "
+  _exec_agent "$prompt" "$@"
+}

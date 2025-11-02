@@ -13,6 +13,8 @@ alias tf="\tail -f"
 alias ssa="\ss -natp"
 alias ssl="\ss -nltp"
 
+alias hist="vim $HISTFILE"
+
 alias lzg="lazygit"
 alias lzd="lazydocker"
 
