@@ -75,6 +75,7 @@ curl https://mise.run | sh
 
 - [`.zshrc`](./.zshrc)
 - [`.zshrc_init`](./.zshrc_init)
+- [`.zshrc_history`](./.zshrc_history)
 - [`.zshrc_alias`](./.zshrc_alias)
 - [`.zshrc_func`](./.zshrc_func)
 

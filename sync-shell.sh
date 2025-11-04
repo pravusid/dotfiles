@@ -17,6 +17,9 @@ echo ".zshrc"
 ln -sf "$(pwd)"/.zshrc_init ~/.zshrc_init
 echo ".zshrc_init"
 
+ln -sf "$(pwd)"/.zshrc_history ~/.zshrc_history
+echo ".zshrc_history"
+
 ln -sf "$(pwd)"/.zshrc_alias ~/.zshrc_alias
 echo ".zshrc_alias"
 

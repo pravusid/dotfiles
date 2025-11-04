@@ -105,6 +105,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+# User history options
+source ~/.zshrc_history
 # User aliases
 source ~/.zshrc_alias
 # User functions
