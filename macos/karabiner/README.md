@@ -8,7 +8,7 @@ Karabiner-Elements 실행
 
 ```sh
 cp -f "$(pwd)"/karabiner.json ~/.config/karabiner/karabiner.json
-rm -rf ~/.config/karabiner/assets/ && ln -sf "$(pwd)"/assets ~/.config/karabiner/assets
+rm -rf ~/.config/karabiner/assets && ln -sf "$(pwd)"/assets ~/.config/karabiner/assets
 ```
 
 - [설정파일-mbp](./karabiner.json)
