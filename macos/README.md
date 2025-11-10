@@ -124,3 +124,13 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores true
   - 페이지 쓸어넘기기: 두 손가락
   - 전체 화면 응용 프로그램 쓸어넘기기: 세 손가락
   - Mission Control: 세 손가락
+
+### Spotlight
+
+`시스템 설정 > Spotlight`
+
+- 관련 콘텐츠 보기: 해제
+- Apple의 검색 기능 향상에 기여하기: 해제
+- 시스템 결과
+  - 파일: 해제
+- 클립보드의 결과: 해제
