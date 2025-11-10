@@ -215,14 +215,19 @@ _exec_agent() {
   <query>${query}</query>
   "
 
+  # OSC 9;4 escape sequence (progress bar)
+  echo -ne "\033]9;4;3\a"
+
   if [[ "$agent" == "claude" ]]; then
     claude --model haiku -p "$input"
   elif [[ "$agent" == "gpt" ]]; then
-    codex -c model="gpt-5-codex" -c sandbox_mode="read-only" -c model_reasoning_effort="low" -c model_verbosity="low" \
+    codex -c model="gpt-5-codex-mini" -c sandbox_mode="read-only" -c model_reasoning_effort="low" -c model_verbosity="low" \
       exec --skip-git-repo-check "$input"
   elif [[ "$agent" == "gemini" ]]; then
     gemini -m gemini-2.5-flash --sandbox -p "$input"
   fi
+
+  echo -ne "\033]9;4;0\a"
 }
 
 #@ q <arg|pipe> - 개발 관련 단순 질의
