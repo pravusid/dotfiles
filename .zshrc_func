@@ -149,7 +149,7 @@ cp949() {
 
 #@ calc-sum -- stdin 내의 숫자 합계, 공백 또는 개행으로 구분, pipe 가능
 calc-sum() {
-  { [ $# -gt 0 ] && echo "$*" || cat; } | tr -s '[:space:]' '+' | sed 's/+$//' | bc
+  { [[ $# -gt 0 ]] && echo "$*" || cat; } | tr -s '[:space:]' '+' | sed 's/+$//' | bc
 }
 
 # keychain-environment-variable https://gist.github.com/bmhatfield/f613c10e360b4f27033761bbee4404fd
@@ -161,19 +161,19 @@ keychain-env-get () {
 
 #@ keychain-env-set SECRET_ENV_KEY
 keychain-env-set () {
-  [ -n "$1" ] || { echo "환경변수 이름이 필요합니다"; return 1; }
+  [[ -n "$1" ]] || { echo "환경변수 이름이 필요합니다"; return 1; }
 
   # Note: if using bash, use `-p` to indicate a prompt string, rather than the leading `?`
   read -s "?Enter Value for ${1}: " secret
 
-  ( [ -n "$1" ] && [ -n "$secret" ] ) || return 1
+  ( [[ -n "$1" ]] && [[ -n "$secret" ]] ) || return 1
   security add-generic-password -U -a ${USER} -D "environment variable" -s "${1}" -w "${secret}"
   echo "키체인에 ${1}이 저장되었습니다"
 }
 
 #@ keychain-env-del SECRET_ENV_KEY
 keychain-env-del() {
-  [ -n "$1" ] || { echo "환경변수 이름이 필요합니다"; return 1; }
+  [[ -n "$1" ]] || { echo "환경변수 이름이 필요합니다"; return 1; }
 
   echo -n "키체인에서 ${1}을(를) 삭제하시겠습니까? [y/N]: "
   read confirm
@@ -203,7 +203,7 @@ _exec_agent() {
   fi
 
   # pipe 입력 처리
-  if [ ! -t 0 ]; then
+  if [[ ! -t 0 ]]; then
     if [[ -n "$query" ]]; then
       prompt+=$'\n'${query}
     fi

@@ -1,6 +1,6 @@
 #compdef uv
 
-if [ -x "$(command -v uv)" ]; then
+if [[ -x "$(command -v uv)" ]]; then
   eval "$(uv generate-shell-completion zsh)"
   _uv "$@"
 fi

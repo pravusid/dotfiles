@@ -1,6 +1,6 @@
 #compdef mise
 
-if [ -f ~/.local/bin/mise ]; then
+if [[ -f ~/.local/bin/mise ]]; then
   eval "$(mise completion zsh)"
   _mise "$@"
 fi
