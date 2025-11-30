@@ -8,6 +8,7 @@ uv = "latest"
 "npm:@google/gemini-cli" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:@github/copilot" = "latest"
+"npm:@beads/bd" = "latest"
 
 [env]
 _.path = ["{{cwd}}/node_modules/.bin", "{{config_root}}/node_modules/.bin"]
