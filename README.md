@@ -84,7 +84,7 @@ curl https://mise.run | sh
 ### gitconfig
 
 - [`.gitconfig`](./.gitconfig)
-- [`.gitconfig_include`](./.gitconfig_include)
+- [`.gitconfig_private`](./.gitconfig_private)
 - [`.gitignore_global`](./.gitignore_global)
 
 > <https://github.com/pravusid/TIL/blob/main/Git/git-config.md>
