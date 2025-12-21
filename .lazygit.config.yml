@@ -4,7 +4,6 @@ gui:
   shortTimeFormat: 03:04PM
   nerdFontsVersion: 3
   filterMode: fuzzy
-  scrollHeight: 20
 
 git:
   pagers:
