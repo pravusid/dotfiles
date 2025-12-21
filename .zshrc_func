@@ -224,7 +224,7 @@ _exec_agent() {
     codex -c model="gpt-5.2" -c sandbox_mode="read-only" -c model_reasoning_effort="low" -c model_verbosity="low" \
       exec --skip-git-repo-check "$input"
   elif [[ "$agent" == "gemini" ]]; then
-    gemini -m gemini-2.5-flash --sandbox -p "$input"
+    gemini -m gemini-3-flash --sandbox -p "$input"
   fi
 
   echo -ne "\033]9;4;0\a"
