@@ -1,7 +1,7 @@
 [user]
     name = Sangdon Park
     email = 24415130+pravusid@users.noreply.github.com
-    signingkey = ~/.ssh/id_pravusid_sign
+    signingkey = ~/.ssh/id_pravusid_sign.pub
 
 [gpg]
     format = ssh
