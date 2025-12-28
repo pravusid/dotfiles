@@ -1,10 +1,7 @@
 [user]
     name = Sangdon Park
     email = 24415130+pravusid@users.noreply.github.com
-    signingkey = ~/.ssh/id_pravusid_sign.pub
-
-[gpg]
-    format = ssh
+    signingKey = D258EA8797558F10
 
 [core]
     autocrlf = input
