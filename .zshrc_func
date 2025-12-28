@@ -241,7 +241,7 @@ q() {
   - Snippet/Steps: Copy-pastable minimal example (include install/import).
   - Verification Links: 1–3 links, official docs first (optionally 1 auxiliary).
   - Caveats/Tips: 1–3 common pitfalls or version/env differences.
-  - Assumptions: State reasonable defaults for ambiguities (e.g., Next.js 14, React 18, Node LTS).
+  - Assumptions: State reasonable defaults for ambiguities (e.g. LTS version).
 
   ## Style Rules
   - No fluff; be factual and concise. Provide one recommended approach + at most one alternative.
