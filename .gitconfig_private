@@ -43,7 +43,7 @@
     rebase = true
 
 [push]
-    recurseSubmodules=check
+    recurseSubmodules = check
 
 [diff]
     colorMoved = default
