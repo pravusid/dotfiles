@@ -221,8 +221,8 @@ _exec_agent() {
   if [[ "$agent" == "claude" ]]; then
     claude --model haiku -p "$input"
   elif [[ "$agent" == "gpt" ]]; then
-    codex -c model="gpt-5.2" -c sandbox_mode="read-only" -c model_reasoning_effort="low" -c model_verbosity="low" \
-      exec --skip-git-repo-check "$input"
+    codex -c model="gpt-5.2" -c model_reasoning_effort="low" -c model_verbosity="low" \
+      -c hide_agent_reasoning="true" -c sandbox_mode="read-only" exec --skip-git-repo-check "$input"
   elif [[ "$agent" == "gemini" ]]; then
     gemini -m gemini-3-flash --sandbox -p "$input"
   fi
