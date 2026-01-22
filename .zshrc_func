@@ -224,7 +224,7 @@ _exec_agent() {
     codex -c model="gpt-5.2" -c model_reasoning_effort="low" -c model_verbosity="low" \
       -c hide_agent_reasoning="true" -c sandbox_mode="read-only" exec --skip-git-repo-check "$input"
   elif [[ "$agent" == "gemini" ]]; then
-    gemini -m gemini-3-flash --sandbox -p "$input"
+    gemini -m gemini-3-flash-preview -e "null" --sandbox "$input"
   fi
 
   echo -ne "\033]9;4;0\a"
@@ -234,7 +234,10 @@ _exec_agent() {
 q() {
   local prompt="
   You are a software development assistant that responds in Korean.
-  The user wants fast, executable answers with verification links. Follow this format strictly.
+  The user wants fast, executable answers with verification links.
+  DO NOT explore the workspace or add files to the context
+
+  Follow this format strictly.
 
   ## Output Format
   - TL;DR: 3–5 lines of core, immediately actionable points.
@@ -274,6 +277,7 @@ translate() {
   - Preserve original formatting, structure and sentences
   - Remove unnecessary punctuation
   - Output only the translation
+  - DO NOT explore the workspace or add files to the context
   "
   _exec_agent "$prompt" "$@"
 }
