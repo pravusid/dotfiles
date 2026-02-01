@@ -30,6 +30,8 @@ alias npgu="npm i -g npm@latest pnpm@latest"
 alias pn="pnpm"
 compdef pn="pnpm"
 
+alias skills="DISABLE_TELEMETRY=1 npx -y skills@latest"
+
 alias python="python3"
 alias pip="pip3"
 alias venv="source .venv/bin/activate"

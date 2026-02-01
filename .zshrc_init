@@ -20,7 +20,7 @@ fi
 # prepend custom completions
 fpath=("$HOME/.zsh-completions" "${fpath[@]}")
 
-export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.bun/bin"
 
 #
 # plugins
