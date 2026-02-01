@@ -2,12 +2,12 @@
 usage = "latest"
 node = "latest"
 deno = "latest"
+bun = "latest"
 uv = "latest"
 "npm:npm-check-updates" = "latest"
 "npm:@google/gemini-cli" = "latest"
 "npm:@openai/codex" = "latest"
 "npm:opencode-ai" = "latest"
-"npm:@beads/bd" = "latest"
 "aqua:aws-cli" = "latest"
 "aqua:aws-sam-cli" = "latest"
 
