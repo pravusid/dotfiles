@@ -24,13 +24,6 @@
   git clone https://github.com/jasonmccreary/git-trim.git $ZSH_CUSTOM/plugins/git-trim
   ```
 
-- gh-cli
-
-  ```sh
-  gh extension install dlvhdr/gh-dash
-  gh extension install nektos/gh-act
-  ```
-
 ## sync dotfiles
 
 ```sh
