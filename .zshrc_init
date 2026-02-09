@@ -47,7 +47,7 @@ export LG_CONFIG_FILE="$HOME/.config/lazygit/config.yml"
 # https://mise.jdx.dev/ide-integration.html#vscode
 # https://mise.jdx.dev/dev-tools/shims.html#how-to-add-mise-shims-to-path → mise activate will remove the shims directory from the PATH
 # editor(vscode, zed) 환경은 login+interactive shell 환경에 맞춰짐, shims 삭제방지를 위해 -i flag 대신 stdin 확인; [[ $- == *i* ]], [[ -o interactive ]]
-[[ -f ~/.local/bin/mise ]] && [[ -t 0 ]] && eval "$(mise activate zsh)"
+[[ -x "$(command -v mise)" ]] && [[ -t 0 ]] && eval "$(mise activate zsh)"
 
 # zsh-defer
 source ~/.zsh-defer/zsh-defer.plugin.zsh
