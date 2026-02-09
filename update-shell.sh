@@ -15,16 +15,4 @@ echo -e "${YELLOW}oh-my-zsh 업데이트 완료${NC}"
 cd ~/.zsh-defer/ && git pull
 echo -e "${YELLOW}zsh-defer 업데이트 완료${NC}"
 
-curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin -y
-echo -e "${YELLOW}starship 업데이트 완료${NC}"
-
-cd ~/.fzf && git pull && ./install --all --no-update-rc
-echo -e "${YELLOW}fzf 업데이트 완료${NC}"
-
-curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-echo -e "${YELLOW}zoxide 업데이트 완료${NC}"
-
-mise self-update -y
-echo -e "${YELLOW}mise 업데이트 완료${NC}"
-
 echo -e "\n${RED}완료${NC}"

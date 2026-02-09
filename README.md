@@ -24,42 +24,12 @@
   git clone https://github.com/jasonmccreary/git-trim.git $ZSH_CUSTOM/plugins/git-trim
   ```
 
-- starship
-
-  ```sh
-  curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin
-  ```
-
-- fzf
-
-  ```sh
-  # install
-  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
-  # upgrade
-  cd ~/.fzf && git pull && ./install
-  ```
-
-- zoxide
-
-  ```sh
-  curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
-  ```
-
 - gh-cli
 
   ```sh
   gh extension install dlvhdr/gh-dash
   gh extension install nektos/gh-act
   ```
-
-## version manager
-
-### mise
-
-```sh
-# install
-curl https://mise.run | sh
-```
 
 ## sync dotfiles
 
