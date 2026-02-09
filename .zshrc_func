@@ -11,6 +11,19 @@ test-shell() {
   for i in {1..10}; do /usr/bin/time $SHELL -i -c exit; done
 }
 
+#@ update-shell
+update-shell() {
+  echo -e "${RED}패키지를 업데이트 합니다${NC}\n"
+
+  ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=8 upgrade_oh_my_zsh_all
+  echo -e "${YELLOW}oh-my-zsh 업데이트 완료${NC}"
+
+  git -C ~/.zsh-defer/ pull
+  echo -e "${YELLOW}zsh-defer 업데이트 완료${NC}"
+
+  echo -e "\n${RED}완료${NC}"
+}
+
 #@ mpeg-dn <input> <output>
 mpeg-dn() {
   ffmpeg -i "$1" -c copy -bsf:a aac_adtstoasc "$2"
