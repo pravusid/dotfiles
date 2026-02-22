@@ -3,3 +3,6 @@
 
 [includeIf "gitdir:~/Documents/dev/**"]
     path = ~/.gitconfig_work
+
+[includeIf "gitdir:~/Documents/detached/**"]
+    path = ~/.gitconfig_detached
