@@ -1,5 +1,4 @@
 [tools]
-usage = "latest"
 node = "latest"
 deno = "latest"
 bun = "latest"
