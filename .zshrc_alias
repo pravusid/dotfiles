@@ -13,6 +13,7 @@ alias tf="\tail -f"
 alias ssa="\ss -natp"
 alias ssl="\ss -nltp"
 
+alias nv="nvim"
 alias hist="vim $HISTFILE"
 
 alias lzg="lazygit"
@@ -23,6 +24,8 @@ compdef dk="docker"
 
 alias mi="mise"
 compdef mi="mise"
+alias mir="mise run"
+compdef mir="mise"
 
 alias npgl="npm ls -g --depth=0"
 alias npgu="npm i -g npm@latest pnpm@latest"
