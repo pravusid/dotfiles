@@ -1,6 +1,5 @@
 tap "buo/cask-upgrade"
 tap "dagger/tap"
-tap "xcodesorg/made"
 brew "age"
 brew "aria2"
 brew "asciinema"
@@ -61,6 +60,7 @@ brew "vale"
 brew "vim"
 brew "webp"
 brew "xan"
+brew "xcodes"
 brew "zoxide"
 cask "aldente"
 cask "dagger/tap/container-use"
@@ -114,15 +114,16 @@ mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Color Picker", id: 1545870783
 mas "Command X", id: 6448461551
+mas "Compressor", id: 6746516157
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
+mas "Keynote", id: 361285480
 mas "Microsoft To Do", id: 1274495053
 mas "Notion Web Clipper", id: 1559269364
-mas "Numbers", id: 409203825
+mas "Numbers", id: 361304891
 mas "Outline", id: 1356178125
-mas "Pages", id: 409201541
+mas "Pages", id: 361309726
 mas "RunCat", id: 1429033973
 mas "Slack", id: 803453959
 mas "uBlock Origin Lite", id: 6745342698
