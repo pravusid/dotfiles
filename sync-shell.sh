@@ -57,6 +57,9 @@ echo "ghostty.config"
 mkdir -p ~/.config/mise && ln -sf "$(pwd)"/mise.config.toml ~/.config/mise/config.toml
 echo "mise.config.toml"
 
+mkdir -p ~/.config/worktrunk && ln -sf "$(pwd)"/worktrunk.config.toml ~/.config/worktrunk/config.toml
+echo "worktrunk.config.toml"
+
 ln -sf "$(pwd)"/.sqliterc ~/.sqliterc
 echo ".sqliterc"
 

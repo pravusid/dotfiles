@@ -1,0 +1,5 @@
+[switch.picker]
+pager = "delta --paging=never --width=$COLUMNS"
+
+[post-start]
+copy = "wt step copy-ignored"
