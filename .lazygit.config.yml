@@ -13,5 +13,5 @@ git:
 
 keybinding:
   commits:
-    moveDownCommit: <disabled>
-    moveUpCommit: <disabled>
+    moveDownCommit: <f7>
+    moveUpCommit: <f8>
