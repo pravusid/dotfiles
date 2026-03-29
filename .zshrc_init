@@ -22,8 +22,8 @@ fpath=("$HOME/.zsh-completions" "${fpath[@]}")
 
 export PATH="$PATH:$HOME/.local/bin:$HOME/.bun/bin"
 
-export VISUAL="vim"
-export EDITOR="vim"
+export VISUAL="${VISUAL:-vim}"
+export EDITOR="${EDITOR:-vim}"
 
 #
 # plugins
