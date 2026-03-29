@@ -1,5 +1,5 @@
 [tools]
-node = "latest"
+node = { version = "latest", postinstall = "npm i -g pnpm" }
 deno = "latest"
 bun = "latest"
 uv = "latest"
