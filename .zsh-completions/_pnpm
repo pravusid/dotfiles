@@ -1,4 +1,4 @@
-#compdef pnpm
+#compdef pnpm pn pnx
 
 if (( $+commands[pnpm] )); then
   eval "$(pnpm completion zsh)"
