@@ -1,3 +1,6 @@
+worktree-path = "~/.agents/worktrees/{{ repo }}/{{ branch | sanitize }}"
+skip-commit-generation-prompt = true
+
 [switch.picker]
 pager = "delta --paging=never --width=$COLUMNS"
 

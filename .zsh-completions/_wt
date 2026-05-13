@@ -1,6 +1,0 @@
-#compdef wt
-
-if [[ -x "$(command -v wt)" ]]; then
-  eval "$(command wt config shell init zsh)"
-  _wt_lazy_complete "$@"
-fi
