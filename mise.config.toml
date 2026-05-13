@@ -19,5 +19,6 @@ _.path = ["{{cwd}}/node_modules/.bin", "{{config_root}}/node_modules/.bin"]
 
 [settings]
 experimental = true
+trusted_config_paths = ["~/.agents/worktrees"]
 idiomatic_version_file_enable_tools = ["node"]
 python.uv_venv_auto = true
