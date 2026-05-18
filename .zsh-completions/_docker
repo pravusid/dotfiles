@@ -1,0 +1,6 @@
+#compdef docker
+
+if [[ -x "$(command -v docker)" ]]; then
+  eval "$(docker completion zsh)"
+  _docker "$@"
+fi

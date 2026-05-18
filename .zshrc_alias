@@ -20,12 +20,10 @@ alias lzg="lazygit"
 alias lzd="lazydocker"
 
 alias dk="docker"
-compdef dk="docker"
+alias dco="docker compose"
 
 alias mi="mise"
-compdef mi="mise"
 alias mir="mise run"
-compdef mir="mise"
 
 alias npgl="npm ls -g --depth=0"
 alias npgu="npm i -g npm@latest pnpm@latest"
@@ -39,7 +37,6 @@ alias venv="source .venv/bin/activate"
 
 # https://docs.astral.sh/uv/concepts/tools/#the-uv-tool-interface
 alias uvx="uv tool run"
-compdef uvx="uv"
 
 # https://formulae.brew.sh/formula/coreutils
 if [[ -n "$HOMEBREW_PREFIX" ]]; then

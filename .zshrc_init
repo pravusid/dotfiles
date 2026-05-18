@@ -13,12 +13,18 @@ if [[ "$OS" == "Darwin" && $(arch) == "arm64" ]]; then
   PATH="$PATH:/opt/homebrew/bin"
   eval "$(brew shellenv)"
 
+  # Undo `export FPATH` from brew shellenv <https://github.com/Homebrew/brew/pull/21910>
+  # Without this, fpath leaks to child shells and omz's `#omz fpath:` metadata check fails, forcing compdump regeneration on every cold boot.
+  # 참고: <https://github.com/ohmyzsh/ohmyzsh/issues/13720>
+  typeset +x FPATH
+
   # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
   fpath+="/opt/homebrew/share/zsh/site-functions"
 fi
 
 # prepend custom completions
 fpath=("$HOME/.zsh-completions" "${fpath[@]}")
+typeset -gU fpath
 
 export PATH="$PATH:$HOME/.local/bin:$HOME/.bun/bin"
 
@@ -32,8 +38,6 @@ export EDITOR="${EDITOR:-vim}"
 export plugins=(
   autoupdate
   colored-man-pages
-  docker
-  docker-compose
   fancy-ctrl-z
   fast-syntax-highlighting
   git
