@@ -19,7 +19,9 @@ if [[ "$OS" == "Darwin" && $(arch) == "arm64" ]]; then
   typeset +x FPATH
 
   # https://docs.brew.sh/Shell-Completion#configuring-completions-in-zsh
-  fpath+="/opt/homebrew/share/zsh/site-functions"
+  # child shell(tmux/zellij)에서는 brew shellenv가 idempotency early-return하므로 fpath 직접 보강 (위 `typeset +x` 보완)
+  # 참고: <https://github.com/Homebrew/brew/issues/21879>
+  fpath[1,0]="${HOMEBREW_PREFIX}/share/zsh/site-functions"
 fi
 
 # prepend custom completions
@@ -36,7 +38,6 @@ export EDITOR="${EDITOR:-vim}"
 #
 
 export plugins=(
-  autoupdate
   colored-man-pages
   fancy-ctrl-z
   fast-syntax-highlighting

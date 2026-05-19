@@ -15,7 +15,9 @@ test-shell() {
 update-shell() {
   echo -e "${RED}패키지를 업데이트 합니다${NC}\n"
 
-  ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=8 upgrade_oh_my_zsh_all
+  zsh "$ZSH/tools/upgrade.sh"
+  source "$ZSH/custom/plugins/autoupdate/autoupdate.plugin.zsh"
+  ZSH_CUSTOM_AUTOUPDATE_NUM_WORKERS=4 upgrade_oh_my_zsh_custom
   echo -e "${YELLOW}oh-my-zsh 업데이트 완료${NC}"
 
   git -C ~/.zsh-defer/ pull
