@@ -1,5 +1,5 @@
 gui:
-  sidePanelWidth: 0.3
+  sidePanelWidth: 0.25
   timeFormat: 2006-01-02 15:04 +09
   shortTimeFormat: 03:04PM
   nerdFontsVersion: 3
@@ -8,8 +8,8 @@ gui:
 
 git:
   pagers:
-    - colorArg: always
-      pager: delta --dark --side-by-side --paging=never
+    - pager: delta --dark --side-by-side --paging=never
+    - pager: delta --dark --paging=never
 
 keybinding:
   commits:
