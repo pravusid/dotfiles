@@ -25,11 +25,16 @@ alias dco="docker compose"
 alias mi="mise"
 alias mir="mise run"
 
+alias au="aube"
+
 alias npgl="npm ls -g --depth=0"
 alias npgu="npm i -g npm@latest pnpm@latest"
 
 alias ncu="npx --ignore-scripts -y npm-check-updates@latest"
 alias skills="DISABLE_TELEMETRY=1 npx --ignore-scripts -y skills@latest"
+
+alias ce="claude"
+alias cx="codex"
 
 alias python="python3"
 alias pip="pip3"

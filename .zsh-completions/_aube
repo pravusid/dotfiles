@@ -1,0 +1,6 @@
+#compdef aube
+
+if [[ -x "$(command -v aube)" ]]; then
+  eval "$(aube completion zsh)"
+  _aube "$@"
+fi
