@@ -24,8 +24,6 @@ update-shell() {
   echo -e "${YELLOW}zsh-defer 업데이트 완료${NC}"
 
   rm -f ~/.zcompdump* || true
-  autoload -Uz compinit
-  compinit
 
   echo -e "\n${RED}완료${NC}"
 }
