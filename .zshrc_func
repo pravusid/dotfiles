@@ -23,7 +23,7 @@ update-shell() {
   git -C ~/.zsh-defer/ pull
   echo -e "${YELLOW}zsh-defer 업데이트 완료${NC}"
 
-  rm -f ~/.zcompdump*
+  rm -f ~/.zcompdump* || true
   autoload -Uz compinit
   compinit
 
