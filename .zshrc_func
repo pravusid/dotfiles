@@ -210,7 +210,7 @@ _exec_agent() {
   local agent=""
   local query=""
 
-  if [[ "$1" == "--claude" ]] || [[ "$1" == "--gpt" ]] || [[ "$1" == "--gemini" ]]; then
+  if [[ "$1" == "--claude" ]] || [[ "$1" == "--gpt" ]]; then
     agent="${1#--}" # -- 제거
     shift
     query="$*"
@@ -240,8 +240,6 @@ _exec_agent() {
   elif [[ "$agent" == "gpt" ]]; then
     codex -c model_reasoning_effort="low" -c model_verbosity="low" \
       -c hide_agent_reasoning="true" -c sandbox_mode="read-only" exec --skip-git-repo-check "$input"
-  elif [[ "$agent" == "gemini" ]]; then
-    gemini -m gemini-3-flash-preview -e "null" --sandbox -p "$input"
   fi
 
   echo -ne "\033]9;4;0\a"

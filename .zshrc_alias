@@ -28,10 +28,10 @@ alias mir="mise run"
 alias au="aube"
 
 alias npgl="npm ls -g --depth=0"
-alias npgu="npm i -g npm@latest pnpm@latest"
+alias npgu="npm i -g npm@latest"
 
-alias ncu="npx --ignore-scripts -y npm-check-updates@latest"
-alias skills="env -u XDG_STATE_HOME DISABLE_TELEMETRY=1 npx --ignore-scripts -y skills@latest"
+alias ncu="npx --ignore-scripts --min-release-age=1 -y npm-check-updates@latest"
+alias skills="env -u XDG_STATE_HOME DISABLE_TELEMETRY=1 npx --ignore-scripts --min-release-age=1 -y skills@latest"
 
 alias ce="claude"
 alias cx="codex"
