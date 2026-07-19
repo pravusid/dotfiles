@@ -1,0 +1,17 @@
+# https://herdr.dev/docs/configuration/
+
+onboarding = false
+
+[worktrees]
+directory = "~/.agents/worktrees"
+
+[theme]
+name = "nord"
+auto_switch = false
+
+[ui]
+agent_panel_sort = "spaces"
+show_agent_labels_on_pane_borders = true
+
+[ui.toast]
+delivery = "herdr"
