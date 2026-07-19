@@ -60,6 +60,9 @@ echo "mise.config.toml"
 mkdir -p ~/.config/worktrunk && ln -sf "$(pwd)"/worktrunk.config.toml ~/.config/worktrunk/config.toml
 echo "worktrunk.config.toml"
 
+mkdir -p ~/.config/herdr && ln -sf "$(pwd)"/herdr.config.toml ~/.config/herdr/config.toml
+echo "herdr.config.toml"
+
 ln -sf "$(pwd)"/.sqliterc ~/.sqliterc
 echo ".sqliterc"
 
