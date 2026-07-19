@@ -50,3 +50,14 @@ defaults write wang.jianing.app.OpenInEditor-Lite LiteDefaultEditor Zed
 mkdir -p ~/.docker/cli-plugins
 ln -sfn $HOMEBREW_PREFIX/opt/docker-compose/bin/docker-compose ~/.docker/cli-plugins/docker-compose
 ```
+
+### pinentry-mac (&gpg)
+
+<https://formulae.brew.sh/formula/pinentry-mac>
+
+```sh
+# ~/.gnupg/gpg-agent.conf
+pinentry-program /opt/homebrew/bin/pinentry-mac
+```
+
+작동하지 않는경우 `pkill -TERM gpg-agent` 실행 후 키체인 활성화

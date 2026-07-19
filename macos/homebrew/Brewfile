@@ -1,75 +1,152 @@
-tap "buo/cask-upgrade"
-tap "dagger/tap"
+tap "buo/cask-upgrade", trusted: true
+tap "dagger/tap", trusted: true
+# Simple, modern, secure file encryption
 brew "age"
+# Download with resuming and segmented downloading
 brew "aria2"
+# Record and share terminal sessions
 brew "asciinema"
+# Code searching, linting, rewriting
 brew "ast-grep"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Dependency manager for Cocoa projects
 brew "cocoapods"
+# Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
+# Create and run Linux containers using lightweight virtual machines
+brew "container"
+# GNU File, Shell, and Text utilities
 brew "coreutils"
+# Command-line csv viewer
 brew "csvlens"
+# Diff that understands syntax
 brew "difftastic"
+# Tool for exploring each layer in a docker image
 brew "dive"
+# Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
+# Isolated development environments using Docker
 brew "docker-compose"
+# Platform keystore credential helper for Docker
 brew "docker-credential-helper"
+# Docker Credential Helper for Amazon ECR
 brew "docker-credential-helper-ecr"
+# Embeddable SQL OLAP Database Management System
 brew "duckdb"
+# Command-line batch renaming tool
 brew "f2"
+# Fast, partial replacement for codemod (find/replace tool for programmers)
 brew "fastmod"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Git extension for versioning large files
 brew "git-lfs"
+# Simple and efficient way to access statistics in git
 brew "git-quick-stats"
+# Audit git repos for secrets
 brew "gitleaks"
+# GNU implementation of the famous stream editor
 brew "gnu-sed"
+# GNU Privacy Guard (OpenPGP)
+brew "gnupg"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
 brew "just"
+# Lazier way to manage everything docker
 brew "lazydocker"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Postgres C API library
 brew "libpq"
+# LLM inference in C/C++
 brew "llama.cpp"
+# Curses-based tool for viewing and analyzing log files
 brew "lnav"
+# Mac App Store command-line interface
 brew "mas"
+# Terminal image, video, directory, and Markdown viewer
 brew "mcat"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Deep clean and optimize your Mac
 brew "mole"
+# Open source relational database management system
 brew "mysql-client"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Port scanning utility for large networks
 brew "nmap"
+# Swiss-army knife of markup format conversion
 brew "pandoc"
+# Pinentry for GPG on Mac
+brew "pinentry-mac"
+# Command-line tool for managing long-running shell commands
 brew "pueue"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Wrapper around ripgrep that adds multiple rich file types
 brew "ripgrep-all"
+# Static analysis and lint tool, for (ba)sh scripts
 brew "shellcheck"
+# Autoformat shell script source code
 brew "shfmt"
+# Cross-platform application to monitor your network traffic
 brew "sniffnet"
+# Editor of encrypted files
 brew "sops"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Organize software neatly under a single directory tree (e.g. /usr/local)
 brew "stow"
+# Official tldr client written in Rust
 brew "tlrc"
+# Program that allows you to count code, quickly
 brew "tokei"
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Syntax-aware linter for prose
 brew "vale"
+# Vi 'workalike' with many additional features
 brew "vim"
+# Image format providing lossless and lossy compression for web images
 brew "webp"
+# CLI for Git worktree management, designed for parallel AI agent workflows
 brew "worktrunk"
+# CSV CLI magician written in Rust
 brew "xan"
+# Command-line tool to install and switch between multiple versions of Xcode
 brew "xcodes"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Containerized environments for coding agents
 cask "dagger/tap/container-use"
+# Multi-platform client-side cloud file encryption tool
 cask "cryptomator"
+# Universal database tool and SQL client
 cask "dbeaver-community"
+# Database manager for MySQL, PostgreSQL, SQL Server, MongoDB, SQLite and others
 cask "dbgate"
+# Utilities designed to make common development tasks easier
 cask "devtoys"
+# Voice and text chat software
 cask "discord"
+# Client for the Dropbox cloud storage service
 cask "dropbox"
+# Collaborative team software
 cask "figma"
+# Web browser
 cask "firefox"
 cask "font-cascadia-code"
 cask "font-d2coding"
@@ -81,38 +158,62 @@ cask "font-ibm-plex-sans-kr"
 cask "font-noto-sans-cjk-kr"
 cask "font-sauce-code-pro-nerd-font"
 cask "font-symbols-only-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Git client for simultaneous branches on top of your existing workflow
 cask "gitbutler"
+# Web browser
 cask "google-chrome"
+# Client for the Google Drive storage service
 cask "google-drive"
-cask "gpg-suite"
+# Open-source video transcoder
 cask "handbrake-app"
+# HTTP and GraphQL Client
 cask "insomnia"
+# JetBrains tools manager
 cask "jetbrains-toolbox"
+# Keyboard customiser
 cask "karabiner-elements"
+# Password manager app
 cask "keepassxc"
+# File archiver
 cask "keka"
+# Open-source keystroke visualiser
 cask "keycastr"
+# Customise mouse behavior
 cask "linearmouse"
+# Open-source cross-platform alternative to AirDrop
 cask "localsend"
+# Mouse utility to add gesture functions and smooth scrolling to 3rd party mice
 cask "mac-mouse-fix"
+# Intercept, modify, replay, save HTTP/S traffic
 cask "mitmproxy"
+# Visual tool to design, develop and administer MySQL servers
 cask "mysqlworkbench"
+# App to write, plan, collaborate, and get organised
 cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Finder Toolbar app to open the current directory in Editor
 cask "openineditor-lite"
+# Finder Toolbar app to open the current directory in Terminal
 cask "openinterminal-lite"
+# Tool to create and manage Outline servers, powered by Shadowsocks
 cask "outline-manager"
+# HTTP client that helps testing and describing APIs
 cask "rapidapi"
+# Window snapping tool
 cask "rectangle-pro"
+# GUI for streamlined Redis application development
 cask "redis-insight"
+# Open-source code editor
 cask "visual-studio-code"
+# Multiplayer code editor
 cask "zed"
 mas "Amphetamine", id: 937984704
 mas "Bitwarden", id: 1352778147
 mas "Color Picker", id: 1545870783
 mas "Command X", id: 6448461551
-mas "Compressor", id: 6746516157
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
@@ -122,7 +223,7 @@ mas "Notion Web Clipper", id: 1559269364
 mas "Numbers", id: 361304891
 mas "Outline", id: 1356178125
 mas "Pages", id: 361309726
-mas "RunCat", id: 1429033973
+mas "RunCatNeo", id: 6757801838
 mas "Slack", id: 803453959
 mas "uBlock Origin Lite", id: 6745342698
 mas "Velja", id: 1607635845
